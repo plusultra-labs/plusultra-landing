@@ -1,0 +1,85 @@
+/* Custom Animations */
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes gentle-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+/* Light Effect */
+.light-effect {
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+/* Star Pattern Background */
+.star-pattern {
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.3) 1px, transparent 1px);
+  background-size: 50px 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Glow Effect */
+.glow-effect {
+  background: radial-gradient(circle at center, rgba(59, 130, 246, 0.3) 0%, transparent 70%);
+}
+
+/* Content Layer */
+.content-layer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-section.visible {
+  display: block;
+  opacity: 1;
+}
+
+/* Scroll Animation */
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+}
+
+/* Gentle Pulse Animation */
+.animate-gentle-pulse {
+  animation: gentle-pulse 3s ease-in-out infinite;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .star-pattern {
+    background-size: 30px 30px;
+  }
+}

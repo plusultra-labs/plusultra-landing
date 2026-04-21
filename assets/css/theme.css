@@ -1,0 +1,301 @@
+/**
+ * PlusUltraLabs Theme System - CSS Variables
+ * 
+ * This file defines all CSS custom properties (variables) used by the theme system.
+ * These variables are dynamically updated by the useTheme composable.
+ */
+
+:root {
+  /* ============================================
+     DEFAULT THEME (Catppuccin Mocha)
+     ============================================ */
+  
+  /* Primary Colors */
+  --theme-primary: #cba6f7;
+  --theme-primary-hover: #f5c2e7;
+  --theme-primary-muted: #6c7086;
+  --theme-primary-subtle: rgba(203, 166, 247, 0.15);
+  
+  /* Semantic Colors */
+  --theme-success: #a6e3a1;
+  --theme-success-subtle: rgba(166, 227, 161, 0.1);
+  --theme-warning: #f9e2af;
+  --theme-warning-subtle: rgba(249, 226, 175, 0.1);
+  --theme-error: #f38ba8;
+  --theme-error-subtle: rgba(243, 139, 168, 0.1);
+  --theme-info: #74c7ec;
+  --theme-info-subtle: rgba(116, 199, 236, 0.1);
+  
+  /* Background Colors */
+  --theme-bg: #1e1e2e;
+  --theme-bg-elevated: #313244;
+  --theme-bg-overlay: rgba(0, 0, 0, 0.8);
+  
+  /* Surface Colors */
+  --theme-surface: #313244;
+  --theme-surface-hover: #45475a;
+  --theme-surface-active: #585b70;
+  
+  /* Border Colors */
+  --theme-border: #45475a;
+  --theme-border-hover: #585b70;
+  --theme-border-active: #6c7086;
+  
+  /* Text Colors */
+  --theme-text: #cdd6f4;
+  --theme-text-secondary: #bac2de;
+  --theme-text-muted: #6c7086;
+  --theme-text-disabled: #585b70;
+  --theme-text-inverse: #1e1e2e;
+  
+  /* Timeline Colors */
+  --theme-timeline-line: #45475a;
+  --theme-timeline-dot: #585b70;
+  --theme-timeline-dot-active: #cba6f7;
+  
+  /* Status Colors */
+  --theme-status-todo: #6c7086;
+  --theme-status-inprogress: #74c7ec;
+  --theme-status-done: #a6e3a1;
+  --theme-status-blocked: #f38ba8;
+  
+  /* Priority Colors */
+  --theme-priority-high: #f38ba8;
+  --theme-priority-medium: #fab387;
+  --theme-priority-low: #a6e3a1;
+  
+  /* ============================================
+     TYPOGRAPHY
+     ============================================ */
+  
+  --theme-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  /* Font Sizes */
+  --theme-font-size-xs: 0.75rem;
+  --theme-font-size-sm: 0.875rem;
+  --theme-font-size-base: 1rem;
+  --theme-font-size-lg: 1.125rem;
+  --theme-font-size-xl: 1.25rem;
+  --theme-font-size-2xl: 1.5rem;
+  
+  /* Line Heights */
+  --theme-line-height-tight: 1.25;
+  --theme-line-height-normal: 1.5;
+  --theme-line-height-relaxed: 1.75;
+  
+  /* Letter Spacing */
+  --theme-letter-spacing-tight: -0.025em;
+  --theme-letter-spacing-normal: 0;
+  --theme-letter-spacing-wide: 0.025em;
+  
+  /* Font Weights */
+  --theme-font-weight-normal: 400;
+  --theme-font-weight-medium: 500;
+  --theme-font-weight-semibold: 600;
+  --theme-font-weight-bold: 700;
+  
+  /* ============================================
+     SPACING
+     ============================================ */
+  
+  --theme-spacing-unit: 4px;
+  
+  /* Spacing Scale */
+  --theme-spacing-0: 0;
+  --theme-spacing-1: 0.25rem;
+  --theme-spacing-2: 0.5rem;
+  --theme-spacing-3: 0.75rem;
+  --theme-spacing-4: 1rem;
+  --theme-spacing-5: 1.25rem;
+  --theme-spacing-6: 1.5rem;
+  --theme-spacing-8: 2rem;
+  --theme-spacing-10: 2.5rem;
+  --theme-spacing-12: 3rem;
+  
+  /* Gap */
+  --theme-gap-xs: 0.5rem;
+  --theme-gap-sm: 1rem;
+  --theme-gap-md: 1.5rem;
+  --theme-gap-lg: 2rem;
+  
+  /* Padding */
+  --theme-padding-xs: 0.5rem;
+  --theme-padding-sm: 1rem;
+  --theme-padding-md: 1.5rem;
+  --theme-padding-lg: 2rem;
+  
+  /* ============================================
+     RADIUS
+     ============================================ */
+  
+  --theme-radius-none: 0;
+  --theme-radius-sm: 0.25rem;
+  --theme-radius-md: 0.5rem;
+  --theme-radius-lg: 0.75rem;
+  --theme-radius-xl: 1rem;
+  --theme-radius-2xl: 1.5rem;
+  --theme-radius-full: 9999px;
+  
+  /* ============================================
+     SHADOWS
+     ============================================ */
+  
+  --theme-shadow-none: none;
+  --theme-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --theme-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --theme-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --theme-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --theme-shadow-glow: 0 0 20px rgba(203, 166, 247, 0.15);
+  --theme-shadow-glow-strong: 0 0 30px rgba(203, 166, 247, 0.3);
+  
+  /* ============================================
+     ANIMATIONS
+     ============================================ */
+  
+  --theme-animations-enabled: 1;
+  
+  /* Durations */
+  --theme-duration-fast: 150ms;
+  --theme-duration-normal: 250ms;
+  --theme-duration-slow: 350ms;
+  
+  /* Easing */
+  --theme-easing-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --theme-easing-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --theme-easing-smooth: cubic-bezier(0.25, 0.1, 0.25, 1);
+  
+  /* ============================================
+     LAYOUT
+     ============================================ */
+  
+  --theme-timeline-width: 280px;
+  --theme-sidebar-width: 300px;
+  --theme-density: comfortable;
+  
+  /* ============================================
+     SYNTAX HIGHLIGHTING
+     ============================================ */
+  
+  --theme-syntax-bg: #1e1e2e;
+  --theme-syntax-text: #cdd6f4;
+  --theme-syntax-keyword: #cba6f7;
+  --theme-syntax-string: #a6e3a1;
+  --theme-syntax-number: #fab387;
+  --theme-syntax-comment: #6c7086;
+  --theme-syntax-function: #89b4fa;
+  --theme-syntax-operator: #cba6f7;
+  
+  /* ============================================
+     LEGACY VARIABLES (for backwards compatibility)
+     ============================================ */
+  
+  --planner-primary: #cba6f7;
+  --planner-hover: #f5c2e7;
+  --planner-muted: #6c7086;
+  --planner-bg: #1e1e2e;
+  --planner-surface: #313244;
+  --planner-border: #45475a;
+}
+
+/* ============================================
+   DENSITY VARIANTS
+   ============================================ */
+
+[data-density="compact"] {
+  --theme-spacing-unit: 3px;
+  --theme-gap-sm: 0.5rem;
+  --theme-gap-md: 0.75rem;
+  --theme-padding-sm: 0.5rem;
+  --theme-padding-md: 0.75rem;
+}
+
+[data-density="spacious"] {
+  --theme-spacing-unit: 6px;
+  --theme-gap-sm: 1.5rem;
+  --theme-gap-md: 2rem;
+  --theme-padding-sm: 1.25rem;
+  --theme-padding-md: 1.75rem;
+}
+
+/* ============================================
+   ANIMATION RESPECT
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --theme-animations-enabled: 0;
+  }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.theme-transition {
+  transition: background-color var(--theme-duration-normal) var(--theme-easing-default),
+              color var(--theme-duration-normal) var(--theme-easing-default),
+              border-color var(--theme-duration-normal) var(--theme-easing-default),
+              box-shadow var(--theme-duration-normal) var(--theme-easing-default);
+}
+
+.theme-surface {
+  background-color: var(--theme-surface);
+  border: 1px solid var(--theme-border);
+  border-radius: var(--theme-radius-lg);
+}
+
+.theme-card {
+  background-color: var(--theme-surface);
+  border: 1px solid var(--theme-border);
+  border-radius: var(--theme-radius-lg);
+  padding: var(--theme-padding-md);
+}
+
+.theme-button-primary {
+  background-color: var(--theme-primary);
+  color: var(--theme-text-inverse);
+  border-radius: var(--theme-radius-md);
+  padding: var(--theme-padding-sm) var(--theme-padding-md);
+  font-weight: var(--theme-font-weight-medium);
+  transition: background-color var(--theme-duration-fast) var(--theme-easing-default);
+}
+
+.theme-button-primary:hover {
+  background-color: var(--theme-primary-hover);
+}
+
+.theme-input {
+  background-color: var(--theme-bg);
+  border: 1px solid var(--theme-border);
+  border-radius: var(--theme-radius-md);
+  color: var(--theme-text);
+  padding: var(--theme-padding-sm);
+}
+
+.theme-input:focus {
+  outline: none;
+  border-color: var(--theme-primary);
+  box-shadow: 0 0 0 2px var(--theme-primary-subtle);
+}
+
+/* ============================================
+   SCROLLBAR STYLING
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--theme-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--theme-border);
+  border-radius: var(--theme-radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-border-hover);
+}
