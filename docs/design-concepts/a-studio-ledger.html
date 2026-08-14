@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Direction A: Studio Ledger</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f7f7f4; --ink:#141513; --ink-soft:#5c5e59; --line:#dcddd6;
+    --accent:#2743e0;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--paper);color:var(--ink);font-family:'Space Grotesk',sans-serif;-webkit-font-smoothing:antialiased}
+  .mono{font-family:'IBM Plex Mono',monospace}
+  .wrap{max-width:1320px;margin:0 auto;padding:0 40px}
+  a{color:inherit;text-decoration:none}
+
+  nav{border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .logo{font-weight:700;font-size:19px;letter-spacing:-.02em}
+  .logo span{color:var(--accent)}
+  .nav-links{display:flex;gap:36px;font-size:15px;color:var(--ink-soft)}
+  .nav-links a:hover{color:var(--ink)}
+  .btn{display:inline-block;background:var(--ink);color:var(--paper);padding:12px 26px;font-size:15px;font-weight:500;transition:transform .15s ease}
+  .btn:hover{transform:translateY(-1px)}
+  .btn:active{transform:scale(.98)}
+  .btn.accent{background:var(--accent);color:#fff}
+
+  .hero{padding:96px 0 72px;display:grid;grid-template-columns:7fr 5fr;gap:64px;align-items:end}
+  h1{font-size:clamp(44px,5.2vw,76px);line-height:1.02;letter-spacing:-.035em;font-weight:700}
+  h1 em{font-style:italic;color:var(--accent);line-height:1.1;display:inline-block;padding-bottom:4px}
+  .hero-side{padding-bottom:10px}
+  .hero-side p{font-size:18px;line-height:1.55;color:var(--ink-soft);max-width:42ch;margin-bottom:28px}
+  .hero-ctas{display:flex;gap:14px;align-items:center}
+  .link-plain{font-size:15px;font-weight:500;border-bottom:1.5px solid var(--ink);padding-bottom:2px}
+
+  .proof{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .proof-in{display:grid;grid-template-columns:1fr 1fr 1fr;}
+  .proof-cell{padding:36px 40px;border-right:1px solid var(--line)}
+  .proof-cell:last-child{border-right:0}
+  .proof-cell .num{font-size:40px;font-weight:700;letter-spacing:-.03em}
+  .proof-cell .lbl{font-size:14.5px;color:var(--ink-soft);margin-top:6px;line-height:1.45}
+
+  .work{padding:104px 0}
+  .work h2{font-size:clamp(30px,3.2vw,46px);letter-spacing:-.03em;margin-bottom:56px;max-width:18ch}
+  .work-grid{display:grid;grid-template-columns:2fr 1fr;gap:28px}
+  .work-card{position:relative;overflow:hidden;background:#e7e7e2}
+  .work-card img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(35%) contrast(1.02)}
+  .work-card.tall{grid-row:span 2}
+  .work-card .cap{display:flex;justify-content:space-between;align-items:baseline;padding:16px 0 0;border-top:0}
+  .work-item .cap{padding-top:14px}
+  .work-item .cap b{font-size:17px;font-weight:500}
+  .work-item .cap span{font-size:13px;color:var(--ink-soft)}
+  .work-item.tall{grid-row:span 2;display:flex;flex-direction:column}
+  .work-item.tall .work-card{flex:1}
+
+  .cta{background:var(--ink);color:var(--paper);padding:110px 0}
+  .cta h2{font-size:clamp(34px,3.8vw,56px);letter-spacing:-.03em;max-width:20ch;margin-bottom:36px}
+  .cta h2 em{font-style:italic;color:#98a6ff}
+
+  footer{padding:34px 0;font-size:13.5px;color:var(--ink-soft);display:flex;justify-content:space-between}
+
+  @media(max-width:860px){
+    .wrap{padding:0 20px}
+    .hero{grid-template-columns:1fr;gap:36px;padding:56px 0}
+    .proof-in{grid-template-columns:1fr}
+    .proof-cell{border-right:0;border-bottom:1px solid var(--line);padding:26px 20px}
+    .work-grid{grid-template-columns:1fr}
+    .nav-links{display:none}
+  }
+</style>
+</head>
+<body>
+
+<nav><div class="wrap nav-in">
+  <a class="logo" href="#">plusultra<span>labs</span></a>
+  <div class="nav-links"><a href="#">Services</a><a href="#">Work</a><a href="#">Products</a><a href="#">Writing</a><a href="#">About</a></div>
+  <a class="btn" href="#">Book a call</a>
+</div></nav>
+
+<header class="wrap hero">
+  <h1>We ship our own AI products.<br>Then we ship <em>yours.</em></h1>
+  <div class="hero-side">
+    <p>Plusultra Labs is an AI product studio. Everything we recommend, we already run in production: our SaaS, our agents, our infrastructure.</p>
+    <div class="hero-ctas">
+      <a class="btn accent" href="#">Book a call</a>
+      <a class="link-plain" href="#">See the work</a>
+    </div>
+  </div>
+</header>
+
+<section class="proof"><div class="wrap proof-in" style="padding:0">
+  <div class="proof-cell"><div class="num">10+</div><div class="lbl">SaaS products live in production, e-signature to medical practice management</div></div>
+  <div class="proof-cell"><div class="num">1</div><div class="lbl">consumer product built and scaled internationally to exit stage</div></div>
+  <div class="proof-cell"><div class="num mono" style="font-size:34px;padding-top:5px">ai-native</div><div class="lbl">our company runs day to day on agents we engineered ourselves</div></div>
+</div></section>
+
+<section class="work wrap">
+  <h2>Work that runs in production, not in a deck.</h2>
+  <div class="work-grid">
+    <div class="work-item tall">
+      <div class="work-card tall"><img src="https://picsum.photos/seed/plusultra-buzzwatch/1100/860" alt="BuzzWatch"></div>
+      <div class="cap"><b>BuzzWatch</b><span>AI visibility SaaS, zero to enterprise partnership</span></div>
+    </div>
+    <div class="work-item">
+      <div class="work-card"><img src="https://picsum.photos/seed/plusultra-tourscanner/620/380" alt="TourScanner"></div>
+      <div class="cap"><b>TourScanner</b><span>travel search, international scale</span></div>
+    </div>
+    <div class="work-item">
+      <div class="work-card"><img src="https://picsum.photos/seed/plusultra-intelligo/620/380" alt="IntelligoAI"></div>
+      <div class="cap"><b>IntelligoAI</b><span>clinic management, GDPR-first</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta"><div class="wrap">
+  <h2>Have a product to build, or a system that needs AI <em>inside it?</em></h2>
+  <a class="btn accent" href="#">Book a call</a>
+</div></section>
+
+<footer class="wrap">
+  <div>Plusultra Labs</div>
+  <div class="mono">alberto@plusultralabs.com</div>
+</footer>
+
+</body>
+</html>
