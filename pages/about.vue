@@ -48,15 +48,10 @@
         Twelve people across product, design, engineering, and delivery, plus
         a wider network of specialists we bring in when a project needs them.
       </p>
-      <div class="mt-12 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-4">
-        <div v-for="member in team" :key="member.name">
-          <img
-            :src="member.avatar"
-            :alt="member.name"
-            class="w-full max-w-[200px] border border-line"
-            loading="lazy"
-          />
-          <b class="mt-3 block text-[16px] font-medium">{{ member.name }}</b>
+      <div class="mt-12 grid grid-cols-2 gap-x-6 gap-y-12 sm:grid-cols-3 lg:grid-cols-4">
+        <div v-for="member in team" :key="member.name" class="flex flex-col items-center text-center">
+          <TeamAvatar :person="member.avatar" :size="128" />
+          <b class="mt-4 block text-[16px] font-medium">{{ member.name }}</b>
           <p class="text-[13.5px] text-ink-soft">{{ member.role }}</p>
         </div>
       </div>

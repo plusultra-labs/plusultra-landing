@@ -74,17 +74,17 @@ export const allWork: WorkItem[] = [
     ],
   },
   {
-    slug: "ts-sites",
-    name: "TS-Sites",
-    tagline: "One tool to manage a fleet of travel websites",
+    slug: "travel-platform-engine",
+    name: "Travel platform engine",
+    tagline: "Managing a portfolio of travel platforms at scale",
     period: "2025 - today",
-    tags: ["Internal tool", "Travel", "Content system"],
+    tags: ["Internal tool", "Travel", "Multi-site"],
     service: "custom-platforms",
-    image: "/work/ts-sites.svg",
+    image: "/work/travel-platform-engine.svg",
     paragraphs: [
-      "TS-Sites is the internal tool we built to manage and curate a portfolio of travel websites from one place: content, translations, design blocks, and publishing for every site, each on its own domain.",
-      "Editors curate pages with visual blocks, AI helps draft and update content in every language, and search-engine best practices ship with every page automatically.",
-      "What used to be weeks of work per website is now a few hours of curation.",
+      "Running one travel website is easy; running a portfolio of them is an operations problem. We built an engine that manages dozens of travel platforms from a single control room: every site on its own domain, with its own design, content, and audience, all driven by one system.",
+      "Under the hood it's a multi-tenant publishing architecture: a block-based page system with per-language content versions, an AI layer that drafts, translates, and refreshes pages across every locale, automated deployment of each site to its own edge infrastructure, and search-engine plumbing (sitemaps, structured data, canonical and language tags) generated correctly for every domain without anyone touching it.",
+      "Editors curate rather than build: pick blocks, approve AI drafts, publish. Performance data flows back per site from Search Console, so the portfolio is steered by numbers, not guesses. Launching a complete new platform, in multiple languages, takes hours instead of weeks.",
     ],
   },
   {
@@ -265,18 +265,18 @@ export interface TeamMember {
 }
 
 export const team: TeamMember[] = [
-  { name: "Alberto", role: "Founder · Product", avatar: "/team/alberto.svg" },
-  { name: "Wei Lin", role: "Engineering Lead", avatar: "/team/weilin.svg" },
-  { name: "Marta", role: "Senior Product Designer", avatar: "/team/marta.svg" },
-  { name: "Ravi", role: "AI Engineer", avatar: "/team/ravi.svg" },
-  { name: "Giulia", role: "Full-stack Engineer", avatar: "/team/giulia.svg" },
-  { name: "Jun Kai", role: "Full-stack Engineer", avatar: "/team/junkai.svg" },
-  { name: "Elena", role: "Product Designer", avatar: "/team/elena.svg" },
-  { name: "Tommaso", role: "Project Manager", avatar: "/team/tommaso.svg" },
-  { name: "Sofia", role: "Project Manager", avatar: "/team/sofia.svg" },
-  { name: "Andrés", role: "Brand Designer", avatar: "/team/andres.svg" },
-  { name: "Priya", role: "Data Engineer", avatar: "/team/priya.svg" },
-  { name: "Luca", role: "QA & Operations", avatar: "/team/luca.svg" },
+  { name: "Alberto", role: "Founder · Product", avatar: "alberto" },
+  { name: "Wei Lin", role: "Engineering Lead", avatar: "weilin" },
+  { name: "Marta", role: "Senior Product Designer", avatar: "marta" },
+  { name: "Ravi", role: "AI Engineer", avatar: "ravi" },
+  { name: "Giulia", role: "Full-stack Engineer", avatar: "giulia" },
+  { name: "Jun Kai", role: "Full-stack Engineer", avatar: "junkai" },
+  { name: "Elena", role: "Product Designer", avatar: "elena" },
+  { name: "Tommaso", role: "Project Manager", avatar: "tommaso" },
+  { name: "Sofia", role: "Project Manager", avatar: "sofia" },
+  { name: "Andrés", role: "Brand Designer", avatar: "andres" },
+  { name: "Priya", role: "Data Engineer", avatar: "priya" },
+  { name: "Luca", role: "QA & Operations", avatar: "luca" },
 ];
 
 export interface PricingTier {
