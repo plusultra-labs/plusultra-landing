@@ -10,7 +10,8 @@
       <div class="pb-2.5">
         <p class="mb-7 max-w-[42ch] text-lg leading-[1.55] text-ink-soft">
           Plusultra Labs is an AI product studio. Everything we recommend, we
-          already run in production: our SaaS, our agents, our infrastructure.
+          already use ourselves every day: our own products, our own AI tools,
+          our own systems.
         </p>
         <div class="flex items-center gap-4">
           <BookCallButton variant="accent" />
@@ -25,22 +26,24 @@
     <section class="border-y border-line">
       <div class="mx-auto grid max-w-site md:grid-cols-3">
         <div class="border-b border-line p-6 md:border-b-0 md:border-r md:px-10 md:py-9">
-          <div class="text-[40px] font-bold tracking-tight">10+</div>
+          <div class="text-[40px] font-bold tracking-tight">35</div>
           <p class="mt-1.5 text-[14.5px] leading-snug text-ink-soft">
-            SaaS products live in production, e-signature to medical practice
-            management
+            digital products designed, built, and running today, for ourselves
+            and for clients
           </p>
         </div>
         <div class="border-b border-line p-6 md:border-b-0 md:border-r md:px-10 md:py-9">
           <div class="text-[40px] font-bold tracking-tight">1</div>
           <p class="mt-1.5 text-[14.5px] leading-snug text-ink-soft">
-            consumer product built and scaled internationally to exit stage
+            travel product grown from an idea into an international success
+            used by millions
           </p>
         </div>
         <div class="p-6 md:px-10 md:py-9">
-          <div class="pt-1 font-mono text-[32px] font-medium">ai-native</div>
+          <div class="text-[40px] font-bold tracking-tight">24/7</div>
           <p class="mt-1.5 text-[14.5px] leading-snug text-ink-soft">
-            our company runs day to day on agents we engineered ourselves
+            our own AI assistants run the company's daily operations, so we
+            know it works
           </p>
         </div>
       </div>
@@ -70,11 +73,11 @@
 
     <!-- Work -->
     <section class="mx-auto max-w-site px-5 pb-20 md:px-10 md:pb-28">
-      <h2 class="mb-12 max-w-[18ch] text-[clamp(30px,3.2vw,46px)] font-bold tracking-[-0.03em]">
-        Work that runs in production, not in a deck.
+      <h2 class="mb-12 max-w-[20ch] text-[clamp(30px,3.2vw,46px)] font-bold tracking-[-0.03em]">
+        Some of our most notable projects
       </h2>
       <div class="grid gap-7 md:grid-cols-[2fr_1fr]">
-        <NuxtLink to="/work" class="flex flex-col md:row-span-2">
+        <NuxtLink :to="`/work#${featuredWork[0].slug}`" class="flex flex-col md:row-span-2">
           <div class="flex-1 overflow-hidden border border-line bg-[#e7e7e2]">
             <img
               :src="featuredWork[0].image"
@@ -88,7 +91,7 @@
             <span class="text-[13px] text-ink-soft">{{ featuredWork[0].tagline }}</span>
           </div>
         </NuxtLink>
-        <NuxtLink v-for="item in featuredWork.slice(1)" :key="item.slug" to="/work">
+        <NuxtLink v-for="item in featuredWork.slice(1)" :key="item.slug" :to="`/work#${item.slug}`">
           <div class="overflow-hidden border border-line bg-[#e7e7e2]">
             <img
               :src="item.image"
@@ -125,17 +128,17 @@ const services = [
   {
     to: "/services/ai-product-development",
     title: "AI product development",
-    body: "From idea to production SaaS. We design, build, and operate AI products the same way we build our own: MVP in weeks, production from day one.",
+    body: "From idea to finished product. We design, build, and run digital products the same way we build our own: first version live in weeks, built to last.",
   },
   {
     to: "/services/ai-integration",
     title: "AI integration",
-    body: "LLMs inside your existing systems and workflows. EU-compliant architecture, predictable costs, engineers on the call.",
+    body: "AI inside the tools your company already uses. Privacy-compliant, costs you can predict, and the people you talk to are the people who build it.",
   },
   {
     to: "/services/custom-platforms",
     title: "Custom platforms",
-    body: "Portals, CRMs, internal tools, marketplaces. Production-grade platforms delivered in weeks, operated after launch.",
+    body: "Portals, management systems, internal tools, marketplaces. Solid platforms delivered in weeks and looked after once they're live.",
   },
 ];
 

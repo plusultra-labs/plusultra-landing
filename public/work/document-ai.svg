@@ -1,7 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750">
-  <rect width="1200" height="750" fill="#f0f0ec"/>
-  <rect x="1" y="1" width="1198" height="748" fill="none" stroke="#dcddd6" stroke-width="2"/>
-  <text x="80" y="330" font-family="Space Grotesk, sans-serif" font-size="60" font-weight="700" fill="#141513" letter-spacing="-2">Document Intelligence</text>
-  <rect x="82" y="360" width="120" height="6" fill="#2743e0"/>
-  <text x="80" y="430" font-family="IBM Plex Mono, monospace" font-size="24" fill="#5c5e59">confidential client</text>
+<rect width="1200" height="750" fill="#f0f0ec"/>
+<rect x="1" y="1" width="1198" height="748" fill="none" stroke="#dcddd6" stroke-width="2"/>
+<rect x="420" y="150" width="240" height="300" fill="#e4e5df"/>
+<rect x="450" y="120" width="240" height="300" fill="#ffffff" stroke="#dcddd6" stroke-width="2"/>
+<g fill="#c9cbc3">
+  <rect x="482" y="156" width="176" height="16"/>
+  <rect x="482" y="188" width="140" height="16"/>
+  <rect x="482" y="220" width="164" height="16"/>
+  <rect x="482" y="284" width="152" height="16"/>
+  <rect x="482" y="316" width="176" height="16"/>
+  <rect x="482" y="348" width="120" height="16"/>
+</g>
+<rect x="474" y="244" width="192" height="32" fill="none" stroke="#2743e0" stroke-width="4"/>
+<g stroke="#2743e0" stroke-width="4" fill="none">
+  <path d="M666 260h120m-14-14 14 14-14 14"/>
+</g>
+<g font-family="IBM Plex Mono, monospace" font-size="20" fill="#141513">
+  <text x="812" y="240">total: 4.820,00</text>
+  <text x="812" y="272" fill="#5c5e59">vat:   1.060,40</text>
+  <text x="812" y="304" fill="#5c5e59">due:   30 days</text>
+</g>
+<text x="140" y="560" font-family="Space Grotesk, sans-serif" font-size="56" font-weight="700" fill="#141513" letter-spacing="-1.5">Document intelligence</text>
+<text x="142" y="608" font-family="IBM Plex Mono, monospace" font-size="22" fill="#5c5e59">confidential client</text>
 </svg>

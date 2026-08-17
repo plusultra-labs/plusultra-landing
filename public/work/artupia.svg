@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750">
+<rect width="1200" height="750" fill="#f0f0ec"/>
+<rect x="1" y="1" width="1198" height="748" fill="none" stroke="#dcddd6" stroke-width="2"/>
+<g fill="none" stroke="#141513" stroke-width="4">
+  <rect x="360" y="150" width="200" height="250"/>
+  <rect x="620" y="120" width="240" height="180"/>
+  <rect x="620" y="340" width="240" height="110"/>
+</g>
+<rect x="392" y="190" width="136" height="170" fill="#2743e0"/>
+<g fill="#c9cbc3">
+  <rect x="652" y="152" width="176" height="116"/>
+  <rect x="652" y="372" width="176" height="46"/>
+</g>
+<circle cx="720" cy="200" r="26" fill="#f0f0ec"/>
+<text x="140" y="560" font-family="Space Grotesk, sans-serif" font-size="56" font-weight="700" fill="#141513" letter-spacing="-1.5">Artupia</text>
+<text x="142" y="608" font-family="IBM Plex Mono, monospace" font-size="22" fill="#5c5e59">custom art marketplace</text>
+</svg>

@@ -5,6 +5,7 @@
     :points="points"
     :steps="steps"
     cta="Have a product idea that deserves a real build?"
+    service="ai-product-development"
   />
 </template>
 

@@ -3,7 +3,7 @@
     <div
       class="mx-auto flex max-w-site flex-col justify-between gap-3 px-5 py-9 text-[13.5px] text-ink-soft md:flex-row md:items-center md:px-10"
     >
-      <div>Plusultra Labs · Milan, Italy</div>
+      <div>Plusultra Labs · Singapore</div>
       <div class="flex gap-6">
         <NuxtLink to="/services" class="hover:text-ink">Services</NuxtLink>
         <NuxtLink to="/work" class="hover:text-ink">Work</NuxtLink>

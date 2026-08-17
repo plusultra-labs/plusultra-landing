@@ -5,6 +5,7 @@
     :points="points"
     :steps="steps"
     cta="Ready to see where AI actually pays off in your systems?"
+    service="ai-integration"
   />
 </template>
 

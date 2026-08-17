@@ -5,6 +5,7 @@
     :points="points"
     :steps="steps"
     cta="Need a platform your business can actually run on?"
+    service="custom-platforms"
   />
 </template>
 
