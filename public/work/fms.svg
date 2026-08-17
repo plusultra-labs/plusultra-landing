@@ -1,33 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750">
-<rect width="1200" height="750" fill="#f0f0ec"/>
-<rect x="1" y="1" width="1198" height="748" fill="none" stroke="#dcddd6" stroke-width="2"/>
-<g font-family="IBM Plex Mono, monospace" font-size="17" fill="#5c5e59">
-  <text x="150" y="140">DA INCIDERE</text>
-  <text x="470" y="140">DA COLORARE</text>
-  <text x="790" y="140">PRONTI</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" font-family="IBM Plex Mono, monospace">
+<rect width="1200" height="750" fill="#e4e6ea"/>
+<!-- desktop admin behind -->
+<rect x="300" y="130" width="720" height="470" rx="14" fill="#141513"/>
+<rect x="312" y="166" width="696" height="422" fill="#fbfbf9"/>
+<g fill="#e0e1db">
+  <rect x="344" y="200" width="200" height="120"/><rect x="568" y="200" width="200" height="120"/><rect x="792" y="200" width="190" height="120"/>
+  <rect x="344" y="344" width="200" height="120"/><rect x="568" y="344" width="200" height="120"/><rect x="792" y="344" width="190" height="120"/>
 </g>
-<g fill="#ffffff" stroke="#dcddd6" stroke-width="2">
-  <rect x="150" y="160" width="260" height="64"/>
-  <rect x="150" y="240" width="260" height="64"/>
-  <rect x="150" y="320" width="260" height="64"/>
-  <rect x="470" y="160" width="260" height="64"/>
-  <rect x="470" y="240" width="260" height="64"/>
-  <rect x="790" y="160" width="260" height="64"/>
+<!-- phone front -->
+<rect x="150" y="170" width="330" height="640" rx="46" fill="#10120f"/>
+<rect x="164" y="184" width="302" height="612" rx="34" fill="#fbfbf9"/>
+<rect x="164" y="184" width="302" height="70" rx="34" fill="#fbfbf9"/>
+<text x="192" y="238" font-size="20" font-weight="600" fill="#141513">Ordini · Marco</text>
+<g font-size="12">
+  <rect x="192" y="258" width="86" height="28" rx="14" fill="#141513"/><text x="212" y="277" fill="#f0f0ec">tutti 18</text>
+  <rect x="288" y="258" width="92" height="28" rx="14" fill="#eceee9"/><text x="304" y="277" fill="#5c5e59">pronti 6</text>
 </g>
-<g fill="#c9cbc3">
-  <rect x="174" y="182" width="140" height="20"/>
-  <rect x="174" y="262" width="110" height="20"/>
-  <rect x="174" y="342" width="152" height="20"/>
-  <rect x="494" y="182" width="128" height="20"/>
-  <rect x="494" y="262" width="146" height="20"/>
-  <rect x="814" y="182" width="120" height="20"/>
+<!-- order cards -->
+<g>
+  <rect x="188" y="306" width="254" height="108" rx="12" fill="#ffffff" stroke="#e3e4de" stroke-width="2"/>
+  <rect x="208" y="326" width="130" height="13" fill="#141513"/>
+  <rect x="208" y="352" width="170" height="11" fill="#c9cbc3"/>
+  <rect x="208" y="378" width="92" height="24" rx="12" fill="#dcefe2"/><text x="222" y="395" font-size="12" fill="#1f7a3d">pronto</text>
 </g>
-<g stroke="#2743e0" stroke-width="4" fill="none">
-  <path d="M418 192h44m-12-12 12 12-12 12"/>
-  <path d="M738 192h44m-12-12 12 12-12 12"/>
+<g>
+  <rect x="188" y="430" width="254" height="108" rx="12" fill="#ffffff" stroke="#e3e4de" stroke-width="2"/>
+  <rect x="208" y="450" width="112" height="13" fill="#141513"/>
+  <rect x="208" y="476" width="150" height="11" fill="#c9cbc3"/>
+  <rect x="208" y="502" width="128" height="24" rx="12" fill="#eef1fb"/><text x="222" y="519" font-size="12" fill="#2743e0">da incidere</text>
 </g>
-<rect x="790" y="240" width="260" height="64" fill="#2743e0"/>
-<path d="M866 272l14 14 26-30" stroke="#f0f0ec" stroke-width="5" fill="none"/>
-<text x="140" y="560" font-family="Space Grotesk, sans-serif" font-size="56" font-weight="700" fill="#141513" letter-spacing="-1.5">Workshop order portal</text>
-<text x="142" y="608" font-family="IBM Plex Mono, monospace" font-size="22" fill="#5c5e59">confidential client</text>
+<g>
+  <rect x="188" y="554" width="254" height="108" rx="12" fill="#ffffff" stroke="#e3e4de" stroke-width="2"/>
+  <rect x="208" y="574" width="142" height="13" fill="#141513"/>
+  <rect x="208" y="600" width="128" height="11" fill="#c9cbc3"/>
+  <rect x="208" y="626" width="134" height="24" rx="12" fill="#f6ecdd"/><text x="222" y="643" font-size="12" fill="#9c6b1f">da colorare</text>
+</g>
+<text x="188" y="736" font-size="12" fill="#5c5e59">sincronizzato 2 min fa</text>
 </svg>

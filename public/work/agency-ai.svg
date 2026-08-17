@@ -1,20 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750">
-<rect width="1200" height="750" fill="#f0f0ec"/>
-<rect x="1" y="1" width="1198" height="748" fill="none" stroke="#dcddd6" stroke-width="2"/>
-<g stroke="#c9cbc3" stroke-width="2.5">
-  <path d="M600 260 L380 170M600 260 L840 150M600 260 L320 360M600 260 L900 330M600 260 L520 430M600 260 L760 420"/>
-  <path d="M380 170 L320 360M840 150 L900 330M520 430 L760 420"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" font-family="IBM Plex Mono, monospace">
+<rect width="1200" height="750" fill="#e5e8e2"/>
+<rect x="120" y="90" width="960" height="660" rx="18" fill="#141513"/>
+<circle cx="152" cy="112" r="5" fill="#5c5e59"/><circle cx="170" cy="112" r="5" fill="#5c5e59"/><circle cx="188" cy="112" r="5" fill="#5c5e59"/>
+<rect x="480" y="102" width="240" height="20" rx="10" fill="#2b2c28"/>
+<rect x="132" y="134" width="936" height="616" fill="#fbfbf9"/>
+<!-- KPI row -->
+<g>
+  <rect x="164" y="166" width="280" height="84" rx="10" fill="#ffffff" stroke="#e3e4de" stroke-width="2"/>
+  <text x="184" y="198" font-size="12" fill="#5c5e59">keywords tracked</text>
+  <text x="184" y="230" font-size="24" font-weight="600" fill="#141513">48,210</text>
+  <rect x="460" y="166" width="280" height="84" rx="10" fill="#ffffff" stroke="#e3e4de" stroke-width="2"/>
+  <text x="480" y="198" font-size="12" fill="#5c5e59">audits automated</text>
+  <text x="480" y="230" font-size="24" font-weight="600" fill="#141513">312</text>
+  <rect x="756" y="166" width="280" height="84" rx="10" fill="#ffffff" stroke="#e3e4de" stroke-width="2"/>
+  <text x="776" y="198" font-size="12" fill="#5c5e59">hours saved / week</text>
+  <text x="776" y="230" font-size="24" font-weight="600" fill="#2743e0">120+</text>
 </g>
-<g fill="#141513">
-  <circle cx="380" cy="170" r="22"/>
-  <circle cx="840" cy="150" r="18"/>
-  <circle cx="320" cy="360" r="16"/>
-  <circle cx="900" cy="330" r="22"/>
-  <circle cx="520" cy="430" r="14"/>
-  <circle cx="760" cy="420" r="18"/>
+<!-- keyword table -->
+<rect x="164" y="278" width="430" height="424" rx="10" fill="#ffffff" stroke="#e3e4de" stroke-width="2"/>
+<rect x="164" y="278" width="430" height="40" rx="10" fill="#f0f0ec"/>
+<g stroke="#eeefe9" stroke-width="1.5"><path d="M164 366H594M164 414H594M164 462H594M164 510H594M164 558H594M164 606H594M164 654H594"/></g>
+<g fill="#c9cbc3">
+  <rect x="184" y="336" width="150" height="12"/><rect x="184" y="384" width="180" height="12"/><rect x="184" y="432" width="130" height="12"/>
+  <rect x="184" y="480" width="164" height="12"/><rect x="184" y="528" width="142" height="12"/><rect x="184" y="576" width="172" height="12"/><rect x="184" y="624" width="120" height="12"/>
 </g>
-<circle cx="600" cy="260" r="34" fill="#2743e0"/>
-<text x="600" y="270" font-family="IBM Plex Mono, monospace" font-size="24" fill="#f0f0ec" text-anchor="middle">AI</text>
-<text x="140" y="560" font-family="Space Grotesk, sans-serif" font-size="56" font-weight="700" fill="#141513" letter-spacing="-1.5">Agency AI transformation</text>
-<text x="142" y="608" font-family="IBM Plex Mono, monospace" font-size="22" fill="#5c5e59">confidential client</text>
+<g font-size="13" font-weight="600">
+  <text x="520" y="346" fill="#1f7a3d">▲ 4</text>
+  <text x="520" y="394" fill="#1f7a3d">▲ 12</text>
+  <text x="520" y="442" fill="#b3261e">▼ 2</text>
+  <text x="520" y="490" fill="#1f7a3d">▲ 7</text>
+  <text x="520" y="538" fill="#5c5e59">— 0</text>
+  <text x="520" y="586" fill="#1f7a3d">▲ 19</text>
+  <text x="520" y="634" fill="#1f7a3d">▲ 3</text>
+</g>
+<!-- chart + AI panel -->
+<rect x="626" y="278" width="410" height="250" rx="10" fill="#ffffff" stroke="#e3e4de" stroke-width="2"/>
+<path d="M656 470 L716 430 L776 448 L836 380 L896 400 L956 330 L1006 344" fill="none" stroke="#2743e0" stroke-width="4" stroke-linejoin="round"/>
+<path d="M656 470 L716 430 L776 448 L836 380 L896 400 L956 330 L1006 344 L1006 500 L656 500 Z" fill="#2743e0" opacity="0.08"/>
+<rect x="626" y="556" width="410" height="146" rx="10" fill="#eef1fb"/>
+<text x="650" y="592" font-size="13" fill="#2743e0">AI audit ready</text>
+<g fill="#b9c4f6"><rect x="650" y="614" width="350" height="11"/><rect x="650" y="636" width="310" height="11"/><rect x="650" y="658" width="336" height="11"/></g>
 </svg>

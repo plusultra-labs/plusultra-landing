@@ -1,25 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750">
-<rect width="1200" height="750" fill="#f0f0ec"/>
-<rect x="1" y="1" width="1198" height="748" fill="none" stroke="#dcddd6" stroke-width="2"/>
-<rect x="420" y="150" width="240" height="300" fill="#e4e5df"/>
-<rect x="450" y="120" width="240" height="300" fill="#ffffff" stroke="#dcddd6" stroke-width="2"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" font-family="IBM Plex Mono, monospace">
+<rect width="1200" height="750" fill="#eceade"/>
+<rect x="120" y="90" width="960" height="660" rx="18" fill="#141513"/>
+<circle cx="152" cy="112" r="5" fill="#5c5e59"/><circle cx="170" cy="112" r="5" fill="#5c5e59"/><circle cx="188" cy="112" r="5" fill="#5c5e59"/>
+<rect x="480" y="102" width="240" height="20" rx="10" fill="#2b2c28"/>
+<rect x="132" y="134" width="936" height="616" fill="#fbfbf9"/>
+<!-- document -->
+<rect x="196" y="150" width="150" height="200" fill="#f0f0ec"/>
+<rect x="180" y="180" width="330" height="470" fill="#ffffff" stroke="#e3e4de" stroke-width="2"/>
 <g fill="#c9cbc3">
-  <rect x="482" y="156" width="176" height="16"/>
-  <rect x="482" y="188" width="140" height="16"/>
-  <rect x="482" y="220" width="164" height="16"/>
-  <rect x="482" y="284" width="152" height="16"/>
-  <rect x="482" y="316" width="176" height="16"/>
-  <rect x="482" y="348" width="120" height="16"/>
+  <rect x="212" y="216" width="180" height="14"/>
+  <rect x="212" y="252" width="266" height="10"/><rect x="212" y="272" width="240" height="10"/><rect x="212" y="292" width="256" height="10"/>
+  <rect x="212" y="330" width="200" height="10"/><rect x="212" y="350" width="266" height="10"/>
+  <rect x="212" y="452" width="250" height="10"/><rect x="212" y="472" width="222" height="10"/><rect x="212" y="492" width="256" height="10"/>
+  <rect x="212" y="568" width="180" height="10"/><rect x="212" y="588" width="212" height="10"/>
 </g>
-<rect x="474" y="244" width="192" height="32" fill="none" stroke="#2743e0" stroke-width="4"/>
-<g stroke="#2743e0" stroke-width="4" fill="none">
-  <path d="M666 260h120m-14-14 14 14-14 14"/>
+<rect x="204" y="382" width="240" height="34" fill="none" stroke="#2743e0" stroke-width="3"/>
+<rect x="204" y="524" width="160" height="30" fill="none" stroke="#2743e0" stroke-width="3"/>
+<rect x="212" y="390" width="150" height="12" fill="#b9c4f6"/>
+<rect x="212" y="532" width="96" height="12" fill="#b9c4f6"/>
+<!-- flow arrow -->
+<g stroke="#141513" stroke-width="4" fill="none"><path d="M540 420h96m-16-16 16 16-16 16"/></g>
+<!-- extracted panel -->
+<rect x="672" y="196" width="364" height="438" rx="12" fill="#ffffff" stroke="#e3e4de" stroke-width="2"/>
+<rect x="672" y="196" width="364" height="46" rx="12" fill="#141513"/>
+<text x="696" y="226" font-size="13" fill="#f0f0ec">extracted · 99.2% confidence</text>
+<g font-size="13">
+  <text x="696" y="284" fill="#5c5e59">type</text><text x="880" y="284" fill="#141513">invoice</text>
+  <text x="696" y="324" fill="#5c5e59">vendor</text><rect x="880" y="312" width="120" height="12" fill="#c9cbc3"/>
+  <text x="696" y="364" fill="#5c5e59">number</text><text x="880" y="364" fill="#141513">2026-0841</text>
+  <text x="696" y="404" fill="#5c5e59">date</text><text x="880" y="404" fill="#141513">14/07/2026</text>
+  <text x="696" y="444" fill="#5c5e59">total</text><text x="880" y="444" font-weight="600" fill="#2743e0">4.820,00</text>
+  <text x="696" y="484" fill="#5c5e59">vat</text><text x="880" y="484" fill="#141513">1.060,40</text>
+  <text x="696" y="524" fill="#5c5e59">due</text><text x="880" y="524" fill="#141513">30 days</text>
 </g>
-<g font-family="IBM Plex Mono, monospace" font-size="20" fill="#141513">
-  <text x="812" y="240">total: 4.820,00</text>
-  <text x="812" y="272" fill="#5c5e59">vat:   1.060,40</text>
-  <text x="812" y="304" fill="#5c5e59">due:   30 days</text>
-</g>
-<text x="140" y="560" font-family="Space Grotesk, sans-serif" font-size="56" font-weight="700" fill="#141513" letter-spacing="-1.5">Document intelligence</text>
-<text x="142" y="608" font-family="IBM Plex Mono, monospace" font-size="22" fill="#5c5e59">confidential client</text>
+<rect x="696" y="560" width="316" height="44" rx="8" fill="#2743e0"/>
+<text x="790" y="588" font-size="14" fill="#ffffff">approve → export</text>
+<text x="672" y="678" font-size="13" fill="#5c5e59">2,140 documents processed today</text>
 </svg>

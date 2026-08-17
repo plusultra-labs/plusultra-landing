@@ -1,20 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750">
-<rect width="1200" height="750" fill="#f0f0ec"/>
-<rect x="1" y="1" width="1198" height="748" fill="none" stroke="#dcddd6" stroke-width="2"/>
-<g stroke="#dcddd6" stroke-width="2">
-  <path d="M300 120V450M460 120V450M620 120V450M780 120V450M940 120V450"/>
-  <path d="M140 200H1060M140 300H1060M140 400H1060"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" font-family="IBM Plex Mono, monospace">
+<rect width="1200" height="750" fill="#e8ebe4"/>
+<!-- phone -->
+<rect x="430" y="80" width="340" height="720" rx="48" fill="#10120f"/>
+<rect x="444" y="94" width="312" height="692" rx="36" fill="#f2f4ee"/>
+<!-- map -->
+<g stroke="#dcdfd6" stroke-width="3">
+  <path d="M444 200H756M444 320H756M444 440H756M520 94V560M620 94V560M710 94V560"/>
 </g>
-<path d="M300 400 H460 V300 H620 V200 H860" fill="none" stroke="#2743e0" stroke-width="6" stroke-dasharray="18 12"/>
-<circle cx="300" cy="400" r="14" fill="#141513"/>
-<g transform="translate(860,200)">
-  <path d="M0 -46c-20 0-34 14-34 32 0 24 34 60 34 60s34-36 34-60c0-18-14-32-34-32z" fill="#2743e0"/>
-  <circle cx="0" cy="-16" r="11" fill="#f0f0ec"/>
+<g stroke="#e7eae1" stroke-width="10"><path d="M480 94V560M444 260H756"/></g>
+<path d="M480 470 H620 V320 H710 V210" fill="none" stroke="#2743e0" stroke-width="6" stroke-dasharray="16 10"/>
+<circle cx="480" cy="470" r="12" fill="#141513"/>
+<g transform="translate(710,210)">
+  <path d="M0 -40c-17 0-29 12-29 27 0 21 29 51 29 51s29-30 29-51c0-15-12-27-29-27z" fill="#2743e0"/>
+  <circle cx="0" cy="-14" r="9" fill="#f2f4ee"/>
 </g>
-<g font-family="IBM Plex Mono, monospace" font-size="18" fill="#5c5e59">
-  <text x="322" y="428">order</text>
-  <text x="900" y="248">21 min</text>
+<!-- bottom order card -->
+<rect x="444" y="540" width="312" height="246" rx="24" fill="#ffffff"/>
+<text x="476" y="590" font-size="17" font-weight="600" fill="#141513">Ordine in arrivo</text>
+<text x="476" y="618" font-size="13" fill="#5c5e59">21 min · 2.4 km</text>
+<rect x="476" y="642" width="248" height="10" rx="5" fill="#eceee9"/>
+<rect x="476" y="642" width="170" height="10" rx="5" fill="#2743e0"/>
+<g font-size="13" fill="#5c5e59">
+  <text x="476" y="690">6x acqua frizzante</text>
+  <text x="476" y="716">2x succo arancia</text>
 </g>
-<text x="140" y="560" font-family="Space Grotesk, sans-serif" font-size="56" font-weight="700" fill="#141513" letter-spacing="-1.5">Quick-commerce MVP</text>
-<text x="142" y="608" font-family="IBM Plex Mono, monospace" font-size="22" fill="#5c5e59">confidential client</text>
+<rect x="640" y="672" width="84" height="56" rx="12" fill="#eceee9"/>
+<text x="660" y="706" font-size="18" fill="#141513">18€</text>
 </svg>
