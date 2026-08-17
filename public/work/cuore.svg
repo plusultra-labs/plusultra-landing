@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750">
+  <rect width="1200" height="750" fill="#f0f0ec"/>
+  <rect x="1" y="1" width="1198" height="748" fill="none" stroke="#dcddd6" stroke-width="2"/>
+  <text x="80" y="330" font-family="Space Grotesk, sans-serif" font-size="60" font-weight="700" fill="#141513" letter-spacing="-2">Cuore e Respiro</text>
+  <rect x="82" y="360" width="120" height="6" fill="#2743e0"/>
+  <text x="80" y="430" font-family="IBM Plex Mono, monospace" font-size="24" fill="#5c5e59">health app, in development</text>
+</svg>

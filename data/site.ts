@@ -59,10 +59,34 @@ export const allWork: WorkItem[] = [
   {
     slug: "insightflow",
     name: "InsightFlow",
-    tagline: "Cross-channel reporting for agency teams",
+    tagline: "AI analytics on top of your spreadsheets",
     description:
-      "Marketing intelligence platform used by agency teams to unify SEO and paid performance reporting across clients. In production with a dedicated reporting team at an international agency.",
+      "Multi-tenant platform that turns raw CSVs, Excel files, and Google Sheets into AI-driven analysis: formulas, charts, commentary, and exportable client reports, with a pluggable connector framework for marketing data sources. In production at an international agency with a dedicated reporting team.",
     image: "/work/insightflow.svg",
+  },
+  {
+    slug: "hotelflex",
+    name: "HotelFlex",
+    tagline: "Flexible booking on welfare credits",
+    description:
+      "Family of booking platforms (hotels, events, experiences) built on one shared core: authentication, welfare-credit wallets, coupons, and vouchers, letting Italian welfare users spend their benefits on real travel inventory.",
+    image: "/work/hotelflex.svg",
+  },
+  {
+    slug: "fms-portal",
+    name: "Workshop order portal",
+    tagline: "Live production tracking for an artisan workshop",
+    description:
+      "Order-tracking portal for a stone-engraving workshop that refused to give up its spreadsheet, so we didn't ask it to: the workbook stays the source of truth, the portal syncs it every few minutes into a mobile dashboard for each sales agent plus an admin view of every production stage.",
+    image: "/work/fms.svg",
+  },
+  {
+    slug: "cuore-e-respiro",
+    name: "Cuore e Respiro",
+    tagline: "Personal health trends from your wearable",
+    description:
+      "Health companion app that reads heart rate, sleep, SpO2, and activity from Apple Health and Health Connect, builds each person's own baseline, and flags deviations from it with gentle, non-diagnostic check-ins. Nuxt + Capacitor, one codebase to iOS and Android.",
+    image: "/work/cuore.svg",
   },
   {
     slug: "real-estate",
@@ -73,12 +97,44 @@ export const allWork: WorkItem[] = [
     image: "/work/realestate.svg",
   },
   {
-    slug: "patrimo",
-    name: "Patrimo",
-    tagline: "CRM built for financial advisors",
+    slug: "agency-ai",
+    name: "Agency AI transformation",
+    tagline: "An AI innovation program inside a real agency",
     description:
-      "Relationship and portfolio CRM designed around how independent financial advisors actually work: clients, mandates, and follow-ups in one place.",
-    image: "/work/patrimo.svg",
+      "Multi-phase AI adoption program for an international digital agency: SEO and paid workflows automated with AI, a keyword-ranking pipeline tracking tens of thousands of keywords weekly, and audit tooling that replaced multiple third-party subscriptions.",
+    image: "/work/agency-ai.svg",
+  },
+  {
+    slug: "medical-assistant",
+    name: "Medical group AI assistant",
+    tagline: "Automated patient intake and scheduling",
+    description:
+      "Intelligent appointment and patient-intake system for a network of medical clinics: automated triage of requests, WhatsApp-based conversations, and schedule optimization, integrated with the group's practice management.",
+    image: "/work/medical-assistant.svg",
+  },
+  {
+    slug: "art-platform",
+    name: "Art industry platform",
+    tagline: "Co-founded, funded, and scaled",
+    description:
+      "Tech platform for the art industry we co-founded and led as product: from concept through EUR 3M in seed funding and a 25-person team.",
+    image: "/work/art-platform.svg",
+  },
+  {
+    slug: "document-ai",
+    name: "Document intelligence platform",
+    tagline: "Thousands of documents a day, understood",
+    description:
+      "Enterprise document processing with OCR, intelligent categorization, and structured data extraction, handling thousands of documents daily with accuracy that improves as it runs.",
+    image: "/work/document-ai.svg",
+  },
+  {
+    slug: "beverage-mvp",
+    name: "Quick-commerce delivery MVP",
+    tagline: "Concept to live product in four weeks",
+    description:
+      "Beverage delivery platform with real-time order tracking, inventory, and smart routing, taken from first call to a live MVP with paying customers in one month.",
+    image: "/work/beverage.svg",
   },
 ];
 
@@ -109,9 +165,5 @@ export const products: Product[] = [
     name: "IntelligoAI",
     url: "https://intelligo-ai.com",
     line: "Practice management for medical clinics, pay per visit",
-  },
-  {
-    name: "Patrimo",
-    line: "CRM for financial advisors",
   },
 ];
