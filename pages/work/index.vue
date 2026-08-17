@@ -13,18 +13,29 @@
     <section class="mx-auto max-w-site px-5 pb-20 md:px-10 md:pb-28">
       <div class="grid gap-x-7 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
         <article v-for="item in allWork" :key="item.slug">
-          <div class="overflow-hidden bg-[#e7e7e2]">
-            <img
-              :src="item.image"
-              :alt="item.name"
-              class="aspect-[8/5] w-full object-cover contrast-[1.02] grayscale-[35%]"
-              loading="lazy"
-            />
-          </div>
-          <div class="pt-4">
-            <b class="text-[17px] font-medium">{{ item.name }}</b>
-            <p class="mt-1 text-[14px] text-ink-soft">{{ item.tagline }}</p>
-          </div>
+          <component
+            :is="item.url ? 'a' : 'div'"
+            :href="item.url"
+            :target="item.url ? '_blank' : undefined"
+            class="group block"
+          >
+            <div class="overflow-hidden border border-line bg-[#e7e7e2]">
+              <img
+                :src="item.image"
+                :alt="item.name"
+                class="aspect-[8/5] w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
+                loading="lazy"
+              />
+            </div>
+            <div class="pt-4">
+              <b class="text-[17px] font-medium">
+                {{ item.name }}
+                <span v-if="item.url" class="ml-1 text-[13px] font-normal text-accent">↗</span>
+              </b>
+              <p class="mt-0.5 text-[14px] font-medium text-ink-soft">{{ item.tagline }}</p>
+              <p class="mt-2 text-[14px] leading-relaxed text-ink-soft">{{ item.description }}</p>
+            </div>
+          </component>
         </article>
       </div>
     </section>

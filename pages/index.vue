@@ -75,11 +75,11 @@
       </h2>
       <div class="grid gap-7 md:grid-cols-[2fr_1fr]">
         <NuxtLink to="/work" class="flex flex-col md:row-span-2">
-          <div class="flex-1 overflow-hidden bg-[#e7e7e2]">
+          <div class="flex-1 overflow-hidden border border-line bg-[#e7e7e2]">
             <img
               :src="featuredWork[0].image"
               :alt="featuredWork[0].name"
-              class="h-full w-full object-cover contrast-[1.02] grayscale-[35%]"
+              class="h-full w-full object-cover object-top"
               loading="lazy"
             />
           </div>
@@ -89,11 +89,11 @@
           </div>
         </NuxtLink>
         <NuxtLink v-for="item in featuredWork.slice(1)" :key="item.slug" to="/work">
-          <div class="overflow-hidden bg-[#e7e7e2]">
+          <div class="overflow-hidden border border-line bg-[#e7e7e2]">
             <img
               :src="item.image"
               :alt="item.name"
-              class="w-full object-cover contrast-[1.02] grayscale-[35%]"
+              class="aspect-[8/5] w-full object-cover object-top"
               loading="lazy"
             />
           </div>
