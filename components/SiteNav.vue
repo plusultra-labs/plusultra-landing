@@ -41,7 +41,6 @@ const open = ref(false);
 const links = [
   { to: "/services", label: "Services" },
   { to: "/work", label: "Work" },
-  { to: "/products", label: "Products" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ];

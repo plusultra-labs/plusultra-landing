@@ -230,33 +230,6 @@ export const allWork: WorkItem[] = [
 
 export const featuredWork = allWork.slice(0, 3);
 
-export interface Product {
-  name: string;
-  url?: string;
-  line: string;
-}
-
-export const products: Product[] = [
-  {
-    name: "BuzzWatch",
-    url: "https://buzzwatch.ai",
-    line: "See and improve what AI assistants say about a brand",
-  },
-  {
-    name: "InsightFlow",
-    line: "AI analysis and client reports from raw spreadsheets",
-  },
-  {
-    name: "ItaSign",
-    url: "https://itasign.com",
-    line: "Legally valid digital signatures, pay per signature",
-  },
-  {
-    name: "IntelligoAI",
-    url: "https://intelligo-ai.com",
-    line: "Management software for medical clinics, pay per visit",
-  },
-];
 
 export interface TeamMember {
   name: string;

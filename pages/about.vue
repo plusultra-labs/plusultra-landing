@@ -26,7 +26,7 @@
           <h2 class="mb-2 text-lg font-medium">AI-first for real</h2>
           <p class="text-[14.5px] leading-relaxed text-ink-soft">
             Our own operations run on AI assistants we built: dispatching
-            work, triaging messages, drafting invoices. We sell what we use.
+            work and triaging messages for us every day. We sell what we use.
           </p>
         </div>
         <div class="p-6 md:px-10 md:py-9">

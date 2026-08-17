@@ -58,17 +58,16 @@ export const avatars: Record<string, AvatarSpec> = {
       { l: 20, b: 26, w: 56, h: 10, br: "999px", bg: BLUE_MID },
     ],
   },
-  // 2 · side part + glasses + collar
+  // 2 · side part, dark-blond hair
   alberto: {
     field: FIELD_GREY,
     layers: [
       shoulders(HAIR_SOFT),
       { l: 34, b: 22, w: 28, h: 16, br: "0 0 999px 999px", bg: SKIN_1 },
       neck(SKIN_1, 50),
-      { l: 29, t: 14, w: 38, h: 26, br: "999px 999px 0 0", bg: GREY },
+      { l: 29, t: 14, w: 38, h: 26, br: "999px 999px 0 0", bg: "#a67c48" },
       head(SKIN_1),
-      { l: 29, t: 15, w: 38, h: 12, br: "999px 999px 40% 40%", bg: GREY },
-      ...glasses(),
+      { l: 29, t: 15, w: 38, h: 12, br: "999px 999px 40% 40%", bg: "#a67c48" },
     ],
   },
   // 3 · fringe + headphones

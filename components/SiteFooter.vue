@@ -7,7 +7,7 @@
       <div class="flex gap-6">
         <NuxtLink to="/services" class="hover:text-ink">Services</NuxtLink>
         <NuxtLink to="/work" class="hover:text-ink">Work</NuxtLink>
-        <NuxtLink to="/products" class="hover:text-ink">Products</NuxtLink>
+        <NuxtLink to="/about" class="hover:text-ink">About</NuxtLink>
       </div>
       <a href="mailto:alberto@plusultralabs.com" class="font-mono hover:text-ink">
         alberto@plusultralabs.com
