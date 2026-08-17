@@ -164,11 +164,12 @@ export const allWork: WorkItem[] = [
     period: "2026 - launching",
     tags: ["Client platform", "Real estate"],
     service: "custom-platforms",
-    image: "/work/realestate.svg",
+    image: "/work/realestate.jpg",
     url: "https://colzaniandpartners.com",
     paragraphs: [
-      "A luxury real estate firm operating between Dubai, Milan, and Monaco needed a digital presence that matched its properties.",
-      "We designed and built a dark, gold-accented listing experience with an admin area the firm uses to publish properties in-house, no agency needed for updates.",
+      "A luxury real estate advisory operating between Dubai, Milan, and Monaco needed a digital presence that matched its properties.",
+      "We designed and built a warm, editorial listing experience: full-bleed photography, refined serif typography, and property pages for each of the three markets.",
+      "An admin area lets the firm publish and update properties in-house, no agency needed for day-to-day changes.",
     ],
   },
   {
