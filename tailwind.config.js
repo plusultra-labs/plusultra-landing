@@ -1,26 +1,44 @@
 /** @type {import('tailwindcss').Config} */
+// Colours are CSS custom properties so the dark-mode block in main.css can
+// re-point them without a second Tailwind palette. Opacity modifiers
+// (text-ink/50) do not work on these — use a token or color-mix instead.
 export default {
   content: [],
   theme: {
     extend: {
       colors: {
-        paper: "#f7f7f4",
-        ink: {
-          DEFAULT: "#141513",
-          soft: "#5c5e59",
+        paper: {
+          DEFAULT: "var(--paper)",
+          2: "var(--paper2)",
         },
-        line: "#dcddd6",
+        ink: {
+          DEFAULT: "var(--ink)",
+          soft: "var(--muted)",
+        },
+        muted: "var(--muted)",
+        line: {
+          DEFAULT: "var(--line)",
+          2: "var(--line2)",
+        },
         accent: {
-          DEFAULT: "#2743e0",
-          soft: "#98a6ff",
+          DEFAULT: "var(--accent)",
+          soft: "var(--accent-soft)",
         },
       },
       fontFamily: {
-        sans: ["Space Grotesk", "ui-sans-serif", "system-ui", "sans-serif"],
+        sans: ["IBM Plex Sans", "Helvetica", "ui-sans-serif", "sans-serif"],
+        display: ["Newsreader", "Georgia", "ui-serif", "serif"],
         mono: ["IBM Plex Mono", "ui-monospace", "monospace"],
       },
       maxWidth: {
-        site: "1320px",
+        site: "1280px",
+      },
+      borderRadius: {
+        DEFAULT: "2px",
+        sm: "2px",
+      },
+      transitionTimingFunction: {
+        pu: "cubic-bezier(.2,.7,.2,1)",
       },
     },
   },

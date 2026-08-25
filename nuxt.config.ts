@@ -1,3 +1,5 @@
+import { ALL_ROUTES, PREFIXED_LOCALES } from "./data/routes";
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
@@ -12,7 +14,14 @@ export default defineNuxtConfig({
     compressPublicAssets: true,
     prerender: {
       crawlLinks: true,
-      routes: ["/"],
+      // Listed explicitly rather than left to the crawler, so a broken link in
+      // the language switcher cannot quietly drop a whole language.
+      routes: [
+        ...ALL_ROUTES.map((r) => r.path),
+        "/sitemap.xml",
+        "/llms.txt",
+        ...PREFIXED_LOCALES.map((l) => `/${l}/llms.txt`),
+      ],
     },
   },
 
@@ -27,7 +36,6 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: "Plusultra Labs - AI Product Studio",
-      htmlAttrs: { lang: "en" },
       meta: [
         { charset: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -49,10 +57,25 @@ export default defineNuxtConfig({
         },
         {
           rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap",
+          href: "https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap",
         },
       ],
-      script: [{ src: "https://server.fillout.com/embed/v1/", defer: true }],
+    },
+  },
+
+  hooks: {
+    // pages/[locale]/[...path].vue would otherwise match /services and /about
+    // too. Pinning the param to the real language codes keeps the English
+    // routes unambiguous instead of relying on route-ranking order.
+    "pages:extend"(pages) {
+      for (const page of pages) {
+        if (page.path.startsWith("/:locale()")) {
+          page.path = page.path.replace(
+            "/:locale()",
+            `/:locale(${PREFIXED_LOCALES.join("|")})`,
+          );
+        }
+      }
     },
   },
 });

@@ -11,11 +11,15 @@ export interface WorkItem {
   image: string;
   url?: string;
   service: "ai-product-development" | "ai-integration" | "custom-platforms";
+  /** own = we built it and it is ours. client = we built it for someone.
+   *  role = someone else's company, where we do the product and AI work. */
+  kind: "own" | "client" | "role";
 }
 
 export const allWork: WorkItem[] = [
   {
     slug: "buzzwatch",
+    kind: "own",
     name: "BuzzWatch",
     tagline: "See what AI says about your brand",
     period: "2024 - today",
@@ -31,21 +35,23 @@ export const allWork: WorkItem[] = [
   },
   {
     slug: "tourscanner",
+    kind: "role",
     name: "TourScanner",
-    tagline: "Compare tours and attractions worldwide",
-    period: "2017 - today",
-    tags: ["Own product", "Travel", "Consumer"],
+    tagline: "AI and product inside a travel metasearch",
+    period: "2023 - today",
+    tags: ["Product role", "Travel", "Consumer"],
     service: "ai-product-development",
     image: "/work/tourscanner.jpg",
     url: "https://tourscanner.com",
     paragraphs: [
-      "TourScanner is a travel search engine that compares tours, activities, and attraction tickets across the major booking sites, the way flight search works for flights.",
-      "We built it from scratch: data ingestion from all major booking platforms, matching millions of listings to the right attraction, ranking, and a multi-language consumer experience.",
-      "It grew into an international product used by millions of travelers a year, and the strongest proof that we can take a product from idea to global scale.",
+      "TourScanner is a travel metasearch that compares tours, activities, and attraction tickets across more than thirty booking sites, the way flight search works for flights. It was founded in 2018 by other people, and we did not build it.",
+      "Alberto joined in 2023 and works there on AI and product: over 1.5 million offers across 5,000 destinations, matched to the right attraction, ranked, and kept current at a scale where every model call has to justify its cost.",
+      "It is the clearest example of the work this studio does most of the time. Somebody else founded the company; our job is to make the product better from the inside.",
     ],
   },
   {
     slug: "intelligoai",
+    kind: "own",
     name: "IntelligoAI",
     tagline: "Pay-per-visit management for medical clinics",
     period: "2025 - today",
@@ -61,6 +67,7 @@ export const allWork: WorkItem[] = [
   },
   {
     slug: "itasign",
+    kind: "own",
     name: "ItaSign",
     tagline: "Digital signatures without subscriptions",
     period: "2025 - today",
@@ -75,6 +82,7 @@ export const allWork: WorkItem[] = [
   },
   {
     slug: "travel-platform-engine",
+    kind: "own",
     name: "Travel platform engine",
     tagline: "Managing a portfolio of travel platforms at scale",
     period: "2025 - today",
@@ -89,6 +97,7 @@ export const allWork: WorkItem[] = [
   },
   {
     slug: "insightflow",
+    kind: "client",
     name: "InsightFlow",
     tagline: "AI analysis on top of your spreadsheets",
     period: "2024 - today",
@@ -103,6 +112,7 @@ export const allWork: WorkItem[] = [
   },
   {
     slug: "hotelflex",
+    kind: "own",
     name: "HotelFlex",
     tagline: "Book hotels with welfare credits",
     period: "2023 - today",
@@ -117,6 +127,7 @@ export const allWork: WorkItem[] = [
   },
   {
     slug: "eventflex",
+    kind: "own",
     name: "EventFlex",
     tagline: "Concerts and events on welfare credits",
     period: "2024 - today",
@@ -131,6 +142,7 @@ export const allWork: WorkItem[] = [
   },
   {
     slug: "fms-portal",
+    kind: "client",
     name: "Workshop order portal",
     tagline: "Live order tracking for an artisan workshop",
     period: "2026",
@@ -145,6 +157,7 @@ export const allWork: WorkItem[] = [
   },
   {
     slug: "cuore-e-respiro",
+    kind: "client",
     name: "Cuore e Respiro",
     tagline: "Personal health trends from your wearable",
     period: "2026 - in development",
@@ -159,6 +172,7 @@ export const allWork: WorkItem[] = [
   },
   {
     slug: "colzani-partners",
+    kind: "client",
     name: "Colzani & Partners",
     tagline: "Luxury real estate, Dubai to Monaco",
     period: "2026 - launching",
@@ -174,6 +188,7 @@ export const allWork: WorkItem[] = [
   },
   {
     slug: "agency-ai",
+    kind: "client",
     name: "Agency AI transformation",
     tagline: "An AI innovation program inside a real agency",
     period: "2026 - today",
@@ -188,21 +203,23 @@ export const allWork: WorkItem[] = [
   },
   {
     slug: "artupia",
+    kind: "own",
     name: "Artupia",
     tagline: "Custom art, made by real artists",
-    period: "2016 - 2021",
-    tags: ["Co-founded", "Marketplace"],
+    period: "2014 - 2021",
+    tags: ["Founded", "Marketplace"],
     service: "ai-product-development",
     image: "/work/artupia.svg",
     url: "https://artupia.com",
     paragraphs: [
       "Artupia let anyone commission a custom artwork from a real artist: describe what you want, artists propose, you follow the piece from sketch to delivery.",
-      "We co-founded the company and led product and technology: marketplace, artist tools, and the commissioning experience.",
-      "The venture raised EUR 3M in funding and grew to a team of 25.",
+      "Alberto founded it and ran it as CEO for seven years, with product and technology in his hands across web, iOS, and backend: the marketplace, the artist tools, and the whole commissioning experience.",
+      "It grew past 100,000 users and a team of 20, and raised up to EUR 3M, before Covid closed the art market it depended on.",
     ],
   },
   {
     slug: "document-ai",
+    kind: "client",
     name: "Document intelligence platform",
     tagline: "Thousands of documents a day, understood",
     period: "2023",
@@ -216,6 +233,7 @@ export const allWork: WorkItem[] = [
   },
   {
     slug: "beverage-mvp",
+    kind: "client",
     name: "Quick-commerce delivery MVP",
     tagline: "Idea to live product in four weeks",
     period: "2022",
@@ -229,28 +247,26 @@ export const allWork: WorkItem[] = [
   },
 ];
 
-export const featuredWork = allWork.slice(0, 3);
 
-
+// Job titles live in the per-locale copy files, keyed by `avatar`.
 export interface TeamMember {
   name: string;
-  role: string;
   avatar: string;
 }
 
 export const team: TeamMember[] = [
-  { name: "Alberto", role: "Founder · Product", avatar: "alberto" },
-  { name: "Wei Lin", role: "Engineering Lead", avatar: "weilin" },
-  { name: "Marta", role: "Senior Product Designer", avatar: "marta" },
-  { name: "Ravi", role: "AI Engineer", avatar: "ravi" },
-  { name: "Giulia", role: "Full-stack Engineer", avatar: "giulia" },
-  { name: "Jun Kai", role: "Full-stack Engineer", avatar: "junkai" },
-  { name: "Elena", role: "Product Designer", avatar: "elena" },
-  { name: "Tommaso", role: "Project Manager", avatar: "tommaso" },
-  { name: "Sofia", role: "Project Manager", avatar: "sofia" },
-  { name: "Andrés", role: "Brand Designer", avatar: "andres" },
-  { name: "Priya", role: "Data Engineer", avatar: "priya" },
-  { name: "Luca", role: "QA & Operations", avatar: "luca" },
+  { name: "Alberto", avatar: "alberto" },
+  { name: "Wei Lin", avatar: "weilin" },
+  { name: "Marta", avatar: "marta" },
+  { name: "Ravi", avatar: "ravi" },
+  { name: "Giulia", avatar: "giulia" },
+  { name: "Jun Kai", avatar: "junkai" },
+  { name: "Elena", avatar: "elena" },
+  { name: "Tommaso", avatar: "tommaso" },
+  { name: "Sofia", avatar: "sofia" },
+  { name: "Andrés", avatar: "andres" },
+  { name: "Priya", avatar: "priya" },
+  { name: "Luca", avatar: "luca" },
 ];
 
 export interface PricingTier {
@@ -258,57 +274,3 @@ export interface PricingTier {
   title: string;
   body: string;
 }
-
-export const pricing: Record<WorkItem["service"], PricingTier[]> = {
-  "ai-product-development": [
-    {
-      price: "~ EUR 15k",
-      title: "Validate",
-      body: "A working first version of your product in 3 to 6 weeks: the core experience, real users, real feedback. Enough to know if the idea deserves more.",
-    },
-    {
-      price: "~ EUR 40k",
-      title: "Launch",
-      body: "The full product: polished design, payments, admin area, AI features where they earn their place. Ready for paying customers.",
-    },
-    {
-      price: "EUR 80k+",
-      title: "Scale",
-      body: "Multi-market product with a roadmap: new features shipping weekly, infrastructure that grows with you, our team as your product team.",
-    },
-  ],
-  "ai-integration": [
-    {
-      price: "~ EUR 8k",
-      title: "Pilot",
-      body: "One workflow automated end to end on your real data, with a measurable result. If it doesn't pay for itself, you'll know fast.",
-    },
-    {
-      price: "~ EUR 25k",
-      title: "Rollout",
-      body: "AI across your core processes: documents, customer communication, internal knowledge. Your team trained, costs under control.",
-    },
-    {
-      price: "from EUR 2k/mo",
-      title: "Operate",
-      body: "We keep it running and improving: monitoring, cost tracking, model upgrades, and new automations as they prove themselves.",
-    },
-  ],
-  "custom-platforms": [
-    {
-      price: "~ EUR 5k",
-      title: "Site or portal",
-      body: "A professional website or a small internal portal, with an admin area so you manage content yourself.",
-    },
-    {
-      price: "~ EUR 15k",
-      title: "Full platform",
-      body: "A complete platform with user accounts, integrations with the tools you already use, and a real back office.",
-    },
-    {
-      price: "EUR 35k+",
-      title: "Business backbone",
-      body: "The system your company runs on: multiple apps, automations, reporting, operated and evolved by us over time.",
-    },
-  ],
-};

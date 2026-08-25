@@ -1,21 +1,41 @@
 <template>
   <button
-    data-fillout-id="6zvrYQxe7Cus"
-    data-fillout-embed-type="popup"
-    data-fillout-dynamic-resize
-    data-fillout-inherit-parameters
-    data-fillout-popup-size="medium"
+    type="button"
     :class="[
-      'inline-block px-6 py-3 text-[15px] font-medium transition-transform hover:-translate-y-px active:scale-[0.98]',
-      variant === 'accent' ? 'bg-accent text-white' : 'bg-ink text-paper',
+      'inline-flex items-center gap-2.5 rounded-sm font-medium transition-[background-color,color,transform,border-color] duration-[250ms]',
+      sizes[size],
+      variant === 'onInk'
+        ? 'bg-paper text-ink hover:-translate-y-0.5 hover:bg-accent hover:text-paper'
+        : 'bg-ink text-paper hover:-translate-y-0.5 hover:bg-accent',
     ]"
+    @click="openBooking"
   >
-    Book a call
+    <slot>{{ c.common.bookCall }}</slot>
+    <span v-if="arrow" aria-hidden="true">&rarr;</span>
   </button>
 </template>
 
 <script setup lang="ts">
-withDefaults(defineProps<{ variant?: "dark" | "accent" }>(), {
-  variant: "dark",
-});
+// Primary action: ink by default, inverted on ink-coloured sections.
+// One primary per view; hover turns it accent and lifts it 2px.
+//
+// Opens the in-page cal.com dialog, which is mounted once in the layout so
+// every one of these buttons drives the same instance.
+withDefaults(
+  defineProps<{
+    variant?: "primary" | "onInk";
+    size?: "sm" | "md" | "lg";
+    arrow?: boolean;
+  }>(),
+  { variant: "primary", size: "md", arrow: false },
+);
+
+const c = useCopy();
+const { openBooking } = useBookCall();
+
+const sizes = {
+  sm: "h-10 px-5 text-[14px]",
+  md: "h-[52px] px-6 text-[15px]",
+  lg: "h-[58px] px-7 text-[16px]",
+};
 </script>
