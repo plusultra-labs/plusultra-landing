@@ -10,58 +10,65 @@
   and the spacing are what keep it from collapsing in Outlook.
 
   Both images are served from the live site, so they only render once this repo
-  is deployed. The avatar is a pre-cut circle because Outlook's Word engine
-  ignores border-radius; the logo is the dark plate on purpose, since it
-  carries its own background and holds up on a white message and in a client's
-  dark mode alike.
+  is deployed, and both ship at exactly twice the size they are displayed at
+  (236x112 and 80x80) — never larger. Every mail client drops CSS sooner or
+  later, and then the file renders at its natural size, so the file itself has
+  to be the right size. Same reason the dimensions sit on the width and height
+  ATTRIBUTES as well as in the style: attributes survive where the style does
+  not.
+
+  The avatar is a pre-cut circle because the Word engine behind Outlook ignores
+  border-radius. The logo is the dark plate on purpose, since it carries its
+  own background and holds up on a white message and in a client's dark mode
+  alike.
 
   Tables, inline styles and px sizes are not old-fashioned here, they are the
   only things every mail client agrees on. Do not "modernise" this to flexbox.
 -->
 <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font-family:Helvetica,Arial,sans-serif;">
   <tr>
-    <td style="padding:0 18px 0 0;vertical-align:top;">
+    <td style="padding:0 16px 0 0;vertical-align:middle;">
       <a href="https://plusultralabs.com" style="text-decoration:none;">
-        <img src="https://plusultralabs.com/brand/plusultra-labs-email-dark.png"
-             width="140" height="70" alt="Plusultra Labs"
-             style="display:block;width:140px;height:70px;border:0;outline:none;text-decoration:none;">
+        <img src="https://plusultralabs.com/brand/signature-logo.png"
+             width="118" height="56" alt="Plusultra Labs"
+             style="display:block;width:118px;height:56px;max-width:118px;border:0;outline:none;text-decoration:none;">
       </a>
     </td>
-    <td style="padding:0 18px 0 0;vertical-align:top;">
-      <div style="width:1px;height:86px;background-color:#DFDCD6;font-size:0;line-height:0;">&nbsp;</div>
+    <td style="padding:0 16px 0 0;vertical-align:middle;">
+      <div style="width:1px;height:64px;background-color:#DFDCD6;font-size:0;line-height:0;">&nbsp;</div>
     </td>
-    <td style="vertical-align:top;">
+    <td style="vertical-align:middle;">
       <!-- Nested table so the face sits against the name itself, not after
            the longest line below it. Nesting is the email-safe way to do a
            row inside a row. -->
       <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
         <tr>
-          <td style="padding:0 12px 0 0;vertical-align:middle;">
+          <td style="padding:0 10px 0 0;vertical-align:middle;">
             <!-- EDIT: avatar -->
             <img src="https://plusultralabs.com/brand/avatar-alberto.png"
-                 width="46" height="46" alt=""
-                 style="display:block;width:46px;height:46px;border:0;outline:none;border-radius:23px;">
+                 width="40" height="40" alt=""
+                 style="display:block;width:40px;height:40px;max-width:40px;border:0;outline:none;border-radius:20px;">
           </td>
           <td style="vertical-align:middle;">
             <!-- EDIT: name -->
-            <div style="font-size:15px;line-height:20px;font-weight:600;color:#22252C;letter-spacing:-0.2px;font-family:Helvetica,Arial,sans-serif;">
+            <div style="font-size:15px;line-height:19px;font-weight:600;color:#22252C;letter-spacing:-0.2px;font-family:Helvetica,Arial,sans-serif;">
               Alberto Lina
             </div>
             <!-- EDIT: role -->
-            <div style="font-size:13px;line-height:18px;color:#71767F;font-family:Helvetica,Arial,sans-serif;">
+            <div style="font-size:12px;line-height:17px;color:#71767F;font-family:Helvetica,Arial,sans-serif;">
               Founder &middot; Product &middot; Plusultra Labs
             </div>
           </td>
         </tr>
         <tr>
-          <td colspan="2" style="padding-top:9px;font-family:Helvetica,Arial,sans-serif;">
-            <div style="font-size:13px;line-height:18px;">
+          <td colspan="2" style="padding-top:8px;font-family:Helvetica,Arial,sans-serif;">
+            <div style="font-size:12px;line-height:17px;">
               <!-- EDIT: email -->
               <a href="mailto:alberto@plusultralabs.com" style="color:#2C5484;text-decoration:none;">alberto@plusultralabs.com</a>
               <span style="color:#C9C5BD;">&nbsp;&middot;&nbsp;</span>
               <a href="https://plusultralabs.com" style="color:#2C5484;text-decoration:none;">plusultralabs.com</a>
             </div>
-            <div style="font-size:12px;line-height:17px;color:#9A9EA6;padding-top:4px;">
+            <div style="font-size:11px;line-height:16px;color:#9A9EA6;padding-top:3px;">
               AI product studio &middot; Singapore &middot;
               <a href="https://plusultralabs.com/contact" style="color:#9A9EA6;text-decoration:underline;">Book a 30-minute call</a>
             </div>

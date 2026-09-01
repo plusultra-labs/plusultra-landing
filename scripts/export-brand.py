@@ -288,6 +288,14 @@ for name, bg, colours in (('light', '#FAF9F7', LIGHT), ('dark', '#22252C', DARK)
         png(art, f'{OUT}/plusultra-labs-email-{name}{tag}.png',
             width, round(width * ph / pw))
 
+# The signature's own pair, at exactly twice the size they are displayed at.
+# Anything larger is a liability: a client that drops the width attribute
+# renders the file at its natural size, and a 520px logo then swamps the mail.
+SIG_W = 118
+pw, ph, art = plate('#22252C', radius_f=0.07, pad_f=0.075, **DARK)
+png(art, f'{OUT}/signature-logo.png', SIG_W * 2, round(SIG_W * 2 * ph / pw))
+print(f'   displayed at {SIG_W}x{round(SIG_W * ph / pw)}')
+
 # The email signature's avatar. Outlook's Word engine ignores border-radius,
 # so the circle has to be cut into the file itself.
 from PIL import Image, ImageDraw  # noqa: E402
@@ -306,7 +314,7 @@ def round_avatar(src, out, size):
     out_im.resize((size, size), Image.LANCZOS).save(out)
     print(f'{os.path.relpath(out, ROOT)}  {size}x{size}')
 
-round_avatar(f'{PUB}/alberto.jpg', f'{OUT}/avatar-alberto.png', 160)
+round_avatar(f'{PUB}/alberto.jpg', f'{OUT}/avatar-alberto.png', 80)  # shown at 40
 
 # The social card, on the same ink plate as the mark. Composed here rather
 # than kept as a hand-made file so it can never drift from the wordmark.

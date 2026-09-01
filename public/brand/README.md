@@ -23,7 +23,8 @@ third one closes into a smear below about 20px.
 | `mark-transparent.svg` | the mark with no plate, for placing on your own colour |
 | `plusultra-labs-email-light.png` / `-dark.png` | email signatures: rounded plate baked in, 520×261, drop in at `width="260"` |
 | `plusultra-labs-email-*@1x.png` | the same at 260×130, for anywhere retina does not matter |
-| `avatar-alberto.png` | 160×160 pre-cut circle for the email signature — Outlook ignores `border-radius` |
+| `signature-logo.png` | 236×112, shown at 118×56 in the signature — kept at exactly 2× so a client that drops the CSS still renders it at a sane size |
+| `avatar-alberto.png` | 80×80 pre-cut circle, shown at 40×40 — the Word engine behind Outlook ignores `border-radius` |
 
 Clear space: at least the height of the "L" in LABS on every side.
 Minimum width: 120px — below that the LABS line stops being legible.
