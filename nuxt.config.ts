@@ -47,21 +47,26 @@ export default defineNuxtConfig({
         // The palette follows the visitor's system setting, so the browser
         // chrome has to follow it too, otherwise a dark page keeps a paper
         // white address bar on mobile.
+        // data-scheme lets useTheme() re-point these when the visitor
+        // overrides the system setting with the header toggle.
         {
           name: "theme-color",
           media: "(prefers-color-scheme: light)",
           content: "#faf9f7",
+          "data-scheme": "light",
         },
         {
           name: "theme-color",
           media: "(prefers-color-scheme: dark)",
           content: "#232830",
+          "data-scheme": "dark",
         },
       ],
       link: [
         { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
         { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
         { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
+        { rel: "manifest", href: "/site.webmanifest" },
         { rel: "preconnect", href: "https://fonts.googleapis.com" },
         {
           rel: "preconnect",
@@ -71,6 +76,18 @@ export default defineNuxtConfig({
         {
           rel: "stylesheet",
           href: "https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap",
+        },
+      ],
+
+      script: [
+        {
+          // Runs before the first paint: without it a visitor who chose dark
+          // gets a white flash while the app hydrates.
+          innerHTML:
+            "try{var t=localStorage.getItem('pu-theme');if(t==='light'||t==='dark'){document.documentElement.dataset.theme=t;" +
+            "for(var m of document.querySelectorAll(\"meta[name='theme-color']\"))" +
+            "m.media=m.dataset.scheme===t?'all':'not all'}}catch(e){}",
+          tagPosition: "head",
         },
       ],
     },

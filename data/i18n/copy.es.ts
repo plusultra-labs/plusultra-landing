@@ -16,6 +16,10 @@ export const copyEs: SiteCopy = {
     homeAria: "Plusultra Labs, inicio",
     menuAria: "Abrir el menú",
     languageAria: "Cambiar de idioma",
+    themeToDark: "Cambiar al tema oscuro",
+    themeToLight: "Cambiar al tema claro",
+    themeLight: "Claro",
+    themeDark: "Oscuro",
   },
 
   common: {

@@ -1,10 +1,13 @@
 /* Plusultra Labs brand identity v1.
    Tokens, type and motion imported from the Claude Design project
    "PlusUltra Agency Redesign" (Plusultra Labs.dc.html, brand page).
-   Light is the default; dark mode is generated from the same tokens and
-   follows the visitor's system setting only. */
+   Light is the default; dark is generated from the same tokens and follows
+   the visitor's system setting until they pick a side with the header
+   toggle, which stamps data-theme on <html> and wins from then on. */
 
 :root {
+  color-scheme: light;
+
   --paper: oklch(0.985 0.004 85);
   --paper2: oklch(0.958 0.006 85);
   --ink: oklch(0.235 0.012 260);
@@ -13,21 +16,45 @@
   --line2: oklch(0.815 0.008 85);
   --accent: oklch(0.47 0.088 250);
   --accent-soft: oklch(0.935 0.028 250);
-  color-scheme: light;
+
+  /* The dark palette, written once here and switched on by the two rules
+     below, so there is only ever one place to edit a dark value. */
+  --paper-dark: oklch(0.19 0.008 260);
+  --paper2-dark: oklch(0.24 0.01 260);
+  --ink-dark: oklch(0.955 0.004 85);
+  --muted-dark: oklch(0.705 0.012 260);
+  --line-dark: oklch(0.32 0.01 260);
+  --line2-dark: oklch(0.4 0.012 260);
+  --accent-dark: oklch(0.79 0.098 250);
+  --accent-soft-dark: oklch(0.305 0.045 250);
 }
 
+/* The system setting, unless the visitor has explicitly asked for light. */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --paper: oklch(0.19 0.008 260);
-    --paper2: oklch(0.24 0.01 260);
-    --ink: oklch(0.955 0.004 85);
-    --muted: oklch(0.705 0.012 260);
-    --line: oklch(0.32 0.01 260);
-    --line2: oklch(0.4 0.012 260);
-    --accent: oklch(0.79 0.098 250);
-    --accent-soft: oklch(0.305 0.045 250);
+  :root:not([data-theme="light"]) {
     color-scheme: dark;
+    --paper: var(--paper-dark);
+    --paper2: var(--paper2-dark);
+    --ink: var(--ink-dark);
+    --muted: var(--muted-dark);
+    --line: var(--line-dark);
+    --line2: var(--line2-dark);
+    --accent: var(--accent-dark);
+    --accent-soft: var(--accent-soft-dark);
   }
+}
+
+/* An explicit choice, whatever the system says. */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: var(--paper-dark);
+  --paper2: var(--paper2-dark);
+  --ink: var(--ink-dark);
+  --muted: var(--muted-dark);
+  --line: var(--line-dark);
+  --line2: var(--line2-dark);
+  --accent: var(--accent-dark);
+  --accent-soft: var(--accent-soft-dark);
 }
 
 html {

@@ -57,6 +57,10 @@ export interface SiteCopy {
     homeAria: string;
     menuAria: string;
     languageAria: string;
+    themeToDark: string;
+    themeToLight: string;
+    themeLight: string;
+    themeDark: string;
   };
 
   common: {
