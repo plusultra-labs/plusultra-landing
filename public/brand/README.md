@@ -23,6 +23,7 @@ third one closes into a smear below about 20px.
 | `mark-transparent.svg` | the mark with no plate, for placing on your own colour |
 | `plusultra-labs-email-light.png` / `-dark.png` | email signatures: rounded plate baked in, 520×261, drop in at `width="260"` |
 | `plusultra-labs-email-*@1x.png` | the same at 260×130, for anywhere retina does not matter |
+| `avatar-alberto.png` | 160×160 pre-cut circle for the email signature — Outlook ignores `border-radius` |
 
 Clear space: at least the height of the "L" in LABS on every side.
 Minimum width: 120px — below that the LABS line stops being legible.
@@ -33,6 +34,8 @@ The email files carry their own rounded plate because a mail client
 composites onto a background nobody controls — the light one on white, the
 dark one anywhere else. Set `width="260"` on the `<img>` and let the 520px
 file cover retina; only the corners are transparent.
+
+The signature markup itself lives in `docs/email-signature.html`.
 
 The same script also writes the site's own icons — `public/favicon.svg`,
 `favicon.ico`, `favicon-96x96.png`, `apple-touch-icon.png`, the two

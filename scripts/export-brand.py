@@ -288,6 +288,26 @@ for name, bg, colours in (('light', '#FAF9F7', LIGHT), ('dark', '#22252C', DARK)
         png(art, f'{OUT}/plusultra-labs-email-{name}{tag}.png',
             width, round(width * ph / pw))
 
+# The email signature's avatar. Outlook's Word engine ignores border-radius,
+# so the circle has to be cut into the file itself.
+from PIL import Image, ImageDraw  # noqa: E402
+
+def round_avatar(src, out, size):
+    im = Image.open(src).convert('RGB')
+    side = min(im.size)
+    im = im.crop(((im.width - side) // 2, (im.height - side) // 2,
+                  (im.width + side) // 2, (im.height + side) // 2))
+    # Mask at 4x and downsample, so the edge is smooth rather than stepped.
+    im = im.resize((size * 4, size * 4), Image.LANCZOS)
+    mask = Image.new('L', im.size, 0)
+    ImageDraw.Draw(mask).ellipse((0, 0, im.width - 1, im.height - 1), fill=255)
+    out_im = Image.new('RGBA', im.size, (0, 0, 0, 0))
+    out_im.paste(im, (0, 0), mask)
+    out_im.resize((size, size), Image.LANCZOS).save(out)
+    print(f'{os.path.relpath(out, ROOT)}  {size}x{size}')
+
+round_avatar(f'{PUB}/alberto.jpg', f'{OUT}/avatar-alberto.png', 160)
+
 # The social card, on the same ink plate as the mark. Composed here rather
 # than kept as a hand-made file so it can never drift from the wordmark.
 ow, oh = 1200, 630
