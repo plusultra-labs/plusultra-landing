@@ -263,6 +263,31 @@ png(mark(512, bg=MARK_BG, inset=0.58), f'{PUB}/apple-touch-icon.png', 180, 180)
 for n in (192, 512):
     png(mark(512, bg=MARK_BG, inset=0.48), f'{PUB}/web-app-manifest-{n}x{n}.png', n, n)
 
+# Email signatures. A mail client composites onto a background nobody
+# controls, so these carry their own plate — rounded, with the corners cut
+# out to alpha — and ship at a fixed pixel size to be dropped in at half
+# their width (retina).
+
+
+def plate(bg, radius_f=0.055, pad_f=0.105, **colours):
+    """The lockup centred on its own rounded plate."""
+    w, h, body = lockup(scale=S, **colours)
+    pad = w * pad_f
+    pw, ph = w + pad * 2, h + pad * 2
+    return pw, ph, (
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{pw:.2f}" height="{ph:.2f}" '
+        f'viewBox="0 0 {pw:.2f} {ph:.2f}" role="img" aria-label="plusultra labs">'
+        f'<rect width="{pw:.2f}" height="{ph:.2f}" rx="{pw * radius_f:.2f}" fill="{bg}"/>'
+        f'<g transform="translate({pad:.2f} {pad:.2f})">{body}</g></svg>')
+
+
+for name, bg, colours in (('light', '#FAF9F7', LIGHT), ('dark', '#22252C', DARK)):
+    pw, ph, art = plate(bg, **colours)
+    open(f'{OUT}/plusultra-labs-email-{name}.svg', 'w').write(art + '\n')
+    for width, tag in ((520, ''), (260, '@1x')):
+        png(art, f'{OUT}/plusultra-labs-email-{name}{tag}.png',
+            width, round(width * ph / pw))
+
 # The social card, on the same ink plate as the mark. Composed here rather
 # than kept as a hand-made file so it can never drift from the wordmark.
 ow, oh = 1200, 630
