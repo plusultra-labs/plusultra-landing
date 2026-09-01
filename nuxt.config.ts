@@ -44,6 +44,19 @@ export default defineNuxtConfig({
           content:
             "Plusultra Labs is an AI product studio. We ship our own AI products, then bring the same engineering team to yours.",
         },
+        // The palette follows the visitor's system setting, so the browser
+        // chrome has to follow it too, otherwise a dark page keeps a paper
+        // white address bar on mobile.
+        {
+          name: "theme-color",
+          media: "(prefers-color-scheme: light)",
+          content: "#faf9f7",
+        },
+        {
+          name: "theme-color",
+          media: "(prefers-color-scheme: dark)",
+          content: "#232830",
+        },
       ],
       link: [
         { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
