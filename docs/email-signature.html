@@ -9,13 +9,27 @@
   avatar at their own file. Nothing else should move — the widths, the divider
   and the spacing are what keep it from collapsing in Outlook.
 
-  Both images are served from the live site, so they only render once this repo
-  is deployed, and both ship at exactly twice the size they are displayed at
-  (236x112 and 80x80) — never larger. Every mail client drops CSS sooner or
-  later, and then the file renders at its natural size, so the file itself has
-  to be the right size. Same reason the dimensions sit on the width and height
-  ATTRIBUTES as well as in the style: attributes survive where the style does
-  not.
+  Both images are served from the live site, so they only render once a deploy
+  has carried them there — check the URLs return 200 before blaming the markup.
+
+  They ship at EXACTLY the size they are displayed at, 132x63 and 44x44, and
+  that is not an oversight. Apple Mail's signature editor rewrites pasted HTML
+  and draws images at their natural size, ignoring the width attribute and the
+  style alike, so a 2x file arrives at double size and swamps the message. At
+  1:1 there is no natural size left to fall back to. If you install the
+  signature as a file instead of pasting it (see below), the sizing does
+  survive and you can point these at signature-logo@2x.png and
+  avatar-alberto@2x.png for a crisper logo on a retina screen.
+
+  The dimensions sit on the width and height ATTRIBUTES as well as in the
+  style, because attributes survive where the style does not.
+
+  PASTING INTO APPLE MAIL MANGLES THIS. Mail's editor rebuilds the markup and
+  stacks the table vertically. To keep it exact: make a placeholder signature
+  in Mail, quit Mail, then replace the body of the newest file in
+  ~/Library/Mail/V*/MailData/Signatures/*.mailsignature with this markup,
+  keeping that file's own header lines, and lock it with `chflags uchg` so Mail
+  cannot regenerate over it.
 
   The avatar is a pre-cut circle because the Word engine behind Outlook ignores
   border-radius. The logo is the dark plate on purpose, since it carries its
@@ -30,12 +44,12 @@
     <td style="padding:0 16px 0 0;vertical-align:middle;">
       <a href="https://plusultralabs.com" style="text-decoration:none;">
         <img src="https://plusultralabs.com/brand/signature-logo.png"
-             width="118" height="56" alt="Plusultra Labs"
-             style="display:block;width:118px;height:56px;max-width:118px;border:0;outline:none;text-decoration:none;">
+             width="132" height="63" alt="Plusultra Labs"
+             style="display:block;width:132px;height:63px;max-width:132px;border:0;outline:none;text-decoration:none;">
       </a>
     </td>
     <td style="padding:0 16px 0 0;vertical-align:middle;">
-      <div style="width:1px;height:64px;background-color:#DFDCD6;font-size:0;line-height:0;">&nbsp;</div>
+      <div style="width:1px;height:70px;background-color:#DFDCD6;font-size:0;line-height:0;">&nbsp;</div>
     </td>
     <td style="vertical-align:middle;">
       <!-- Nested table so the face sits against the name itself, not after
@@ -46,8 +60,8 @@
           <td style="padding:0 10px 0 0;vertical-align:middle;">
             <!-- EDIT: avatar -->
             <img src="https://plusultralabs.com/brand/avatar-alberto.png"
-                 width="40" height="40" alt=""
-                 style="display:block;width:40px;height:40px;max-width:40px;border:0;outline:none;border-radius:20px;">
+                 width="44" height="44" alt=""
+                 style="display:block;width:44px;height:44px;max-width:44px;border:0;outline:none;border-radius:22px;">
           </td>
           <td style="vertical-align:middle;">
             <!-- EDIT: name -->

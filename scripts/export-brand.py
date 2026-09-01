@@ -288,13 +288,18 @@ for name, bg, colours in (('light', '#FAF9F7', LIGHT), ('dark', '#22252C', DARK)
         png(art, f'{OUT}/plusultra-labs-email-{name}{tag}.png',
             width, round(width * ph / pw))
 
-# The signature's own pair, at exactly twice the size they are displayed at.
-# Anything larger is a liability: a client that drops the width attribute
-# renders the file at its natural size, and a 520px logo then swamps the mail.
-SIG_W = 118
+# The signature's own pair, at EXACTLY the size they are displayed at.
+#
+# Apple Mail's signature editor rewrites pasted HTML and renders images at
+# their natural size, ignoring both the width attribute and the style. A 2x
+# file therefore arrives at double size and swamps the message. The only
+# defence that always holds is shipping the file at 1:1, so there is no
+# "natural size" left to fall back to. @2x is written alongside for anyone
+# installing the signature as a file, where the sizing survives.
+SIG_W = 132
 pw, ph, art = plate('#22252C', radius_f=0.07, pad_f=0.075, **DARK)
-png(art, f'{OUT}/signature-logo.png', SIG_W * 2, round(SIG_W * 2 * ph / pw))
-print(f'   displayed at {SIG_W}x{round(SIG_W * ph / pw)}')
+png(art, f'{OUT}/signature-logo.png', SIG_W, round(SIG_W * ph / pw))
+png(art, f'{OUT}/signature-logo@2x.png', SIG_W * 2, round(SIG_W * 2 * ph / pw))
 
 # The email signature's avatar. Outlook's Word engine ignores border-radius,
 # so the circle has to be cut into the file itself.
@@ -314,7 +319,8 @@ def round_avatar(src, out, size):
     out_im.resize((size, size), Image.LANCZOS).save(out)
     print(f'{os.path.relpath(out, ROOT)}  {size}x{size}')
 
-round_avatar(f'{PUB}/alberto.jpg', f'{OUT}/avatar-alberto.png', 80)  # shown at 40
+round_avatar(f'{PUB}/alberto.jpg', f'{OUT}/avatar-alberto.png', 44)   # 1:1, see above
+round_avatar(f'{PUB}/alberto.jpg', f'{OUT}/avatar-alberto@2x.png', 88)
 
 # The social card, on the same ink plate as the mark. Composed here rather
 # than kept as a hand-made file so it can never drift from the wordmark.

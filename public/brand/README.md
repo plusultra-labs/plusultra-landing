@@ -23,8 +23,9 @@ third one closes into a smear below about 20px.
 | `mark-transparent.svg` | the mark with no plate, for placing on your own colour |
 | `plusultra-labs-email-light.png` / `-dark.png` | email signatures: rounded plate baked in, 520×261, drop in at `width="260"` |
 | `plusultra-labs-email-*@1x.png` | the same at 260×130, for anywhere retina does not matter |
-| `signature-logo.png` | 236×112, shown at 118×56 in the signature — kept at exactly 2× so a client that drops the CSS still renders it at a sane size |
-| `avatar-alberto.png` | 80×80 pre-cut circle, shown at 40×40 — the Word engine behind Outlook ignores `border-radius` |
+| `signature-logo.png` | 132×63, **1:1** — Apple Mail draws images at natural size no matter what the markup says, so the file must already be the display size |
+| `avatar-alberto.png` | 44×44 pre-cut circle, 1:1 — the Word engine behind Outlook ignores `border-radius` |
+| `signature-logo@2x.png` / `avatar-alberto@2x.png` | the retina pair, only safe where the sizing survives (signature installed as a file, not pasted) |
 
 Clear space: at least the height of the "L" in LABS on every side.
 Minimum width: 120px — below that the LABS line stops being legible.
@@ -36,7 +37,10 @@ composites onto a background nobody controls — the light one on white, the
 dark one anywhere else. Set `width="260"` on the `<img>` and let the 520px
 file cover retina; only the corners are transparent.
 
-The signature markup itself lives in `docs/email-signature.html`.
+The signature markup itself lives in `docs/email-signature.html`, and
+`scripts/install-mail-signature.sh` writes it straight into Apple Mail —
+pasting it into Mail's Signatures pane does not survive, the editor rebuilds
+the markup and stacks the table.
 
 The same script also writes the site's own icons — `public/favicon.svg`,
 `favicon.ico`, `favicon-96x96.png`, `apple-touch-icon.png`, the two
