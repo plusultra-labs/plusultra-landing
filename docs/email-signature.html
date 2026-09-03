@@ -12,14 +12,18 @@
   Both images are served from the live site, so they only render once a deploy
   has carried them there — check the URLs return 200 before blaming the markup.
 
-  They ship at EXACTLY the size they are displayed at, 132x63 and 44x44, and
-  that is not an oversight. Apple Mail's signature editor rewrites pasted HTML
-  and draws images at their natural size, ignoring the width attribute and the
-  style alike, so a 2x file arrives at double size and swamps the message. At
-  1:1 there is no natural size left to fall back to. If you install the
-  signature as a file instead of pasting it (see below), the sizing does
-  survive and you can point these at signature-logo@2x.png and
-  avatar-alberto@2x.png for a crisper logo on a retina screen.
+  The files are 2x of a deliberately small display size — 220x105 shown at
+  110x52, 80x80 shown at 40x40. Two constraints pull against each other here:
+  a retina screen needs 2x pixels or the logo goes soft, while Apple Mail,
+  when the signature is pasted instead of installed as a file, throws the
+  width away and draws the image at its natural size. At 2x of a small size,
+  a client that honours the width gets a crisp 110px logo and one that does
+  not gets a 220px one — bigger than intended, but still a signature.
+
+  The filenames carry their pixel size on purpose. Changing the size changes
+  the URL, and that matters: a mail client that has cached a 404 for a
+  filename will not retry it, so a renamed file is the only reliable way to
+  make it fetch again.
 
   The dimensions sit on the width and height ATTRIBUTES as well as in the
   style, because attributes survive where the style does not.
@@ -43,13 +47,13 @@
   <tr>
     <td style="padding:0 16px 0 0;vertical-align:middle;">
       <a href="https://plusultralabs.com" style="text-decoration:none;">
-        <img src="https://plusultralabs.com/brand/signature-logo.png"
-             width="132" height="63" alt="Plusultra Labs"
-             style="display:block;width:132px;height:63px;max-width:132px;border:0;outline:none;text-decoration:none;">
+        <img src="https://plusultralabs.com/brand/signature-logo-220.png"
+             width="110" height="52" alt="Plusultra Labs"
+             style="display:block;width:110px;height:52px;max-width:110px;border:0;outline:none;text-decoration:none;">
       </a>
     </td>
     <td style="padding:0 16px 0 0;vertical-align:middle;">
-      <div style="width:1px;height:70px;background-color:#DFDCD6;font-size:0;line-height:0;">&nbsp;</div>
+      <div style="width:1px;height:64px;background-color:#DFDCD6;font-size:0;line-height:0;">&nbsp;</div>
     </td>
     <td style="vertical-align:middle;">
       <!-- Nested table so the face sits against the name itself, not after
@@ -59,9 +63,9 @@
         <tr>
           <td style="padding:0 10px 0 0;vertical-align:middle;">
             <!-- EDIT: avatar -->
-            <img src="https://plusultralabs.com/brand/avatar-alberto.png"
-                 width="44" height="44" alt=""
-                 style="display:block;width:44px;height:44px;max-width:44px;border:0;outline:none;border-radius:22px;">
+            <img src="https://plusultralabs.com/brand/signature-avatar-80.png"
+                 width="40" height="40" alt=""
+                 style="display:block;width:40px;height:40px;max-width:40px;border:0;outline:none;border-radius:20px;">
           </td>
           <td style="vertical-align:middle;">
             <!-- EDIT: name -->

@@ -23,9 +23,12 @@ third one closes into a smear below about 20px.
 | `mark-transparent.svg` | the mark with no plate, for placing on your own colour |
 | `plusultra-labs-email-light.png` / `-dark.png` | email signatures: rounded plate baked in, 520×261, drop in at `width="260"` |
 | `plusultra-labs-email-*@1x.png` | the same at 260×130, for anywhere retina does not matter |
-| `signature-logo.png` | 132×63, **1:1** — Apple Mail draws images at natural size no matter what the markup says, so the file must already be the display size |
-| `avatar-alberto.png` | 44×44 pre-cut circle, 1:1 — the Word engine behind Outlook ignores `border-radius` |
-| `signature-logo@2x.png` / `avatar-alberto@2x.png` | the retina pair, only safe where the sizing survives (signature installed as a file, not pasted) |
+| `signature-logo-220.png` | shown at 110×52 — 2× for retina, and small enough that a client which ignores the width still renders a signature rather than a billboard |
+| `signature-avatar-80.png` | shown at 40×40, pre-cut circle — the Word engine behind Outlook ignores `border-radius` |
+
+The signature filenames carry their pixel size deliberately: changing the size
+changes the URL. A mail client that has cached a 404 for a filename will not
+retry it, so a rename is the only reliable way to make it fetch again.
 
 Clear space: at least the height of the "L" in LABS on every side.
 Minimum width: 120px — below that the LABS line stops being legible.

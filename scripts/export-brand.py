@@ -288,18 +288,21 @@ for name, bg, colours in (('light', '#FAF9F7', LIGHT), ('dark', '#22252C', DARK)
         png(art, f'{OUT}/plusultra-labs-email-{name}{tag}.png',
             width, round(width * ph / pw))
 
-# The signature's own pair, at EXACTLY the size they are displayed at.
+# The signature pair. Two constraints pull against each other:
 #
-# Apple Mail's signature editor rewrites pasted HTML and renders images at
-# their natural size, ignoring both the width attribute and the style. A 2x
-# file therefore arrives at double size and swamps the message. The only
-# defence that always holds is shipping the file at 1:1, so there is no
-# "natural size" left to fall back to. @2x is written alongside for anyone
-# installing the signature as a file, where the sizing survives.
-SIG_W = 132
+#   - Retina wants 2x pixels, or the logo is visibly soft.
+#   - Apple Mail, when the signature is pasted rather than installed as a
+#     file, throws the width away and draws the image at its natural size.
+#
+# So the file is 2x of a deliberately small display size. Sized properly it is
+# a crisp 110px logo; sized by Mail it is a 220px one — bigger than intended,
+# but still a signature rather than a billboard. The filenames carry their
+# pixel size, which also gives a fresh URL whenever they change: a client that
+# has cached a 404 for a name will never retry it.
+SIG_W = 220                   # file; displayed at half this
 pw, ph, art = plate('#22252C', radius_f=0.07, pad_f=0.075, **DARK)
-png(art, f'{OUT}/signature-logo.png', SIG_W, round(SIG_W * ph / pw))
-png(art, f'{OUT}/signature-logo@2x.png', SIG_W * 2, round(SIG_W * 2 * ph / pw))
+png(art, f'{OUT}/signature-logo-{SIG_W}.png', SIG_W, round(SIG_W * ph / pw))
+print(f'   displayed at {SIG_W // 2}x{round(SIG_W * ph / pw) // 2}')
 
 # The email signature's avatar. Outlook's Word engine ignores border-radius,
 # so the circle has to be cut into the file itself.
@@ -319,8 +322,7 @@ def round_avatar(src, out, size):
     out_im.resize((size, size), Image.LANCZOS).save(out)
     print(f'{os.path.relpath(out, ROOT)}  {size}x{size}')
 
-round_avatar(f'{PUB}/alberto.jpg', f'{OUT}/avatar-alberto.png', 44)   # 1:1, see above
-round_avatar(f'{PUB}/alberto.jpg', f'{OUT}/avatar-alberto@2x.png', 88)
+round_avatar(f'{PUB}/alberto.jpg', f'{OUT}/signature-avatar-80.png', 80)  # shown at 40
 
 # The social card, on the same ink plate as the mark. Composed here rather
 # than kept as a hand-made file so it can never drift from the wordmark.
