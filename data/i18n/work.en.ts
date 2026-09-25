@@ -12,6 +12,8 @@ export const workEn = Object.fromEntries(
       period: w.period,
       tags: w.tags,
       paragraphs: w.paragraphs,
+      outcome: w.outcome,
+      metrics: w.metrics,
     },
   ]),
 ) as WorkTexts;

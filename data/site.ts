@@ -10,11 +10,20 @@ export interface WorkItem {
   paragraphs: string[];
   image: string;
   url?: string;
-  service: "ai-product-development" | "ai-integration" | "custom-platforms";
+  service: "ai-product-development" | "ai-integration" | "custom-platforms" | "fractional-ai-leadership";
   /** own = we built it and it is ours. client = we built it for someone.
    *  role = someone else's company, where we do the product and AI work. */
   kind: "own" | "client" | "role";
+  /** One short, concrete result, shown under the name in homepage rows. */
+  outcome?: string;
+  /** The first is the headline number on a featured card; the rest are
+   *  smaller facts under it. Only for items that have real numbers. */
+  metrics?: { value: string; label: string }[];
 }
+
+/** The three homepage showcase cards, chosen by hand: each one leads with a
+ *  real number, and TourScanner (kind "role") has to be reachable too. */
+export const featuredSlugs = ["tourscanner", "travel-platform-engine", "beverage-mvp"];
 
 export const allWork: WorkItem[] = [
   {
@@ -22,6 +31,7 @@ export const allWork: WorkItem[] = [
     kind: "own",
     name: "BuzzWatch",
     tagline: "See what AI says about your brand",
+    outcome: "From zero to paying customers and an agency partner",
     period: "2024 - today",
     tags: ["Own product", "AI", "Marketing tech"],
     service: "ai-product-development",
@@ -38,14 +48,20 @@ export const allWork: WorkItem[] = [
     kind: "role",
     name: "TourScanner",
     tagline: "AI and product inside a travel metasearch",
+    outcome: "AI and product since 2023, inside a company founded by others in 2018",
+    metrics: [
+      { value: "1.5M+", label: "travel offers matched to the right attraction, ranked and kept current, with every model call priced" },
+      { value: "30+", label: "booking sites compared" },
+      { value: "5,000", label: "destinations" },
+    ],
     period: "2023 - today",
     tags: ["Product role", "Travel", "Consumer"],
     service: "ai-product-development",
     image: "/work/tourscanner.jpg",
     url: "https://tourscanner.com",
     paragraphs: [
-      "TourScanner is a travel metasearch that compares tours, activities, and attraction tickets across more than thirty booking sites, the way flight search works for flights. It was founded in 2018 by other people, and we did not build it.",
-      "Alberto joined in 2023 and works there on AI and product: over 1.5 million offers across 5,000 destinations, matched to the right attraction, ranked, and kept current at a scale where every model call has to justify its cost.",
+      "At TourScanner, Alberto works on AI and product: over 1.5 million offers across 5,000 destinations, matched to the right attraction, ranked, and kept current at a scale where every model call has to justify its cost.",
+      "TourScanner is a travel metasearch that compares tours, activities, and attraction tickets across more than thirty booking sites, the way flight search works for flights. Other people founded it in 2018, and we did not build it; Alberto joined in 2023.",
       "It is the clearest example of the work this studio does most of the time. Somebody else founded the company; our job is to make the product better from the inside.",
     ],
   },
@@ -54,6 +70,7 @@ export const allWork: WorkItem[] = [
     kind: "own",
     name: "IntelligoAI",
     tagline: "Pay-per-visit management for medical clinics",
+    outcome: "Clinics pay per visit, not per year",
     period: "2025 - today",
     tags: ["Own product", "Healthcare"],
     service: "ai-product-development",
@@ -70,6 +87,7 @@ export const allWork: WorkItem[] = [
     kind: "own",
     name: "ItaSign",
     tagline: "Digital signatures without subscriptions",
+    outcome: "Legal e-signatures, paid per signature, no subscription",
     period: "2025 - today",
     tags: ["Own product", "Legal tech"],
     service: "ai-product-development",
@@ -85,6 +103,10 @@ export const allWork: WorkItem[] = [
     kind: "own",
     name: "Travel platform engine",
     tagline: "Managing a portfolio of travel platforms at scale",
+    outcome: "A new multilingual site live in hours, not weeks",
+    metrics: [
+      { value: "<24h", label: "to launch a complete new travel platform in several languages. It used to take weeks." },
+    ],
     period: "2025 - today",
     tags: ["Internal tool", "Travel", "Multi-site"],
     service: "custom-platforms",
@@ -100,6 +122,7 @@ export const allWork: WorkItem[] = [
     kind: "client",
     name: "InsightFlow",
     tagline: "AI analysis on top of your spreadsheets",
+    outcome: "Client reports an agency team ships every week",
     period: "2024 - today",
     tags: ["Client platform", "AI", "Analytics"],
     service: "ai-integration",
@@ -115,6 +138,7 @@ export const allWork: WorkItem[] = [
     kind: "own",
     name: "HotelFlex",
     tagline: "Book hotels with welfare credits",
+    outcome: "Hotels bookable with employee welfare credits",
     period: "2023 - today",
     tags: ["Own product", "Travel", "Fintech"],
     service: "ai-product-development",
@@ -130,6 +154,7 @@ export const allWork: WorkItem[] = [
     kind: "own",
     name: "EventFlex",
     tagline: "Concerts and events on welfare credits",
+    outcome: "Concerts and events on the same welfare wallet",
     period: "2024 - today",
     tags: ["Own product", "Events", "Fintech"],
     service: "ai-product-development",
@@ -145,6 +170,7 @@ export const allWork: WorkItem[] = [
     kind: "client",
     name: "Workshop order portal",
     tagline: "Live order tracking for an artisan workshop",
+    outcome: "Hundreds of orders visible, zero retraining",
     period: "2026",
     tags: ["Client platform", "Confidential"],
     service: "custom-platforms",
@@ -160,6 +186,7 @@ export const allWork: WorkItem[] = [
     kind: "client",
     name: "Cuore e Respiro",
     tagline: "Personal health trends from your wearable",
+    outcome: "One health app for iPhone and Android",
     period: "2026 - in development",
     tags: ["Client app", "Healthcare", "Mobile"],
     service: "ai-product-development",
@@ -175,6 +202,7 @@ export const allWork: WorkItem[] = [
     kind: "client",
     name: "Colzani & Partners",
     tagline: "Luxury real estate, Dubai to Monaco",
+    outcome: "Luxury listings published in-house, no agency",
     period: "2026 - launching",
     tags: ["Client platform", "Real estate"],
     service: "custom-platforms",
@@ -191,6 +219,7 @@ export const allWork: WorkItem[] = [
     kind: "client",
     name: "Agency AI transformation",
     tagline: "An AI innovation program inside a real agency",
+    outcome: "Every phase pays for itself before the next",
     period: "2026 - today",
     tags: ["Client program", "AI", "Confidential"],
     service: "ai-integration",
@@ -206,6 +235,7 @@ export const allWork: WorkItem[] = [
     kind: "own",
     name: "Artupia",
     tagline: "Custom art, made by real artists",
+    outcome: "100,000+ users and up to EUR 3M raised",
     period: "2014 - 2021",
     tags: ["Founded", "Marketplace"],
     service: "ai-product-development",
@@ -222,6 +252,7 @@ export const allWork: WorkItem[] = [
     kind: "client",
     name: "Document intelligence platform",
     tagline: "Thousands of documents a day, understood",
+    outcome: "Thousands of documents a day, read and sorted",
     period: "2023",
     tags: ["Client platform", "AI", "Confidential"],
     service: "ai-integration",
@@ -236,6 +267,10 @@ export const allWork: WorkItem[] = [
     kind: "client",
     name: "Quick-commerce delivery MVP",
     tagline: "Idea to live product in four weeks",
+    outcome: "Idea to real orders in four weeks",
+    metrics: [
+      { value: "4 wk", label: "from idea to a live delivery app taking real orders" },
+    ],
     period: "2022",
     tags: ["Client app", "Confidential"],
     service: "custom-platforms",

@@ -524,4 +524,179 @@ export const servicesIt: ServiceTexts = {
         "Piattaforme su misura di livello produzione: portali, CRM, marketplace, strumenti interni. Consegnate in settimane su stack moderno, da un team che ne manda avanti più di dieci sue.",
     },
   },
+
+  "fractional-ai-leadership": {
+    cardTitle: "Direzione AI part-time",
+    cardBody:
+      "Un responsabile AI senior dentro la tua direzione, a tempo parziale. Roadmap, scelte tra comprare e costruire, fornitori, controllo dei costi e un team che rilascia i primi progetti.",
+    title: "Un responsabile AI senior nella tua direzione, senza assumerlo a tempo pieno",
+    lead: "Quasi tutte le aziende sanno che l'AI conta, e quasi nessuna ha una persona senior che se ne prenda la responsabilità. Noi entriamo nella tua direzione 2-4 giorni al mese: fissiamo la roadmap, decidiamo cosa comprare e cosa costruire, scegliamo fornitori e modelli, teniamo sotto controllo il conto dell'AI, e il nostro team rilascia i primi progetti. I consigli arrivano da chi manda avanti prodotti AI suoi.",
+    specs: [
+      { label: "Impegno tipico", value: "2–4 giorni al mese" },
+      { label: "Formula", value: "Part-time, dentro la tua direzione" },
+      { label: "Prezzo", value: "Preventivo dopo la prima call" },
+    ],
+    narrative: {
+      heading: "Perché i piani sull'AI si fermano tra la riunione di direzione e il primo rilascio",
+      paragraphs: [
+        "Di solito va così. La direzione decide che l'AI è una priorità. A qualcuno si chiede di occuparsene, oltre al suo lavoro vero. I fornitori fanno le loro presentazioni, si comprano un paio di strumenti, un reparto fa un pilota, e un anno dopo nessuno sa dire quanto è costato né cosa ha cambiato. Quasi mai manca il budget. Manca una persona senior che prenda le decisioni e sappia distinguere una buona offerta da una cattiva.",
+        "Assumere quella persona a tempo pieno è lento e costa caro, e nella maggior parte delle aziende il ruolo non vale ancora un tempo pieno. Un consulente strategico ti scrive il piano, ma non lo costruisce. Noi stiamo nel mezzo: un responsabile AI senior che siede alle riunioni di direzione qualche giorno al mese, risponde della roadmap e ha dietro un team che costruisce quello che la roadmap dice.",
+        "Il giudizio viene dal nostro lavoro. Mandiamo avanti prodotti AI in produzione, tra cui BuzzWatch, che ha clienti paganti e una partnership enterprise con un'agenzia internazionale. Gestiamo un programma di innovazione AI dentro un'agenzia digitale internazionale, a fasi, e ogni fase deve ripagarsi prima che parta la successiva. Alberto lavora su AI e prodotto in TourScanner, un metamotore di viaggi con più di 1,5 milioni di offerte, dove ogni chiamata a un modello deve giustificare quello che costa. Prima ha fondato e guidato Artupia per sette anni, fino a 100.000 utenti e un team di 20 persone.",
+      ],
+      pullQuote:
+        "Ogni decisione sull'AI in mano a una persona senior, con dietro un team capace di costruirla.",
+    },
+    points: [
+      {
+        title: "Una roadmap legata al business",
+        body: "Partiamo da dove la tua azienda guadagna e perde soldi, poi decidiamo dove ha senso l'AI. La roadmap dice quali processi, in che ordine, con quale ritorno atteso e cosa si lascia perdere. Ogni mese la confrontiamo con quello che è successo davvero.",
+      },
+      {
+        title: "Comprare o costruire, deciso sui numeri",
+        body: "Certe cose conviene comprarle, altre costruirle, altre ancora non farle proprio. Decidiamo caso per caso, con il costo di ogni opzione messo per iscritto. Quando uno strumento che esiste già fa il lavoro, te lo diciamo.",
+      },
+      {
+        title: "Fornitori e modelli scelti sui tuoi dati",
+        body: "Leggiamo i contratti, proviamo i modelli sui tuoi dati e confrontiamo il costo vero per ogni attività. Ricevi una raccomandazione che puoi difendere, e i tuoi fornitori sanno che qualcuno di senior controlla il loro lavoro.",
+      },
+      {
+        title: "Costi dell'AI visibili e sotto controllo",
+        body: "Spesa tracciata per team, per strumento e per processo, con limiti fissati prima che arrivi la fattura. È la stessa disciplina che usiamo sui nostri prodotti, dove ogni chiamata a un modello deve guadagnarsi il posto.",
+      },
+      {
+        title: "Aiuto nelle assunzioni, anche di chi ci sostituirà",
+        body: "Quando arriva il momento di un team AI tuo, ti aiutiamo a definire i ruoli, a valutare i candidati su lavoro vero e a capire quali competenze devono stare in casa. L'obiettivo è un'azienda che per questo non ha più bisogno di noi.",
+      },
+      {
+        title: "I primi progetti, rilasciati dal nostro team",
+        body: "Una roadmap che nessuno costruisce resta un documento. Il nostro team rilascia i primi progetti con lo stesso stack e gli stessi standard dei nostri prodotti, sui tuoi account, così il piano diventa software che la gente usa.",
+      },
+    ],
+    pipeline: {
+      intro:
+        "Quattro fasi. Il primo mese serve a capire cosa hai già. Dopo il lavoro prende un ritmo mensile, e ogni progetto viene definito e concordato a parte.",
+      stages: [
+        {
+          title: "Inquadramento",
+          duration: "1 settimana",
+          basis: "Gratis",
+          body: "Una call, poi una risposta breve e scritta. Dove sta l'AI oggi nella tua azienda, cosa le chiede la direzione e se un responsabile part-time è la formula giusta per te.",
+          outputs: [
+            "Uso attuale dell'AI, spesa e fornitori sul tavolo",
+            "Una risposta onesta: ci siamo o non ci siamo",
+            "L'impegno adatto a te, con un preventivo",
+          ],
+        },
+        {
+          title: "Analisi",
+          duration: "Primo mese",
+          basis: "Mensile",
+          body: "Conosciamo il team, leggiamo i sistemi e guardiamo quanto ti costa già l'AI. Poi mettiamo per iscritto le decisioni che contano di più.",
+          outputs: [
+            "Mappa di dove l'AI si usa oggi e dove dovrebbe stare",
+            "Spesa AI attuale per strumento e fornitore",
+            "Le prime scelte tra comprare e costruire, motivate",
+            "Una roadmap per il prossimo trimestre",
+          ],
+        },
+        {
+          title: "Primi progetti",
+          duration: "Dal secondo mese",
+          basis: "Concordato per progetto",
+          body: "Il nostro team rilascia i primi punti della roadmap, così il piano si misura presto con lavoro vero e dati veri.",
+          outputs: [
+            "I primi progetti online, sui tuoi account",
+            "Il numero che ogni progetto deve spostare, misurato",
+            "Fornitori e modelli provati sui tuoi dati",
+            "Quello che non ha funzionato, abbandonato",
+          ],
+        },
+        {
+          title: "Direzione continuativa",
+          duration: "In corso",
+          basis: "Mensile",
+          body: "2-4 giorni al mese dentro il ritmo della tua direzione. La roadmap resta aggiornata, la spesa resta visibile e le decisioni arrivano in tempo.",
+          outputs: [
+            "Revisione mensile di roadmap e spesa",
+            "Scelte di fornitori e modelli man mano che il mercato cambia",
+            "Supporto nelle assunzioni per il tuo team AI",
+            "Passaggio di consegne quando assumi un responsabile a tempo pieno",
+          ],
+        },
+      ],
+      footnote:
+        "Puoi fermarti dopo qualsiasi fase e tenerti tutto quello che è stato prodotto fino a lì, sui tuoi account.",
+    },
+    deliverables: [
+      {
+        group: "Direzione",
+        items: [
+          "Una roadmap AI legata a ricavi e costi",
+          "Scelte tra comprare e costruire, scritte e motivate",
+          "Una lista chiara di dove l'AI non va usata",
+          "Una revisione mensile con la direzione",
+          "Un aggiornamento mensile breve per il consiglio o gli investitori",
+        ],
+      },
+      {
+        group: "Fornitori e costi",
+        items: [
+          "Rose di fornitori e modelli, provate sui tuoi dati",
+          "Revisione di contratti e prezzi prima della firma",
+          "Spesa AI tracciata per team, strumento e processo",
+          "Limiti di spesa e allarmi fissati in anticipo",
+          "Un piano per quando un fornitore cambia prezzo o qualità",
+        ],
+      },
+      {
+        group: "Team e progetti",
+        items: [
+          "Definizione dei ruoli per le tue assunzioni AI",
+          "Valutazione dei candidati su lavoro vero",
+          "I primi progetti, rilasciati dal nostro team",
+          "Codice, dati e account intestati a te",
+          "Documentazione che il tuo futuro team può riprendere",
+        ],
+      },
+    ],
+    notDoing: [
+      "Fare da figura di facciata. Un responsabile AI senza un team che costruisce è un titolo, non una funzione.",
+      "Presentazioni strategiche senza software funzionante dietro.",
+      "Somministrazione di personale a ore. Rispondiamo di decisioni e risultati, non di un foglio presenze.",
+      "Comprare strumenti perché li ha comprati un concorrente. Ogni acquisto ha un compito e un numero.",
+      "Lock-in. Roadmap, account e codice sono tuoi, con un passaggio di consegne pulito quando assumi il tuo responsabile.",
+    ],
+    faq: [
+      {
+        q: "Cosa vuol dire part-time, in pratica?",
+        a: "Un responsabile AI senior che fa parte della tua direzione 2-4 giorni al mese. Siamo alle riunioni dove si decide, rispondiamo della roadmap AI e ci assicuriamo che i primi progetti vengano davvero rilasciati.",
+      },
+      {
+        q: "In cosa è diverso da un consulente?",
+        a: "Un consulente ti consegna un piano. Noi prendiamo le decisioni, e il nostro team costruisce i primi punti della roadmap. Ci giudichi sul software in produzione e su quanto ti costa l'AI, non sulla qualità delle slide.",
+      },
+      {
+        q: "Perché non assumere un Head of AI a tempo pieno?",
+        a: "Più avanti potrebbe servirti, e ti aiutiamo ad assumerlo. Finché il ruolo non vale un tempo pieno, un responsabile part-time costa meno, parte prima e ha dietro un team che costruisce. Quando assumi, gli passiamo roadmap, decisioni e codice.",
+      },
+      {
+        q: "Quanto costa?",
+        a: "Dipende dall'impegno, tra 2 e 4 giorni al mese, e dai progetti che decidi di fare. Ti facciamo il preventivo dopo la prima call, quando sappiamo cosa ti serve.",
+      },
+      {
+        q: "Chi entra nella nostra direzione?",
+        a: "Una persona senior del nostro team, con nome e cognome prima di firmare qualsiasi cosa, e dietro gli ingegneri e i designer che rilasciano i progetti.",
+      },
+      {
+        q: "Ci consiglierete sempre di costruire con voi?",
+        a: "No. Comprare o costruire vuol dire proprio questo. Quando uno strumento che esiste già fa il lavoro, te lo diciamo e ti aiutiamo a sceglierlo. Costruiamo dove sul mercato non c'è niente che vada bene, o dove averlo tuo ti dà un vantaggio vero.",
+      },
+    ],
+    cta: "Ti serve una persona senior che si prenda in carico l'AI in azienda?",
+    meta: {
+      title: "Direzione AI part-time - Plusultra Labs",
+      description:
+        "Un responsabile AI senior dentro la tua direzione, 2-4 giorni al mese: roadmap, scelte tra comprare e costruire, fornitori e modelli, controllo dei costi AI e primi progetti rilasciati dal nostro team.",
+    },
+  },
 };

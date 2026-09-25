@@ -4,6 +4,7 @@ export const workIt: WorkTexts = {
   buzzwatch: {
     name: "BuzzWatch",
     tagline: "Guarda cosa dice l'AI del tuo marchio",
+    outcome: "Da zero a clienti paganti e un'agenzia partner",
     period: "2024 - oggi",
     tags: ["Prodotto nostro", "AI", "Marketing tech"],
     paragraphs: [
@@ -15,17 +16,24 @@ export const workIt: WorkTexts = {
   tourscanner: {
     name: "TourScanner",
     tagline: "AI e prodotto dentro un metamotore per il travel",
+    outcome: "AI e prodotto dal 2023, in un'azienda fondata da altri nel 2018",
+    metrics: [
+      { value: "1,5M+", label: "offerte di viaggio associate all'attrazione giusta, ordinate e aggiornate, con il costo di ogni chiamata al modello sotto controllo" },
+      { value: "30+", label: "siti di prenotazione confrontati" },
+      { value: "5.000", label: "destinazioni" },
+    ],
     period: "2023 - oggi",
     tags: ["Ruolo di prodotto", "Travel", "Consumer"],
     paragraphs: [
-      "TourScanner è un metamotore per il travel che confronta tour, attività e biglietti per le attrazioni su più di trenta siti di prenotazione, come i comparatori fanno con i voli. È stato fondato da altre persone nel 2018, e non l'abbiamo costruito noi.",
-      "Alberto è entrato nel 2023 e ci lavora su AI e prodotto: oltre un milione e mezzo di offerte su 5.000 destinazioni, associate all'attrazione giusta, ordinate e tenute aggiornate a una scala dove ogni chiamata a un modello deve giustificare il proprio costo.",
+      "In TourScanner Alberto lavora su AI e prodotto: oltre un milione e mezzo di offerte su 5.000 destinazioni, associate all'attrazione giusta, ordinate e tenute aggiornate a una scala dove ogni chiamata a un modello deve giustificare il proprio costo.",
+      "TourScanner è un metamotore per il travel che confronta tour, attività e biglietti per le attrazioni su più di trenta siti di prenotazione, come i comparatori fanno con i voli. L'hanno fondato altre persone nel 2018 e non l'abbiamo costruito noi; Alberto è entrato nel 2023.",
       "È l'esempio più chiaro del lavoro che questo studio fa quasi sempre. L'azienda l'ha fondata qualcun altro; il nostro compito è migliorare il prodotto dall'interno.",
     ],
   },
   intelligoai: {
     name: "IntelligoAI",
     tagline: "Gestionale a consumo per studi medici",
+    outcome: "Gli studi pagano a visita, non a canone annuale",
     period: "2025 - oggi",
     tags: ["Prodotto nostro", "Sanità"],
     paragraphs: [
@@ -37,6 +45,7 @@ export const workIt: WorkTexts = {
   itasign: {
     name: "ItaSign",
     tagline: "Firma digitale senza abbonamenti",
+    outcome: "Firme elettroniche valide, a consumo, senza abbonamento",
     period: "2025 - oggi",
     tags: ["Prodotto nostro", "Legal tech"],
     paragraphs: [
@@ -47,6 +56,10 @@ export const workIt: WorkTexts = {
   "travel-platform-engine": {
     name: "Motore per piattaforme travel",
     tagline: "Gestire un portafoglio di piattaforme travel su larga scala",
+    outcome: "Un nuovo sito multilingua online in ore, non settimane",
+    metrics: [
+      { value: "<24h", label: "per lanciare una nuova piattaforma di viaggio completa, in più lingue. Prima servivano settimane." },
+    ],
     period: "2025 - oggi",
     tags: ["Strumento interno", "Travel", "Multi-sito"],
     paragraphs: [
@@ -58,6 +71,7 @@ export const workIt: WorkTexts = {
   insightflow: {
     name: "InsightFlow",
     tagline: "Analisi AI sopra i tuoi fogli di calcolo",
+    outcome: "I report che un team di agenzia consegna ogni settimana",
     period: "2024 - oggi",
     tags: ["Piattaforma cliente", "AI", "Analytics"],
     paragraphs: [
@@ -69,6 +83,7 @@ export const workIt: WorkTexts = {
   hotelflex: {
     name: "HotelFlex",
     tagline: "Prenota hotel con il credito welfare",
+    outcome: "Hotel prenotabili con il credito welfare",
     period: "2023 - oggi",
     tags: ["Prodotto nostro", "Travel", "Fintech"],
     paragraphs: [
@@ -79,6 +94,7 @@ export const workIt: WorkTexts = {
   eventflex: {
     name: "EventFlex",
     tagline: "Concerti ed eventi con il credito welfare",
+    outcome: "Concerti ed eventi con lo stesso portafoglio welfare",
     period: "2024 - oggi",
     tags: ["Prodotto nostro", "Eventi", "Fintech"],
     paragraphs: [
@@ -89,6 +105,7 @@ export const workIt: WorkTexts = {
   "fms-portal": {
     name: "Portale ordini di laboratorio",
     tagline: "Stato degli ordini in tempo reale per un laboratorio artigiano",
+    outcome: "Centinaia di ordini sotto controllo, zero formazione",
     period: "2026",
     tags: ["Piattaforma cliente", "Riservato"],
     paragraphs: [
@@ -100,6 +117,7 @@ export const workIt: WorkTexts = {
   "cuore-e-respiro": {
     name: "Cuore e Respiro",
     tagline: "Le tue tendenze di salute lette dal dispositivo che indossi",
+    outcome: "Un'app per la salute, su iPhone e Android",
     period: "2026 - in sviluppo",
     tags: ["App cliente", "Sanità", "Mobile"],
     paragraphs: [
@@ -111,6 +129,7 @@ export const workIt: WorkTexts = {
   "colzani-partners": {
     name: "Colzani & Partners",
     tagline: "Immobili di lusso, da Dubai a Monaco",
+    outcome: "Annunci di lusso pubblicati in casa, senza agenzia",
     period: "2026 - in lancio",
     tags: ["Piattaforma cliente", "Immobiliare"],
     paragraphs: [
@@ -122,6 +141,7 @@ export const workIt: WorkTexts = {
   "agency-ai": {
     name: "Trasformazione AI di un'agenzia",
     tagline: "Un programma di innovazione AI dentro un'agenzia vera",
+    outcome: "Ogni fase si ripaga prima della successiva",
     period: "2026 - oggi",
     tags: ["Programma cliente", "AI", "Riservato"],
     paragraphs: [
@@ -133,6 +153,7 @@ export const workIt: WorkTexts = {
   artupia: {
     name: "Artupia",
     tagline: "Arte su commissione, fatta da artisti veri",
+    outcome: "Oltre 100.000 utenti e fino a 3 milioni di euro raccolti",
     period: "2014 - 2021",
     tags: ["Fondata", "Marketplace"],
     paragraphs: [
@@ -144,6 +165,7 @@ export const workIt: WorkTexts = {
   "document-ai": {
     name: "Piattaforma di lettura documenti",
     tagline: "Migliaia di documenti al giorno, capiti",
+    outcome: "Migliaia di documenti al giorno, letti e smistati",
     period: "2023",
     tags: ["Piattaforma cliente", "AI", "Riservato"],
     paragraphs: [
@@ -154,6 +176,10 @@ export const workIt: WorkTexts = {
   "beverage-mvp": {
     name: "MVP di consegne quick-commerce",
     tagline: "Dall'idea al prodotto online in quattro settimane",
+    outcome: "Dall'idea agli ordini veri in quattro settimane",
+    metrics: [
+      { value: "4 sett.", label: "dall'idea a un'app di consegne online, con ordini veri" },
+    ],
     period: "2022",
     tags: ["App cliente", "Riservato"],
     paragraphs: [

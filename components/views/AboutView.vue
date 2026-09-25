@@ -5,11 +5,11 @@
       <div class="mx-auto max-w-site px-5 md:px-10">
         <div class="grid items-end gap-12 py-16 md:grid-cols-[1.25fr_0.75fr] md:gap-16 md:pb-16 md:pt-[88px]">
           <div>
-            <div class="pu-fade mb-[22px] font-mono text-[11px] uppercase tracking-[0.16em] text-muted">
+            <div class="pu-fade mb-[22px] text-[15px] font-bold text-accent">
               {{ c.about.kicker }}
             </div>
             <h1
-              class="pu-rise mb-[26px] max-w-[20ch] font-display text-[clamp(40px,4.8vw,68px)] font-normal leading-[1.03] tracking-[-0.022em]"
+              class="pu-rise mb-[26px] max-w-[20ch] font-display text-[clamp(40px,4.8vw,68px)] font-extrabold leading-[1.03] tracking-[-0.022em]"
             >
               {{ c.about.heading }}
             </h1>
@@ -22,21 +22,21 @@
           </div>
           <div class="pu-fade grid gap-5 border-line md:border-l md:pl-8" style="animation-delay: 0.3s">
             <div>
-              <div class="mb-2 font-mono text-[10.5px] uppercase tracking-[0.14em] text-muted">
+              <div class="mb-2 text-[14px] font-bold text-muted">
                 {{ c.common.basedIn }}
               </div>
               <div class="text-[15.5px] leading-[1.5]">{{ c.common.location }}</div>
             </div>
             <div class="h-px bg-line" />
             <div>
-              <div class="mb-2 font-mono text-[10.5px] uppercase tracking-[0.14em] text-muted">
+              <div class="mb-2 text-[14px] font-bold text-muted">
                 {{ c.about.clientsLabel }}
               </div>
               <div class="text-[15.5px] leading-[1.5]">{{ c.about.clientsValue }}</div>
             </div>
             <div class="h-px bg-line" />
             <div>
-              <div class="mb-2 font-mono text-[10.5px] uppercase tracking-[0.14em] text-muted">
+              <div class="mb-2 text-[14px] font-bold text-muted">
                 {{ c.about.teamLabel }}
               </div>
               <div class="font-display text-[32px] leading-none">
@@ -51,7 +51,7 @@
     <!-- Founder story -->
     <section id="alberto" class="scroll-mt-28 border-b border-line">
       <div class="mx-auto max-w-site px-5 py-16 md:px-10 md:py-[92px]">
-        <div data-reveal class="mb-[18px] font-mono text-[11px] uppercase tracking-[0.16em] text-muted">
+        <div data-reveal class="mb-[18px] text-[15px] font-bold text-accent">
           {{ c.about.storyKicker }}
         </div>
         <div class="grid gap-12 md:grid-cols-[0.42fr_1fr] md:gap-16">
@@ -67,7 +67,7 @@
               />
               <div class="pt-4">
                 <div class="font-display text-[24px] leading-tight">Alberto</div>
-                <div class="mt-1 font-mono text-[10.5px] uppercase tracking-[0.12em] text-muted">
+                <div class="mt-1 text-[14px] font-bold text-muted">
                   {{ c.about.founderRole }}
                 </div>
                 <a
@@ -82,7 +82,7 @@
 
           <div data-reveal>
             <h2
-              class="mb-7 max-w-[22ch] font-display text-[clamp(28px,3vw,40px)] font-normal leading-[1.1] tracking-[-0.018em]"
+              class="mb-7 max-w-[22ch] font-display text-[clamp(28px,3vw,40px)] font-extrabold leading-[1.1] tracking-[-0.018em]"
             >
               {{ c.about.storyHeading }}
             </h2>
@@ -106,12 +106,12 @@
     <!-- Principles -->
     <section class="border-b border-line bg-paper-2">
       <div class="mx-auto max-w-site px-5 py-16 md:px-10 md:py-[92px]">
-        <div data-reveal class="mb-[18px] font-mono text-[11px] uppercase tracking-[0.16em] text-muted">
+        <div data-reveal class="mb-[18px] text-[15px] font-bold text-accent">
           {{ c.about.principlesKicker }}
         </div>
         <h2
           data-reveal
-          class="mb-12 max-w-[24ch] font-display text-[clamp(28px,3vw,40px)] font-normal leading-[1.1] tracking-[-0.018em]"
+          class="mb-12 max-w-[24ch] font-display text-[clamp(28px,3vw,40px)] font-extrabold leading-[1.1] tracking-[-0.018em]"
         >
           {{ c.about.principlesHeading }}
         </h2>
@@ -132,12 +132,12 @@
     <!-- Team -->
     <section class="border-b border-line">
       <div class="mx-auto max-w-site px-5 py-16 md:px-10 md:py-[92px]">
-        <div data-reveal class="mb-[18px] font-mono text-[11px] uppercase tracking-[0.16em] text-muted">
+        <div data-reveal class="mb-[18px] text-[15px] font-bold text-accent">
           {{ c.about.teamKicker }}
         </div>
         <h2
           data-reveal
-          class="mb-5 font-display text-[clamp(28px,3vw,40px)] font-normal leading-[1.1] tracking-[-0.018em]"
+          class="mb-5 font-display text-[clamp(28px,3vw,40px)] font-extrabold leading-[1.1] tracking-[-0.018em]"
         >
           {{ c.about.teamHeading }}
         </h2>
@@ -153,7 +153,7 @@
           >
             <TeamAvatar :person="member.avatar" :size="128" />
             <b class="mt-4 block text-[16px] font-medium">{{ member.name }}</b>
-            <p class="mt-0.5 font-mono text-[10.5px] uppercase tracking-[0.1em] text-muted">
+            <p class="mt-0.5 text-[14px] font-bold text-muted">
               {{ c.team[member.avatar] }}
             </p>
           </div>
@@ -167,7 +167,7 @@
         class="mx-auto flex max-w-site flex-wrap items-center justify-between gap-10 px-5 py-16 md:px-10 md:py-[88px]"
       >
         <h2
-          class="max-w-[24ch] font-display text-[clamp(30px,3.2vw,44px)] font-normal leading-[1.08] tracking-[-0.018em]"
+          class="max-w-[24ch] font-display text-[clamp(30px,3.2vw,44px)] font-extrabold leading-[1.08] tracking-[-0.018em]"
         >
           {{ c.about.ctaHeading }}
         </h2>

@@ -1,4 +1,4 @@
-// English long-form content for the three service pages. The other languages
+// English long-form content for the service pages. The other languages
 // live in data/i18n/services.<locale>.ts and satisfy the same shape; the
 // merge back into ServiceContent (with the localised URL) happens in
 // data/i18n/index.ts.
@@ -560,6 +560,182 @@ export const services: ServiceContent[] = [
       title: "Custom Platforms & SaaS Development - Plusultra Labs",
       description:
         "Production-grade custom platforms: portals, CRMs, marketplaces, internal tools. Delivered in weeks on a modern stack by a team that operates 10+ of its own.",
+    },
+  },
+  {
+    slug: "fractional-ai-leadership",
+    to: "/services/fractional-ai-leadership",
+    cardTitle: "Fractional AI leadership",
+    cardBody:
+      "A senior AI lead inside your leadership team, part-time. Roadmap, build-or-buy calls, vendors, cost control, and a team that ships the first builds.",
+    title: "A senior AI lead in your leadership team, without the full-time hire",
+    lead: "Most companies know AI matters and have nobody senior to own it. We sit inside your leadership team 2 to 4 days a month: we set the roadmap, make the build-or-buy calls, pick vendors and models, keep the AI bill under control, and our team ships the first builds. The advice comes from people who run AI products of their own.",
+    specs: [
+      { label: "Typical commitment", value: "2–4 days a month" },
+      { label: "Format", value: "Part-time, inside your leadership team" },
+      { label: "Price", value: "Quoted after the scoping call" },
+    ],
+    narrative: {
+      heading: "Why most AI plans stall between the leadership meeting and the first build",
+      paragraphs: [
+        "The usual pattern goes like this. Leadership agrees AI is a priority. Someone is asked to look into it on top of their real job. Vendors pitch, a few tools get bought, one team runs a pilot, and a year later nobody can say what it cost or what it changed. The missing piece is rarely budget. It is a senior person who owns the decisions and can tell a good vendor pitch from a bad one.",
+        "Hiring that person full-time is slow and expensive, and in most companies the role is not a full-time job yet. A strategy consultant can write the plan but will not build it. We fill the gap in between: a senior AI lead who sits in your leadership meetings a few days a month, owns the roadmap, and has a team behind them to build what the roadmap says.",
+        "The judgement comes from our own work. We run AI products in production, including BuzzWatch, which has paying customers and an enterprise partnership with an international agency. We run an AI innovation program inside an international digital agency, in phases, where every phase has to pay for itself before the next one starts. Alberto works on AI and product at TourScanner, a travel metasearch with more than 1.5 million offers, where every model call has to justify its cost. Before that he founded and ran Artupia for seven years, growing it to 100,000 users and a team of 20.",
+      ],
+      pullQuote:
+        "Every AI decision owned by someone senior, with a team behind them that can build it.",
+    },
+    points: [
+      {
+        title: "A roadmap tied to the business",
+        body: "We start from where your company makes and loses money, then decide where AI belongs. The roadmap names the workflows, the order, the expected return, and what gets dropped. Every month it is checked against what actually happened.",
+      },
+      {
+        title: "Build-or-buy calls, made with numbers",
+        body: "Some things you should buy, some you should build, and some you should not do at all. We make the call case by case, with the cost of each option written down. When an existing tool does the job, we say so.",
+      },
+      {
+        title: "Vendors and models, chosen on your data",
+        body: "We read the contracts, test the models on your own data, and compare the real cost per task. You get a recommendation you can defend, and your vendors know someone senior is checking their work.",
+      },
+      {
+        title: "AI costs you can see and control",
+        body: "Spend tracked per team, per tool, and per workflow, with limits set before the invoice arrives. It is the same discipline we apply to our own products, where every model call has to earn its place.",
+      },
+      {
+        title: "Hiring advice, including the hire that replaces us",
+        body: "When it is time for your own AI team, we help define the roles, review candidates on real work, and decide which skills belong in-house. The goal is a company that no longer needs us for this.",
+      },
+      {
+        title: "The first builds, shipped by our team",
+        body: "A roadmap nobody builds is a document. Our team ships the first builds on the same stack and standards we use for our own products, in your accounts, so the plan turns into software people use.",
+      },
+    ],
+    pipeline: {
+      intro:
+        "Four stages. The first month is about understanding what you already have. After that the work settles into a monthly rhythm, and each build is scoped and agreed on its own.",
+      stages: [
+        {
+          title: "Scoping",
+          duration: "1 week",
+          basis: "Free",
+          body: "A call, then a short written answer. Where AI sits in your company today, what leadership needs from it, and whether a part-time lead is the right shape for you.",
+          outputs: [
+            "Current AI use, spend, and vendors on the table",
+            "An honest fit or no-fit answer",
+            "The commitment that fits, and a quote",
+          ],
+        },
+        {
+          title: "Assessment",
+          duration: "First month",
+          basis: "Monthly",
+          body: "We meet the team, read the systems, and look at what AI already costs you. Then we write down the decisions that matter most.",
+          outputs: [
+            "Map of where AI is used, and where it should be",
+            "Current AI spend by tool and vendor",
+            "The first build-or-buy calls, with reasons",
+            "A roadmap for the next quarter",
+          ],
+        },
+        {
+          title: "First builds",
+          duration: "From month two",
+          basis: "Agreed per build",
+          body: "Our team ships the first items on the roadmap, so the plan meets real work and real data early.",
+          outputs: [
+            "The first builds live, in your accounts",
+            "The number each build has to move, measured",
+            "Vendor and model choices tested on your data",
+            "What did not work, dropped",
+          ],
+        },
+        {
+          title: "Ongoing leadership",
+          duration: "Ongoing",
+          basis: "Monthly",
+          body: "2 to 4 days a month inside your leadership rhythm. The roadmap stays current, spend stays visible, and decisions get made on time.",
+          outputs: [
+            "Monthly roadmap and spend review",
+            "Vendor and model decisions as the market moves",
+            "Hiring support for your own AI team",
+            "Handover when you hire a full-time lead",
+          ],
+        },
+      ],
+      footnote:
+        "You can stop after any stage and keep everything produced up to that point, in your own accounts.",
+    },
+    deliverables: [
+      {
+        group: "Direction",
+        items: [
+          "An AI roadmap tied to revenue and cost",
+          "Build-or-buy decisions, written down with their reasons",
+          "A clear list of where AI should not be used",
+          "A monthly review with the leadership team",
+          "A short monthly update for the board or investors",
+        ],
+      },
+      {
+        group: "Vendors and cost",
+        items: [
+          "Vendor and model shortlists, tested on your own data",
+          "Contract and pricing review before you sign",
+          "AI spend tracked per team, tool, and workflow",
+          "Spend limits and alerts set in advance",
+          "A plan for when a provider changes price or quality",
+        ],
+      },
+      {
+        group: "Team and builds",
+        items: [
+          "Role definitions for your AI hires",
+          "Candidate review on real work",
+          "The first builds, shipped by our team",
+          "Code, data, and accounts in your name",
+          "Documentation your future team can pick up",
+        ],
+      },
+    ],
+    notDoing: [
+      "Being a figurehead. An AI lead with no team to build is a title, not a function.",
+      "Strategy decks with no working software behind them.",
+      "Hourly staff augmentation. We own decisions and outcomes, not a timesheet.",
+      "Buying tools because a competitor did. Every purchase has a job and a number attached.",
+      "Lock-in. Your roadmap, your accounts, your code, and a clean handover when you hire your own lead.",
+    ],
+    faq: [
+      {
+        q: "What does fractional mean in practice?",
+        a: "A senior AI lead who is part of your leadership team 2 to 4 days a month. We join the meetings where decisions get made, own the AI roadmap, and make sure the first builds actually ship.",
+      },
+      {
+        q: "How is this different from hiring a consultant?",
+        a: "A consultant hands over a plan. We own the decisions, and our team builds the first items on the roadmap. You judge us on software in production and on what AI costs you, not on the quality of a deck.",
+      },
+      {
+        q: "Why not hire a full-time Head of AI?",
+        a: "You may need one later, and we help you hire them. Until the role is a full-time job, a part-time lead costs less, starts sooner, and comes with a team that can build. When you do hire, we hand over the roadmap, the decisions, and the code.",
+      },
+      {
+        q: "How much does it cost?",
+        a: "It depends on the commitment, between 2 and 4 days a month, and on the builds you decide to do. We quote it after the scoping call, once we know what you need.",
+      },
+      {
+        q: "Who would sit in our leadership team?",
+        a: "A senior person from our team, named before anything is signed, with the engineers and designers behind them who ship the builds.",
+      },
+      {
+        q: "Will you only recommend building with you?",
+        a: "No. Build-or-buy means exactly that. When an existing tool does the job, we say so and help you choose it. We build where nothing on the market fits, or where owning it gives you a real advantage.",
+      },
+    ],
+    cta: "Need someone senior to own AI in your company?",
+    meta: {
+      title: "Fractional AI Leadership - Plusultra Labs",
+      description:
+        "A senior AI lead inside your leadership team, 2 to 4 days a month: roadmap, build-or-buy calls, vendor and model choices, AI cost control, and first builds shipped by our team.",
     },
   },
 ];

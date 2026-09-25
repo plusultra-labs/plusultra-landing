@@ -14,12 +14,12 @@
           class="flex items-start justify-between gap-6 border-b border-line px-5 py-5 md:px-8 md:py-6"
         >
           <div>
-            <div class="font-mono text-[11px] uppercase tracking-[0.16em] text-muted">
+            <div class="text-[15px] font-bold text-accent">
               {{ c.booking.kicker }}
             </div>
             <h2
               :id="headingId"
-              class="mt-2.5 font-display text-[26px] font-normal leading-[1.1] tracking-[-0.018em] md:text-[32px]"
+              class="mt-2.5 font-display text-[26px] font-extrabold leading-[1.1] tracking-[-0.018em] md:text-[32px]"
             >
               {{ heading }}
             </h2>
@@ -90,7 +90,7 @@
                 @click="activeDate = day.date"
               >
                 <span class="text-[15px] leading-tight">{{ dayLabel(day) }}</span>
-                <span class="shrink-0 font-mono text-[10.5px] uppercase tracking-[0.1em] text-muted">
+                <span class="shrink-0 text-[14px] font-bold text-muted">
                   {{ fill(c.booking.slotCount, { n: day.slots.length }) }}
                 </span>
               </button>
@@ -102,13 +102,13 @@
                   v-for="slot in activeSlots"
                   :key="slot"
                   type="button"
-                  class="h-11 rounded-sm border border-line-2 font-mono text-[12.5px] transition-[border-color,background-color,color,transform] duration-[250ms] hover:-translate-y-0.5 hover:border-ink hover:bg-ink hover:text-paper"
+                  class="h-11 rounded-sm border border-line-2 text-[14px] font-bold transition-[border-color,background-color,color,transform] duration-[250ms] hover:-translate-y-0.5 hover:border-ink hover:bg-ink hover:text-paper"
                   @click="pick(slot)"
                 >
                   {{ timeFmt.format(new Date(slot)) }}
                 </button>
               </div>
-              <p class="mt-6 font-mono text-[10.5px] uppercase tracking-[0.12em] text-muted">
+              <p class="mt-6 text-[14px] font-bold text-muted">
                 {{ fill(c.booking.timezoneNote, { tz: timeZone }) }}
               </p>
             </div>
@@ -127,7 +127,7 @@
             <span class="text-[15.5px]">{{ chosenLabel }}</span>
             <button
               type="button"
-              class="font-mono text-[10.5px] uppercase tracking-[0.12em] text-muted underline underline-offset-4 hover:text-ink"
+              class="text-[14px] font-bold text-muted underline underline-offset-4 hover:text-ink"
               @click="step = 'slot'"
             >
               {{ c.booking.change }}
@@ -300,7 +300,7 @@ const lead = computed(() =>
 );
 
 const labelClass =
-  "mb-2 block font-mono text-[10.5px] uppercase tracking-[0.14em] text-muted";
+  "mb-2 block text-[14px] font-bold text-muted";
 const fieldClass =
   "block h-12 w-full rounded-sm border border-line-2 bg-paper px-4 text-[15px] text-ink transition-[border-color] duration-[250ms] placeholder:text-muted hover:border-ink focus:border-ink";
 

@@ -18,7 +18,10 @@ export type ServiceText = Omit<ServiceContent, "slug" | "to">;
 export type ServiceTexts = Record<ServiceSlug, ServiceText>;
 
 /** The words of a case study; slug, image, url and service stay in data/site.ts. */
-export type WorkText = Pick<WorkItem, "name" | "tagline" | "period" | "tags" | "paragraphs">;
+export type WorkText = Pick<
+  WorkItem,
+  "name" | "tagline" | "period" | "tags" | "paragraphs" | "outcome" | "metrics"
+>;
 export type WorkTexts = Record<string, WorkText>;
 
 export interface CategoryText {
@@ -114,7 +117,13 @@ export interface SiteCopy {
     heroEmphasis: string;
     lead: string;
     stats: Labelled[];
-    proofs: Labelled[];
+    /** The logo rule unrolled into the founder timeline, under the hero. */
+    timeline: { year: string; label: string }[];
+    sectorsLabel: string;
+    sectorsNote: string;
+    seeNumbers: string;
+    kindLabels: { own: string; client: string; role: string };
+    readCase: string;
     servicesKicker: string;
     servicesHeading: string;
     servicesIntro: string;
@@ -163,6 +172,9 @@ export interface SiteCopy {
     pricingKicker: string;
     pricingHeading: string;
     pricingNote: string;
+    /** Used instead when no tier carries a number (price on request). */
+    pricingHeadingOnRequest: string;
+    pricingNoteOnRequest: string;
     faqKicker: string;
     faqHeading: string;
     relatedKicker: string;

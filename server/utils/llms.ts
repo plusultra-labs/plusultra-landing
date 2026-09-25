@@ -30,10 +30,12 @@ ${services
   .map((s) => {
     const duration = s.specs[0]?.value ?? "";
     const price = s.specs[s.specs.length - 1]?.value ?? "";
-    return `- [${s.cardTitle}](${SITE_URL}${s.to}): ${s.cardBody} ${fill(
-      c.llms.typicalEngagement,
-      { duration, price },
-    )}`;
+    // "from {price}" only reads right for a number; a service with no public
+    // price (fractional leadership) lists its specs as they are instead.
+    const engagement = /\d/.test(price)
+      ? fill(c.llms.typicalEngagement, { duration, price })
+      : s.specs.map((sp) => `${sp.label}: ${sp.value}.`).join(" ");
+    return `- [${s.cardTitle}](${SITE_URL}${s.to}): ${s.cardBody} ${engagement}`;
   })
   .join("\n")}
 

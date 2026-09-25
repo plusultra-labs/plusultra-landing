@@ -1,32 +1,54 @@
-/* Plusultra Labs brand identity v1.
-   Tokens, type and motion imported from the Claude Design project
-   "PlusUltra Agency Redesign" (Plusultra Labs.dc.html, brand page).
-   Light is the default; dark is generated from the same tokens and follows
-   the visitor's system setting until they pick a side with the header
-   toggle, which stamps data-theme on <html> and wins from then on. */
+/* Plusultra Labs, direction "Further" (25/09/2026).
+   The page is the logo unrolled: three dashes, each longer than the last,
+   running into an arrow. Colour is one deep ultramarine used as full-bleed
+   fields, on pure white and near-black. No cream paper, no serif.
+   Mockups: https://claude.ai/artifact/JeVY5DXWeqV5vDKMXM3dvs
+
+   Two kinds of token:
+   - surfaces and text (paper, ink, muted, line, accent) flip in dark mode;
+   - brand fields (ultra, ultra-deep, on-ultra*) never do: a blue block is
+     the same blue in both themes, so it reads as the brand, not the theme.
+   Light is the default; dark follows the system until the visitor picks a
+   side with the header toggle, which stamps data-theme on <html>. */
 
 :root {
   color-scheme: light;
 
-  --paper: oklch(0.985 0.004 85);
-  --paper2: oklch(0.958 0.006 85);
-  --ink: oklch(0.235 0.012 260);
-  --muted: oklch(0.53 0.014 260);
-  --line: oklch(0.895 0.006 85);
-  --line2: oklch(0.815 0.008 85);
-  --accent: oklch(0.47 0.088 250);
-  --accent-soft: oklch(0.935 0.028 250);
+  --paper: #ffffff;
+  --paper2: #f3f5fa;
+  --ink: #0b0d12;
+  --muted: #4b5263;
+  --line: #d9deea;
+  --line2: #c9d0e3;
+  --accent: #10207f;
+  --accent-soft: #e3e7f6;
+  --accent-soft-line: #a7b0da;
 
-  /* The dark palette, written once here and switched on by the two rules
-     below, so there is only ever one place to edit a dark value. */
-  --paper-dark: oklch(0.19 0.008 260);
-  --paper2-dark: oklch(0.24 0.01 260);
-  --ink-dark: oklch(0.955 0.004 85);
-  --muted-dark: oklch(0.705 0.012 260);
-  --line-dark: oklch(0.32 0.01 260);
-  --line2-dark: oklch(0.4 0.012 260);
-  --accent-dark: oklch(0.79 0.098 250);
-  --accent-soft-dark: oklch(0.305 0.045 250);
+  /* Brand fields: identical in both themes. */
+  --ultra: #10207f;
+  --ultra-deep: #0a155a;
+  --on-ultra: #ffffff;
+  --on-ultra-muted: #c3caea;
+  --on-ultra-soft: #e3e7f6;
+  --on-ultra-line: #4556b8;
+  --night: #0b0d12;
+  --night-line: #2a2f3d;
+  --night-muted: #b8bfd0;
+  --periwinkle: #a3aee8;
+  /* Black blocks on the page. In dark mode the page itself is near-black,
+     so they lift one step to stay visible as blocks. */
+  --night-block: #0b0d12;
+
+  --paper-dark: #0b0d12;
+  --paper2-dark: #141823;
+  --ink-dark: #f2f4fa;
+  --muted-dark: #a4abbd;
+  --line-dark: #262b38;
+  --line2-dark: #353b4b;
+  --accent-dark: #a3aee8;
+  --accent-soft-dark: #1a2142;
+  --accent-soft-line-dark: #34407a;
+  --night-block-dark: #181c28;
 }
 
 /* The system setting, unless the visitor has explicitly asked for light. */
@@ -41,6 +63,8 @@
     --line2: var(--line2-dark);
     --accent: var(--accent-dark);
     --accent-soft: var(--accent-soft-dark);
+    --accent-soft-line: var(--accent-soft-line-dark);
+    --night-block: var(--night-block-dark);
   }
 }
 
@@ -55,11 +79,20 @@
   --line2: var(--line2-dark);
   --accent: var(--accent-dark);
   --accent-soft: var(--accent-soft-dark);
+  --accent-soft-line: var(--accent-soft-line-dark);
+  --night-block: var(--night-block-dark);
 }
 
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Headlines and big numbers: Archivo, expanded. Width and weight do the
+   emphasis the old serif italics used to do. */
+.font-display {
+  font-stretch: 118%;
+  letter-spacing: -0.03em;
 }
 
 body {

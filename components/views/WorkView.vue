@@ -4,11 +4,11 @@
       <div class="mx-auto max-w-site px-5 md:px-10">
         <div class="grid items-end gap-12 py-16 md:grid-cols-[1.25fr_0.75fr] md:gap-16 md:pb-16 md:pt-[88px]">
           <div>
-            <div class="pu-fade mb-[22px] font-mono text-[11px] uppercase tracking-[0.16em] text-muted">
+            <div class="pu-fade mb-[22px] text-[15px] font-bold text-accent">
               {{ c.work.kicker }}
             </div>
             <h1
-              class="pu-rise mb-[26px] max-w-[20ch] font-display text-[clamp(40px,4.8vw,68px)] font-normal leading-[1.03] tracking-[-0.022em]"
+              class="pu-rise mb-[26px] max-w-[20ch] font-display text-[clamp(40px,4.8vw,68px)] font-extrabold leading-[1.03] tracking-[-0.022em]"
             >
               {{ c.work.heading }}
             </h1>
@@ -21,7 +21,7 @@
           </div>
           <div class="pu-fade grid gap-5 border-line md:border-l md:pl-8" style="animation-delay: 0.3s">
             <div>
-              <div class="mb-2 font-mono text-[10.5px] uppercase tracking-[0.14em] text-muted">
+              <div class="mb-2 text-[14px] font-bold text-muted">
                 {{ c.work.kindsLabel }}
               </div>
               <div class="text-[15.5px] leading-[1.5]">
@@ -30,14 +30,14 @@
             </div>
             <div class="h-px bg-line" />
             <div>
-              <div class="mb-2 font-mono text-[10.5px] uppercase tracking-[0.14em] text-muted">
+              <div class="mb-2 text-[14px] font-bold text-muted">
                 {{ c.work.sectorsLabel }}
               </div>
               <div class="text-[15.5px] leading-[1.5]">{{ c.work.sectors }}</div>
             </div>
             <div class="h-px bg-line" />
             <div>
-              <div class="mb-2 font-mono text-[10.5px] uppercase tracking-[0.14em] text-muted">
+              <div class="mb-2 text-[14px] font-bold text-muted">
                 {{ c.work.countLabel }}
               </div>
               <div class="font-display text-[32px] leading-none">{{ work.length }} / 35</div>
@@ -56,7 +56,7 @@
       <nav class="hidden md:block">
         <div class="sticky top-28 flex flex-col gap-6 border-l border-line pl-5 text-[14px]">
           <div v-for="group in grouped" :key="group.title">
-            <div class="mb-2.5 font-mono text-[10px] uppercase tracking-[0.14em] text-muted">
+            <div class="mb-2.5 text-[14px] font-bold text-muted">
               {{ group.title }}
             </div>
             <ol class="flex flex-col gap-2">
@@ -85,17 +85,17 @@
           class="scroll-mt-28 border-line py-12 first:pt-0 md:py-16"
           :class="{ 'border-t': i > 0 }"
         >
-          <div class="mb-5 flex flex-wrap items-baseline gap-x-5 gap-y-1 font-mono text-[10.5px] uppercase tracking-[0.14em] text-muted">
+          <div class="mb-5 flex flex-wrap items-baseline gap-x-5 gap-y-1 text-[14px] font-bold text-muted">
             <span>{{ item.period }}</span>
             <span v-for="tag in item.tags" :key="tag">{{ tag }}</span>
           </div>
-          <h2 class="font-display text-[clamp(28px,3vw,42px)] font-normal leading-[1.06] tracking-[-0.02em]">
+          <h2 class="font-display text-[clamp(28px,3vw,42px)] font-extrabold leading-[1.06] tracking-[-0.02em]">
             {{ item.name }}
             <a
               v-if="item.url"
               :href="item.url"
               target="_blank"
-              class="ml-2 align-middle font-mono text-[11px] uppercase tracking-[0.1em] text-accent"
+              class="ml-2 align-middle text-[14px] font-bold text-accent"
             >{{ c.common.visit }} ↗</a>
           </h2>
           <p class="mt-2 text-[17px] text-muted">{{ item.tagline }}</p>
@@ -127,7 +127,7 @@
         class="mx-auto flex max-w-site flex-wrap items-center justify-between gap-10 px-5 py-16 md:px-10 md:py-[88px]"
       >
         <h2
-          class="max-w-[24ch] font-display text-[clamp(30px,3.2vw,44px)] font-normal leading-[1.08] tracking-[-0.018em]"
+          class="max-w-[24ch] font-display text-[clamp(30px,3.2vw,44px)] font-extrabold leading-[1.08] tracking-[-0.018em]"
         >
           {{ c.work.ctaHeading }}
         </h2>

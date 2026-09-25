@@ -14,7 +14,7 @@ export const org = {
   email: "alberto@plusultralabs.com",
   // One canonical sentence. Do not paraphrase it per-page.
   description:
-    "Plusultra Labs is an AI product studio. We build and operate our own AI products, and bring the same senior team to client work: AI product development, AI integration, and custom platforms.",
+    "Plusultra Labs is an AI product studio. We build and operate our own AI products, and bring the same senior team to client work: AI product development, AI integration, custom platforms, and fractional AI leadership.",
   shortDescription: "AI product studio. We ship our own AI products, then we ship yours.",
   foundingLocation: "Singapore",
   areaServed: ["Europe", "Asia"],
@@ -31,6 +31,7 @@ export const org = {
     "Custom SaaS platform development",
     "EU and GDPR compliant AI architecture",
     "Production AI cost control",
+    "Fractional AI leadership",
     "Travel technology",
   ],
   // Only sites this studio actually owns: sameAs asserts identity, and

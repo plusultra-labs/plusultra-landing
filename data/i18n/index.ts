@@ -41,7 +41,7 @@ const WORK_TEXTS: Record<Locale, WorkTexts> = {
   fr: workFr,
 };
 
-/** The three services, worded for this language and pointing at its URLs. */
+/** Every service, worded for this language and pointing at its URLs. */
 export function localisedServices(locale: Locale): ServiceContent[] {
   const texts = SERVICE_TEXTS[locale];
   return SERVICE_SLUGS.map((slug) => ({

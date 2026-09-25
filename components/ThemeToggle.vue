@@ -1,7 +1,7 @@
 <template>
   <button
     type="button"
-    class="-my-2 flex items-center gap-2.5 p-2 font-mono text-[10.5px] uppercase tracking-[0.14em] text-muted transition-colors duration-[250ms] hover:text-ink"
+    class="-my-2 flex items-center gap-2.5 p-2 text-[15px] font-semibold text-muted transition-colors duration-[250ms] hover:text-ink"
     :aria-label="label"
     :title="label"
     @click="toggle"

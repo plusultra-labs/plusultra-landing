@@ -1,54 +1,56 @@
 <template>
-  <footer class="border-t border-line bg-paper-2">
+  <footer class="bg-night-block text-white">
     <div
-      class="mx-auto grid max-w-site gap-10 px-5 pb-11 pt-14 md:grid-cols-[1.5fr_1fr_1fr_1fr] md:px-10"
+      class="mx-auto grid max-w-site gap-10 px-5 pb-11 pt-14 md:grid-cols-[1.5fr_1fr_1fr_1fr] md:px-10 md:pt-[72px]"
     >
       <div>
         <div class="mb-[18px] flex flex-col items-start gap-[3px]">
-          <span class="text-[19px] font-medium leading-none tracking-[-0.035em]">plusultra</span>
+          <span class="font-logo text-[21px] font-medium leading-none tracking-[-0.035em]">plusultra</span>
           <span class="flex items-center gap-[7px]">
-            <span class="block h-0.5 w-[30px] bg-accent" />
-            <span class="font-mono text-[9px] tracking-[0.24em] text-muted">LABS</span>
+            <svg class="block h-[8.75px] w-[34px] text-periwinkle" viewBox="0 -3.75 34 8.75" fill="currentColor" aria-hidden="true">
+              <rect x="0" y="0" width="4.04" height="1.25" />
+              <rect x="6.79" y="0" width="6.46" height="1.25" />
+              <rect x="16" y="0" width="10.5" height="1.25" />
+              <path d="M27.5 -3.12 L34 0.62 L27.5 4.38" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linejoin="miter" />
+            </svg>
+            <span class="font-mono text-[9.5px] tracking-[0.24em] text-night-muted">LABS</span>
           </span>
         </div>
-        <p class="max-w-[34ch] text-[14.5px] leading-[1.6] text-muted">
+        <p class="max-w-[34ch] text-[16px] leading-[1.55] text-night-muted">
           {{ c.footer.blurb }}
         </p>
       </div>
 
-      <div v-for="col in columns" :key="col.title" class="grid content-start gap-3 text-[14.5px]">
-        <div
-          class="mb-1 font-mono text-[10px] uppercase tracking-[0.16em] text-muted"
-        >
+      <div v-for="col in columns" :key="col.title" class="grid content-start gap-3 text-[16px]">
+        <div class="mb-1 font-extrabold text-periwinkle">
           {{ col.title }}
         </div>
         <template v-for="item in col.items" :key="item.label">
           <NuxtLink
             v-if="item.to"
             :to="item.to"
-            class="text-muted transition-colors duration-[250ms] hover:text-ink"
+            class="text-white/90 transition-colors duration-[250ms] hover:text-periwinkle"
           >
             {{ item.label }}
           </NuxtLink>
           <a
             v-else-if="item.href"
             :href="item.href"
-            class="text-muted transition-colors duration-[250ms] hover:text-ink"
+            class="text-white/90 transition-colors duration-[250ms] hover:text-periwinkle"
           >
             {{ item.label }}
           </a>
-          <span v-else class="text-muted">{{ item.label }}</span>
+          <span v-else class="text-night-muted">{{ item.label }}</span>
         </template>
       </div>
     </div>
 
     <div class="mx-auto max-w-site px-5 pb-10 md:px-10">
       <div
-        class="flex flex-wrap items-center justify-between gap-5 border-t border-line pt-5 font-mono text-[10.5px] uppercase tracking-[0.12em] text-muted"
+        class="flex flex-wrap items-center justify-between gap-5 border-t border-night-line pt-5 text-[14px] text-night-muted"
       >
-        <span>&copy; {{ year }} Plusultra Labs</span>
+        <span>&copy; {{ year }} Plusultra Labs · {{ c.common.location }}</span>
         <span class="hidden md:inline">{{ c.footer.tagline }}</span>
-        <LanguageSwitcher drop="up" />
       </div>
     </div>
   </footer>

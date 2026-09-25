@@ -8,7 +8,7 @@
   >
     <button
       type="button"
-      class="flex items-center gap-2.5 py-2.5 font-mono text-[10.5px] uppercase tracking-[0.14em] text-muted transition-colors duration-[250ms] hover:text-ink"
+      class="flex items-center gap-2.5 py-2.5 text-[15px] font-semibold text-muted transition-colors duration-[250ms] hover:text-ink"
       :aria-label="c.nav.languageAria"
       aria-haspopup="true"
       :aria-expanded="open"
@@ -46,14 +46,14 @@
           :hreflang="alt.locale"
           :lang="alt.locale"
           :aria-current="alt.locale === locale ? 'true' : undefined"
-          class="flex items-center gap-3 px-4 py-2.5 text-[14px] transition-colors duration-[250ms] hover:bg-paper-2"
+          class="flex items-center gap-3 min-h-[44px] px-4 py-2.5 text-[15px] transition-colors duration-[250ms] hover:bg-paper-2"
           :class="alt.locale === locale ? 'text-accent' : 'text-muted hover:text-ink'"
           :tabindex="open ? undefined : -1"
           @click="open = false"
         >
           <LocaleFlag :locale="alt.locale" />
           <span class="flex-1">{{ LOCALE_LABELS[alt.locale] }}</span>
-          <span class="font-mono text-[10px] uppercase tracking-[0.14em] text-muted">
+          <span class="text-[13px] font-bold uppercase text-muted">
             {{ alt.locale }}
           </span>
         </NuxtLink>

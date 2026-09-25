@@ -4,7 +4,7 @@ import type { SiteCopy } from "./types";
 // were written against.
 export const copyEn: SiteCopy = {
   orgDescription:
-    "Plusultra Labs is an AI product studio. We build and operate our own AI products, and bring the same senior team to client work: AI product development, AI integration, and custom platforms.",
+    "Plusultra Labs is an AI product studio. We build and operate our own AI products, and bring the same senior team to client work: AI product development, AI integration, custom platforms, and fractional AI leadership.",
   orgShort: "AI product studio. We ship our own AI products, then we ship yours.",
 
   nav: {
@@ -66,8 +66,8 @@ export const copyEn: SiteCopy = {
   },
 
   home: {
-    kicker: "AI product studio · Singapore",
-    heroLines: ["We ship our own", "AI products. Then", "we ship"],
+    kicker: "B2B AI product studio, based in Singapore, working across Europe and Asia",
+    heroLines: ["We ship our own", "AI products.", "Then we ship"],
     heroEmphasis: "yours.",
     lead: "Plusultra Labs is an AI product studio. Everything we recommend, we already use ourselves every day: our own products, our own AI tools, our own systems.",
     stats: [
@@ -75,52 +75,48 @@ export const copyEn: SiteCopy = {
       { label: "First usable release", value: "3–6 weeks" },
       { label: "The team", value: "12 people" },
     ],
-    proofs: [
-      {
-        value: "35",
-        label: "digital products designed, built, and running today, for ourselves and for clients",
-      },
-      {
-        value: "1.5M+",
-        label: "travel offers matched and ranked on TourScanner, where our founder works on AI and product",
-      },
-      { value: "100%", label: "of code and infrastructure delivered in repositories you own" },
-      {
-        value: "24/7",
-        label: "our own AI assistants run the company's daily operations, so we know it works",
-      },
+    timeline: [
+      { year: "2014", label: "First company, Artupia" },
+      { year: "2021", label: "Building for other founders" },
+      { year: "2023", label: "Our own products, live and paying" },
+      { year: "Next", label: "Yours" },
     ],
-    servicesKicker: "01 — What we do",
-    servicesHeading: "Three ways we work with companies.",
+    sectorsLabel: "We work B2B, for",
+    sectorsNote: "Sectors we know from the inside",
+    seeNumbers: "See the numbers",
+    kindLabels: { own: "Own product", client: "Client build", role: "Product and AI role" },
+    readCase: "Read the case",
+    servicesKicker: "What we do",
+    servicesHeading: "Four ways we work with companies.",
     servicesIntro:
       "No account layer and no handover to juniors: the people on your first call are the people who write the code. Scope and price are fixed in writing before anything starts.",
-    buildKicker: "02 — What we build",
+    buildKicker: "What we build",
     buildHeading: "Four kinds of build, not four projects.",
     buildIntro:
       "Thirty-five products shipped and running today. What follows is grouped by the kind of build rather than by client, because the useful question is whether we have solved your shape of problem before, not whether we happen to list your industry.",
     buildNote: "Examples only · part of our client work sits under NDA",
     showcaseHeading: "A few we can show, with the numbers attached.",
-    showcaseLabel: "Own products",
-    processKicker: "03 — How an engagement runs",
+    showcaseLabel: "Our own products, client builds, and one company we work inside. Each card leads with the number that matters for it.",
+    processKicker: "How an engagement runs",
     processHeading: "A written process, with dates attached to it.",
     process: [
       {
-        when: "WEEK 0",
+        when: "Week 0",
         title: "Scoping call",
         body: "A call with the engineers who would build it. You leave with a written answer on fit, budget range, and timeline, whether or not you hire us.",
       },
       {
-        when: "WEEK 1",
+        when: "Week 1",
         title: "Fixed proposal",
         body: "Scope, architecture, price, and delivery dates in one document, agreed before any code. No hourly surprises.",
       },
       {
-        when: "WEEK 2 — 12",
+        when: "Weeks 2 to 12",
         title: "Weekly releases",
         body: "A live environment from week one and something you can click every week, with your real data in it early.",
       },
       {
-        when: "ONGOING",
+        when: "Ongoing",
         title: "Run it or hand it over",
         body: "We operate it, or hand over documented code and infrastructure. Your accounts from the first commit either way.",
       },
@@ -135,13 +131,13 @@ export const copyEn: SiteCopy = {
         "Plusultra Labs is an AI product studio. We ship our own AI products, then bring the same engineering team to yours. AI product development, AI integration, custom SaaS.",
       ogTitle: "Plusultra Labs - AI Product Studio",
       ogDescription:
-        "We ship our own AI products. Then we ship yours. AI product development, AI integration, custom platforms.",
+        "We ship our own AI products. Then we ship yours. AI product development, AI integration, custom platforms, fractional AI leadership.",
     },
   },
 
   services: {
     kicker: "Services",
-    heading: "Three ways we work with companies.",
+    heading: "Four ways we work with companies.",
     lead: "Whatever the shape of the engagement, the team is the same one that builds and operates our own products. What follows is what we deliver, roughly what it costs, and how long it takes.",
     includedLabel: "Always included",
     included: [
@@ -187,28 +183,31 @@ export const copyEn: SiteCopy = {
   servicePage: {
     breadcrumb: "Services",
     atAGlance: "At a glance",
-    pointsKicker: "01 — What you get from us",
+    pointsKicker: "What you get from us",
     pointsHeading: "The parts that make the difference.",
-    pipelineKicker: "02 — How an engagement runs",
+    pipelineKicker: "How an engagement runs",
     pipelineHeading: "A written process, with dates attached to it.",
-    deliverablesKicker: "03 — Deliverables",
+    deliverablesKicker: "Deliverables",
     deliverablesHeading: "What you actually get.",
     deliverablesIntro:
       "Not a category list. The concrete things that exist at the end, and that stay yours.",
     boundariesKicker: "Boundaries",
     boundariesHeading: "What we don't do.",
     boundariesBody: "Saying it out loud saves everyone a call.",
-    pricingKicker: "04 — Engagement models",
+    pricingKicker: "Engagement models",
     pricingHeading: "Prices published, before you ask.",
     pricingNote:
       "Every project is quoted on its real scope; these ranges show the order of magnitude so you know where you stand before the first call.",
-    faqKicker: "05 — Questions",
+    pricingHeadingOnRequest: "Three ways to set it up.",
+    pricingNoteOnRequest:
+      "The price depends on how many days a month you need and what we build alongside. You get a written quote after the scoping call.",
+    faqKicker: "Questions",
     faqHeading: "Questions we get asked.",
-    relatedKicker: "06 — Selected work",
+    relatedKicker: "Selected work",
     relatedHeading: "Selected projects from this service portfolio.",
     relatedNote:
       "A selection, not the full list. Part of our client work sits under NDA and is not shown here.",
-    otherServices: "The other two ways we work",
+    otherServices: "The other three ways we work",
     howToName: "How a {service} engagement runs",
   },
 
@@ -237,7 +236,7 @@ export const copyEn: SiteCopy = {
     clientsValue: "Europe and Asia",
     teamLabel: "The team",
     peopleUnit: "people",
-    storyKicker: "01 — Where this started",
+    storyKicker: "Where this started",
     storyHeading: "I started by building the thing, not by selling the service.",
     story: [
       "I bootstrapped my first project at fifteen; Artupia was the first real company. I started it in 2014, while I was still at school, and ran it as founder and CEO for seven years: a marketplace where anyone could commission a piece from a real artist — describe what you want, artists propose, you follow it from sketch to delivery. It grew past 100,000 users and a team of 20, and raised up to EUR 3M. Covid took the art market out from under it in 2021. Building it is also what made me a developer: I taught myself full-stack because the product needed it.",
@@ -249,7 +248,7 @@ export const copyEn: SiteCopy = {
     storyPullQuote: "Everything we sell, we already run ourselves.",
     founderRole: "Founder · Product",
     founderAlt: "Alberto, founder of Plusultra Labs",
-    principlesKicker: "02 — How we work",
+    principlesKicker: "How we work",
     principlesHeading: "Three things that decide everything else.",
     principles: [
       {
@@ -265,7 +264,7 @@ export const copyEn: SiteCopy = {
         body: "Something you can click every week, live from the very start. Software is real when people use it, not when it demos well.",
       },
     ],
-    teamKicker: "03 — The team",
+    teamKicker: "The team",
     teamHeading: "The people who would build it.",
     teamIntro:
       "{n} people across product, design, engineering, and delivery, plus a wider network of specialists we bring in when a project needs them.",
@@ -439,6 +438,23 @@ export const copyEn: SiteCopy = {
         price: "EUR 35k+",
         title: "Business backbone",
         body: "The system your company runs on: multiple apps, automations, reporting, operated and evolved by us over time.",
+      },
+    ],
+    "fractional-ai-leadership": [
+      {
+        price: "Quoted after the scoping call",
+        title: "Advise",
+        body: "2 days a month. The AI roadmap, build-or-buy calls, vendor and model choices, and a monthly review of what AI is costing you.",
+      },
+      {
+        price: "Quoted after the scoping call",
+        title: "Lead",
+        body: "3 to 4 days a month. A seat in your leadership meetings, ownership of the roadmap, hiring advice, and the first builds shipped by our team.",
+      },
+      {
+        price: "Quoted after the scoping call",
+        title: "Hand over",
+        body: "For when you are ready for your own AI lead. We help you hire them, then hand over the roadmap, the decisions, and the code.",
       },
     ],
   },

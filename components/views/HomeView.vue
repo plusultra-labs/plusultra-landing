@@ -1,182 +1,261 @@
 <template>
   <div>
-    <!-- Hero -->
-    <section class="overflow-hidden border-b border-line">
-      <div class="mx-auto max-w-site px-5 md:px-10">
-        <div
-          class="grid items-end gap-12 py-16 md:grid-cols-[1.4fr_0.6fr] md:gap-16 md:pb-[76px] md:pt-[104px]"
+    <!-- Hero: the blue field, the promise, and the logo rule unrolled into
+         the founder timeline. -->
+    <section class="bg-ultra text-white">
+      <div class="mx-auto max-w-site px-5 pt-8 md:px-10 md:pt-[72px]">
+        <p class="pu-fade mb-5 max-w-[60ch] text-[15px] font-semibold text-ultra-muted md:mb-10 md:text-[18px]">
+          {{ c.home.kicker }}
+        </p>
+        <h1
+          class="font-display text-[clamp(44px,8.2vw,116px)] font-extrabold leading-[0.94] md:leading-[0.92]"
+          style="letter-spacing: -0.04em"
         >
-          <div>
-            <div class="pu-fade mb-9 flex items-center gap-3">
-              <span class="block h-1.5 w-1.5 bg-accent" />
-              <span
-                class="font-mono text-[11.5px] uppercase tracking-[0.16em] text-muted"
-              >{{ c.home.kicker }}</span>
-            </div>
-            <h1
-              class="mb-8 max-w-[19ch] font-display text-[clamp(46px,5.6vw,82px)] font-normal leading-[1.01] tracking-[-0.024em]"
-            >
-              <span
-                v-for="(line, i) in c.home.heroLines"
-                :key="i"
-                class="pu-rise block"
-                :style="{ animationDelay: `${i * 0.09}s` }"
-              >
-                <template v-if="i < c.home.heroLines.length - 1">{{ line }}</template>
-                <template v-else>{{ line }} <em class="italic text-accent">{{ c.home.heroEmphasis }}</em></template>
-              </span>
-            </h1>
-            <p
-              class="pu-rise mb-[42px] max-w-[58ch] text-[19.5px] leading-[1.55] text-muted"
-              style="animation-delay: 0.28s"
-            >
+          <!-- Lines stack on desktop and flow on phones; the explicit space
+               keeps words apart when they flow (Vue trims trailing spaces). -->
+          <template v-for="(line, i) in c.home.heroLines" :key="i">
+            <span class="pu-rise md:block" :style="{ animationDelay: `${i * 0.08}s` }">{{ line }}</span>{{ " " }}
+          </template>
+          <span class="pu-rise md:block" :style="{ animationDelay: `${c.home.heroLines.length * 0.08}s` }">{{
+            c.home.heroEmphasis
+          }}</span>
+        </h1>
+
+        <div class="mt-6 grid gap-8 md:mt-12 md:grid-cols-[1.1fr_1fr] md:items-end md:gap-20">
+          <div class="pu-rise flex flex-col gap-8" style="animation-delay: 0.3s">
+            <p class="max-w-[50ch] text-[17px] leading-[1.5] text-ultra-soft md:text-[21px]">
               {{ c.home.lead }}
             </p>
-            <div
-              class="pu-rise flex flex-wrap items-center gap-3.5"
-              style="animation-delay: 0.36s"
-            >
-              <BookCallButton arrow>{{ c.common.bookScopingCall }}</BookCallButton>
-              <NuxtLink
-                :to="lp('work')"
-                class="inline-flex h-[52px] items-center rounded-sm border border-line-2 px-6 text-[15px] font-medium transition-[border-color,background-color] duration-[250ms] hover:border-ink hover:bg-paper-2"
+            <div class="hidden flex-wrap gap-3.5 md:flex">
+              <BookCallButton variant="onInk" size="lg" arrow>{{ c.common.bookScopingCall }}</BookCallButton>
+              <a
+                href="#numbers"
+                class="inline-flex h-16 items-center border-2 border-white px-7 text-[17px] font-bold transition-colors duration-[250ms] hover:bg-white hover:text-ultra"
               >
-                {{ c.common.seeSelectedWork }}
-              </NuxtLink>
+                {{ c.home.seeNumbers }}
+              </a>
             </div>
           </div>
 
-          <div
-            class="pu-fade grid gap-6 border-line md:border-l md:pl-[34px]"
-            style="animation-delay: 0.4s"
-          >
-            <template v-for="(stat, i) in c.home.stats" :key="stat.label">
-              <div v-if="i > 0" class="h-px bg-line" />
-              <div>
-                <div
-                  class="mb-2.5 font-mono text-[10.5px] uppercase tracking-[0.14em] text-muted"
-                >
-                  {{ stat.label }}
-                </div>
-                <div class="font-display text-[32px] leading-none">{{ stat.value }}</div>
-              </div>
-            </template>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Proof band -->
-    <section class="border-b border-line bg-paper-2">
-      <div class="mx-auto max-w-site px-5 md:px-10">
-        <!-- padding lives on the wrapper: bg-line on a padded element would
-             paint the container gutters, not just the 1px cell gaps -->
-        <div class="grid gap-px bg-line md:grid-cols-4">
-          <div
-            v-for="proof in c.home.proofs"
-            :key="proof.label"
-            data-reveal
-            class="bg-paper-2 py-7 md:px-[26px] md:first:pl-0 md:last:pr-0"
-          >
-            <div class="mb-2.5 font-display text-[34px] leading-none">{{ proof.value }}</div>
-            <div class="text-[14.5px] leading-[1.5] text-muted">{{ proof.label }}</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services -->
-    <section class="border-b border-line">
-      <div class="mx-auto max-w-site px-5 md:px-10">
-        <div class="grid gap-8 pb-9 pt-16 md:grid-cols-[0.44fr_1fr] md:gap-16 md:pt-[92px]">
-          <div data-reveal>
-            <div class="mb-[18px] font-mono text-[11px] uppercase tracking-[0.16em] text-muted">
-              {{ c.home.servicesKicker }}
+          <dl class="pu-fade grid grid-cols-3 gap-3 md:gap-6" style="animation-delay: 0.4s">
+            <div v-for="stat in c.home.stats" :key="stat.label" class="border-t-[3px] border-white pt-3 md:pt-4">
+              <dd class="font-display text-[26px] font-extrabold leading-none md:text-[36px]">
+                {{ stat.value }}
+              </dd>
+              <dt class="mt-2 text-[14px] leading-[1.3] text-ultra-soft md:text-[16px]">{{ stat.label }}</dt>
             </div>
-            <h2
-              class="font-display text-[clamp(30px,3.2vw,40px)] font-normal leading-[1.1] tracking-[-0.018em]"
+          </dl>
+        </div>
+
+        <!-- Desktop: the rule runs across, dashes growing into the arrow. -->
+        <ol class="hidden grid-cols-[16fr_26fr_42fr_180px] items-center gap-x-5 gap-y-4 pb-16 pt-12 md:grid">
+          <li v-for="(t, i) in c.home.timeline" :key="t.year" class="contents">
+            <span v-if="i < 3" class="block h-2.5 bg-white" :style="{ gridColumn: i + 1, gridRow: 1 }" />
+            <ChevronIcon v-else :size="40" :weight="4.5" class="text-white" :style="{ gridColumn: 4, gridRow: 1 }" />
+            <span class="text-[15px] leading-[1.4] text-ultra-soft" :style="{ gridColumn: i + 1, gridRow: 2 }">
+              <strong class="block font-bold text-white">{{ t.year }}</strong>{{ t.label }}
+            </span>
+          </li>
+        </ol>
+
+        <!-- Phones: the same rule, turned to run down the screen. -->
+        <ol class="grid grid-cols-[44px_1fr] gap-x-4 pb-8 pt-8 md:hidden">
+          <li v-for="(t, i) in c.home.timeline" :key="t.year" class="contents">
+            <span class="flex justify-center">
+              <span v-if="i < 3" class="block w-2 bg-white" :style="{ height: `${[22, 34, 52][i]}px` }" />
+              <ChevronIcon v-else :size="26" :weight="4.5" class="rotate-90 text-white" />
+            </span>
+            <span class="pb-3 text-[15px] leading-[1.35] text-ultra-soft">
+              <strong class="font-bold text-white">{{ t.year }}</strong> {{ t.label }}
+            </span>
+          </li>
+        </ol>
+      </div>
+
+      <div class="bg-ultra-deep">
+        <div class="mx-auto flex max-w-site flex-col gap-3 px-5 py-5 md:flex-row md:items-center md:gap-7 md:px-10">
+          <span class="text-[15px] font-bold md:text-[16px]">{{ c.home.sectorsLabel }}</span>
+          <ul class="flex flex-wrap gap-2 md:gap-2.5">
+            <li
+              v-for="sector in sectors"
+              :key="sector"
+              class="border-[1.5px] border-ultra-line px-3 py-[7px] text-[15px] font-semibold md:px-3.5 md:py-2"
             >
+              {{ sector }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Step 1 · Proof: each card leads with its number. -->
+    <section id="numbers" class="scroll-mt-20 py-14 md:py-28">
+      <div class="mx-auto max-w-site md:px-10">
+        <div class="mb-6 grid gap-5 px-5 md:mb-14 md:grid-cols-[1.3fr_1fr] md:items-end md:gap-20 md:px-0">
+          <div data-reveal class="flex flex-col gap-5 md:gap-6">
+            <SectionKicker :step="1" />
+            <h2 class="font-display text-[32px] font-extrabold leading-[1.02] md:text-[56px] md:leading-none">
+              {{ c.home.showcaseHeading }}
+            </h2>
+          </div>
+          <p data-reveal class="hidden text-[18px] leading-[1.55] text-muted md:block">
+            {{ c.home.showcaseLabel }}
+          </p>
+        </div>
+
+        <!-- Phones swipe the cards sideways; desktop lays them in a row. -->
+        <div
+          class="flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pb-2 [scrollbar-width:none] md:grid md:grid-cols-3 md:gap-6 md:overflow-visible md:px-0 md:pb-0"
+          style="scroll-padding-left: 20px"
+        >
+          <NuxtLink
+            v-for="(item, i) in featured"
+            :key="item.slug"
+            :to="lp('work', `#${item.slug}`)"
+            class="group flex min-h-[440px] w-[300px] shrink-0 snap-start flex-col gap-3.5 p-6 md:min-h-[580px] md:w-auto md:gap-5 md:p-9"
+            :class="cardTone[i % 3].card"
+          >
+            <span class="self-start border-[1.5px] px-2.5 py-1.5 text-[14px] font-bold" :class="cardTone[i % 3].chip">
+              {{ c.home.kindLabels[item.kind] }}
+            </span>
+            <template v-if="item.metrics?.length">
+              <div
+                class="pt-2 font-display text-[76px] font-extrabold leading-[0.9] md:pt-4 md:text-[clamp(64px,6vw,88px)]"
+                :class="cardTone[i % 3].number"
+                style="letter-spacing: -0.045em"
+              >
+                {{ item.metrics[0].value }}
+              </div>
+              <p class="text-[16px] leading-[1.45] md:text-[19px]" :class="cardTone[i % 3].body">
+                {{ item.metrics[0].label }}
+              </p>
+            </template>
+            <div class="flex-1" />
+            <dl
+              v-if="item.metrics && item.metrics.length > 1"
+              class="grid grid-cols-2 gap-4 border-t-[1.5px] pt-3 text-[15px] leading-[1.4] md:pt-4"
+              :class="[cardTone[i % 3].rule, cardTone[i % 3].body]"
+            >
+              <div v-for="m in item.metrics.slice(1)" :key="m.value">
+                <dt class="font-display text-[22px] font-extrabold md:text-[24px]" :class="cardTone[i % 3].strong">
+                  {{ m.value }}
+                </dt>
+                <dd>{{ m.label }}</dd>
+              </div>
+            </dl>
+            <div class="flex items-end justify-between gap-4">
+              <div>
+                <h3 class="font-display text-[22px] font-extrabold leading-[1.1] md:text-[24px]">{{ item.name }}</h3>
+                <p class="pt-1 text-[14px] leading-[1.45] md:text-[15px]" :class="cardTone[i % 3].note">
+                  {{ item.outcome }}
+                </p>
+              </div>
+              <span
+                class="flex h-12 w-12 shrink-0 items-center justify-center transition-transform duration-[250ms] group-hover:translate-x-1 md:h-[52px] md:w-[52px]"
+                :class="cardTone[i % 3].button"
+              >
+                <ChevronIcon :size="15" />
+              </span>
+            </div>
+          </NuxtLink>
+          <span class="w-2 shrink-0 md:hidden" aria-hidden="true" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Step 2 · Services -->
+    <section class="bg-paper-2 py-14 md:py-28">
+      <div class="mx-auto max-w-site px-5 md:px-10">
+        <div class="mb-6 grid gap-5 md:mb-14 md:grid-cols-[1.3fr_1fr] md:items-end md:gap-20">
+          <div data-reveal class="flex flex-col gap-5 md:gap-6">
+            <SectionKicker :step="2" />
+            <h2 class="font-display text-[32px] font-extrabold leading-[1.02] md:text-[56px] md:leading-none">
               {{ c.home.servicesHeading }}
             </h2>
           </div>
-          <p
-            data-reveal
-            class="max-w-[60ch] self-end text-[17.5px] leading-[1.62] text-muted"
-          >
+          <p data-reveal class="text-[16px] leading-[1.55] text-muted md:text-[18px]">
             {{ c.home.servicesIntro }}
           </p>
         </div>
 
-        <div class="border-t border-line">
+        <div class="flex flex-col gap-2.5 md:gap-3">
           <NuxtLink
-            v-for="(svc, i) in services"
+            v-for="svc in services"
             :key="svc.to"
             :to="svc.to"
             data-reveal
-            class="group -mx-3 grid items-start gap-6 border-b border-line px-3 py-9 transition-colors duration-300 hover:bg-paper-2 md:grid-cols-[72px_1.05fr_1fr_130px] md:gap-8 md:py-10"
+            class="group grid grid-cols-[1fr_44px] gap-x-3 gap-y-2.5 bg-paper p-5 transition-colors duration-[250ms] hover:bg-accent-soft md:grid-cols-[0.9fr_1.2fr_200px_64px] md:items-center md:gap-10 md:py-8 md:pl-10 md:pr-8"
           >
-            <span class="font-mono text-[12px] text-muted md:pt-[7px]">
-              A.{{ String(i + 1).padStart(2, "0") }}
-            </span>
-            <h3
-              class="font-display text-[clamp(24px,2.4vw,30px)] font-normal leading-[1.14] tracking-[-0.014em]"
-            >
+            <h3 class="font-display text-[24px] font-extrabold leading-[1.08] md:text-[32px] md:leading-[1.05]">
               {{ svc.cardTitle }}
             </h3>
-            <p class="text-[16px] leading-[1.62] text-muted">{{ svc.cardBody }}</p>
             <span
-              class="font-mono text-[11.5px] uppercase tracking-[0.1em] text-accent md:pt-[9px] md:text-right"
+              class="row-span-1 flex h-11 w-11 items-center justify-center bg-ultra text-white transition-transform duration-[250ms] group-hover:translate-x-1 md:order-last md:h-16 md:w-16"
             >
-              {{ c.common.explore }} &rarr;
+              <ChevronIcon :size="14" />
             </span>
+            <p class="col-span-2 text-[16px] leading-[1.5] text-muted md:col-span-1 md:text-[17px]">{{ svc.cardBody }}</p>
+            <p class="col-span-2 text-[15px] leading-[1.5] md:col-span-1">
+              <strong class="font-extrabold md:block md:text-[20px]">{{ svc.specs[0]?.value }}</strong>
+              <span class="text-muted"><span class="md:hidden"> · </span>{{ priceLine(svc) }}</span>
+            </p>
           </NuxtLink>
         </div>
       </div>
     </section>
 
-    <!-- What we build -->
-    <section class="border-b border-line bg-paper-2">
-      <div class="mx-auto max-w-site px-5 py-16 md:px-10 md:py-[92px]">
-        <div class="grid gap-8 md:grid-cols-[0.44fr_1fr] md:gap-16">
-          <div data-reveal>
-            <div class="mb-[18px] font-mono text-[11px] uppercase tracking-[0.16em] text-muted">
-              {{ c.home.buildKicker }}
-            </div>
-            <h2
-              class="font-display text-[clamp(30px,3.2vw,40px)] font-normal leading-[1.1] tracking-[-0.018em]"
-            >
+    <!-- Step 3 · What we build: kinds of build, sectors, every row an outcome. -->
+    <section class="py-14 md:py-28">
+      <div class="mx-auto max-w-site px-5 md:px-10">
+        <div class="mb-6 grid gap-5 md:mb-12 md:grid-cols-[1.3fr_1fr] md:items-end md:gap-20">
+          <div data-reveal class="flex flex-col gap-5 md:gap-6">
+            <SectionKicker :step="3" />
+            <h2 class="font-display text-[32px] font-extrabold leading-[1.02] md:text-[56px] md:leading-none">
               {{ c.home.buildHeading }}
             </h2>
           </div>
-          <p data-reveal class="max-w-[60ch] self-end text-[17.5px] leading-[1.62] text-muted">
+          <p data-reveal class="text-[16px] leading-[1.55] text-muted md:text-[18px]">
             {{ c.home.buildIntro }}
           </p>
         </div>
 
-        <div class="mt-12 grid gap-px border border-line bg-line md:grid-cols-2">
+        <div data-reveal class="mb-6 flex flex-col gap-1.5 bg-accent-soft p-4 md:mb-12 md:flex-row md:items-center md:gap-5 md:px-6 md:py-5">
+          <span class="text-[14px] font-bold text-accent md:text-[16px]">{{ c.home.sectorsNote }}</span>
+          <span class="text-[15px] font-semibold leading-[1.5] md:text-[16px]">{{ c.work.sectors }}</span>
+        </div>
+
+        <div class="grid gap-3 md:grid-cols-2 md:gap-6">
           <div
             v-for="cat in categories"
             :key="cat.slug"
             data-reveal
-            class="flex flex-col bg-paper-2 px-7 py-8 md:px-8 md:py-9"
+            class="flex flex-col gap-2.5 bg-paper-2 px-5 pb-2 pt-6 md:gap-3 md:px-9 md:pb-5 md:pt-9"
           >
-            <h3 class="font-display text-[26px] font-normal leading-tight tracking-[-0.012em]">
-              {{ cat.title }}
-            </h3>
-            <p class="mt-2.5 text-[15.5px] leading-[1.6] text-muted">{{ cat.blurb }}</p>
-            <p class="mt-3.5 text-[14.5px] italic leading-[1.55] text-muted">
-              {{ cat.forWho }}
-            </p>
+            <h3 class="font-display text-[24px] font-extrabold leading-[1.1] md:text-[30px]">{{ cat.title }}</h3>
+            <p class="text-[15px] leading-[1.55] text-muted md:text-[16px]">{{ cat.blurb }}</p>
+            <p class="text-[15px] font-bold leading-[1.45] text-accent md:text-[16px]">{{ cat.forWho }}</p>
 
-            <ul class="mt-6 border-t border-line">
+            <ul class="pt-1.5 md:pt-3">
               <li v-for="ex in categoryExamples(cat, work)" :key="ex.slug">
                 <NuxtLink
                   :to="lp('work', `#${ex.slug}`)"
-                  class="group flex items-baseline justify-between gap-4 border-b border-line py-3 transition-colors duration-[250ms] hover:text-accent"
+                  class="group -mx-3 flex min-h-[68px] items-center justify-between gap-4 border-t-[1.5px] border-line px-3 transition-colors duration-[250ms] hover:border-accent hover:bg-paper md:-mx-4 md:min-h-[72px] md:px-4"
                 >
-                  <span class="text-[15px] font-medium">{{ ex.name }}</span>
-                  <span class="text-right font-mono text-[10.5px] uppercase tracking-[0.1em] text-muted">
-                    {{ ex.tags[0] }}
+                  <span class="flex flex-col gap-0.5 py-2.5">
+                    <span class="text-[17px] font-bold transition-colors duration-[250ms] group-hover:text-accent md:text-[18px]">
+                      {{ ex.name }}
+                    </span>
+                    <span v-if="ex.outcome" class="text-[15px] text-muted">{{ ex.outcome }}</span>
+                  </span>
+                  <span class="flex items-center gap-2.5 text-accent">
+                    <span
+                      class="hidden text-[14px] font-bold opacity-0 transition-opacity duration-[250ms] group-hover:opacity-100 md:inline"
+                    >{{ c.home.readCase }}</span>
+                    <ChevronIcon
+                      :size="13"
+                      :weight="5"
+                      class="transition-transform duration-[250ms] group-hover:translate-x-1"
+                    />
                   </span>
                 </NuxtLink>
               </li>
@@ -184,123 +263,101 @@
           </div>
         </div>
 
-        <div class="mt-8 flex flex-wrap items-center justify-between gap-5">
-          <p class="font-mono text-[11px] uppercase tracking-[0.12em] text-muted">
-            {{ c.home.buildNote }}
-          </p>
+        <div class="mt-6 flex flex-col gap-4 md:mt-8 md:flex-row md:items-center md:justify-between md:gap-6">
+          <p class="text-[15px] text-muted md:text-[16px]">{{ c.home.buildNote }}</p>
           <NuxtLink
             :to="lp('work')"
-            class="inline-flex h-11 items-center rounded-sm border border-line-2 px-5 text-[14.5px] font-medium transition-[border-color,background-color] duration-[250ms] hover:border-ink hover:bg-paper"
+            class="group flex h-14 items-center justify-between gap-3.5 border-2 border-ink px-5 text-[16px] font-bold transition-colors duration-[250ms] hover:bg-ink hover:text-paper md:inline-flex md:px-6"
           >
-            {{ c.common.seeFullList }} &rarr;
+            {{ c.common.seeFullList }}
+            <ChevronIcon :size="13" class="text-accent transition-transform duration-[250ms] group-hover:translate-x-1 group-hover:text-current" />
           </NuxtLink>
         </div>
       </div>
     </section>
 
-    <!-- A few we can show -->
-    <section class="border-b border-line">
-      <div class="mx-auto max-w-site px-5 py-16 md:px-10 md:py-[92px]">
-        <div class="mb-12 flex flex-wrap items-end justify-between gap-6">
-          <h2
-            data-reveal
-            class="max-w-[26ch] font-display text-[clamp(26px,2.8vw,34px)] font-normal leading-[1.1] tracking-[-0.018em]"
-          >
-            {{ c.home.showcaseHeading }}
+    <!-- Step 4 · Process: the arrow lights up, the next block is the call. -->
+    <section class="bg-night-block py-14 text-white md:py-28">
+      <div class="mx-auto max-w-site px-5 md:px-10">
+        <div data-reveal class="mb-8 flex flex-col gap-5 md:mb-16 md:gap-6">
+          <SectionKicker :step="4" mark-class="text-periwinkle" unlit="var(--night-line)" />
+          <h2 class="max-w-[18ch] font-display text-[32px] font-extrabold leading-[1.02] md:text-[56px] md:leading-none">
+            {{ c.home.processHeading }}
           </h2>
-          <span class="font-mono text-[11px] uppercase tracking-[0.12em] text-muted">
-            {{ c.home.showcaseLabel }}
-          </span>
         </div>
-
-        <div class="grid gap-x-7 gap-y-10 md:grid-cols-3">
-          <NuxtLink
-            v-for="item in featured"
-            :key="item.slug"
-            :to="lp('work', `#${item.slug}`)"
-            data-reveal
-            class="group block"
-          >
-            <div class="mb-[11px] font-mono text-[10.5px] uppercase tracking-[0.14em] text-muted">
-              {{ item.tags[0] }} · {{ item.tags[item.tags.length - 1] }}
-            </div>
-            <div class="overflow-hidden border border-line bg-paper-2">
-              <img
-                :src="item.image"
-                :alt="item.name"
-                class="aspect-[16/9] w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
-                loading="lazy"
-              />
-            </div>
-            <h3 class="mt-4 font-display text-[26px] font-normal leading-tight">
-              {{ item.name }}
-            </h3>
-            <p class="mt-1.5 text-[15.5px] leading-[1.55] text-muted">{{ item.tagline }}</p>
-            <div class="mt-4 font-mono text-[10.5px] uppercase tracking-[0.1em] text-muted">
-              {{ item.period }}
-            </div>
-          </NuxtLink>
-        </div>
-      </div>
-    </section>
-
-    <!-- Process -->
-    <section class="border-b border-line">
-      <div class="mx-auto max-w-site px-5 py-16 md:px-10 md:py-[92px]">
-        <div data-reveal class="mb-[18px] font-mono text-[11px] uppercase tracking-[0.16em] text-muted">
-          {{ c.home.processKicker }}
-        </div>
-        <h2
-          data-reveal
-          class="mb-14 max-w-[24ch] font-display text-[clamp(30px,3.2vw,40px)] font-normal leading-[1.1] tracking-[-0.018em]"
-        >
-          {{ c.home.processHeading }}
-        </h2>
-        <div class="grid gap-px border-y border-line bg-line md:grid-cols-4">
-          <!-- edge-bordered band: first/last cells align to the container,
-               the same rule the proof band follows -->
-          <div
-            v-for="step in c.home.process"
+        <ol class="grid gap-6 md:grid-cols-4 md:gap-8">
+          <li
+            v-for="(step, i) in c.home.process"
             :key="step.title"
             data-reveal
-            class="bg-paper px-6 py-8 md:py-9 md:first:pl-0 md:last:pr-0"
+            class="grid grid-cols-[36px_1fr] gap-x-4 md:flex md:flex-col md:gap-3.5"
           >
-            <div class="mb-6 font-mono text-[11px] tracking-[0.12em] text-accent">
-              {{ step.when }}
+            <span class="flex justify-center pt-1 md:h-9 md:items-center md:justify-start md:pt-0">
+              <span
+                v-if="i < 3"
+                class="block w-1.5 bg-periwinkle md:!h-2 md:w-[var(--w)]"
+                :style="{ height: `${[24, 44, 72][i]}px`, '--w': `${[22, 45, 80][i]}%` }"
+              />
+              <ChevronIcon v-else :size="26" :weight="5" class="rotate-90 text-periwinkle md:rotate-0" />
+            </span>
+            <div class="flex flex-col gap-1.5 md:gap-3.5">
+              <span class="text-[14px] font-extrabold text-periwinkle md:text-[16px]">{{ step.when }}</span>
+              <h3 class="font-display text-[20px] font-extrabold md:text-[24px]">{{ step.title }}</h3>
+              <p class="text-[15px] leading-[1.55] text-night-muted md:text-[16px]">{{ step.body }}</p>
             </div>
-            <h3 class="mb-3 text-[17px] font-semibold">{{ step.title }}</h3>
-            <p class="text-[15px] leading-[1.6] text-muted">{{ step.body }}</p>
-          </div>
-        </div>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="border-b border-line">
-      <div
-        class="mx-auto grid max-w-site items-center gap-12 px-5 py-20 md:grid-cols-[1.15fr_0.85fr] md:gap-[72px] md:px-10 md:py-24"
+    <!-- The arrowhead: the call. -->
+    <section class="relative overflow-hidden bg-ultra text-white">
+      <svg
+        class="pointer-events-none absolute -right-[120px] top-6 h-[340px] w-[300px] md:-right-[60px] md:top-10 md:h-[600px] md:w-[520px]"
+        viewBox="0 0 30 34"
+        aria-hidden="true"
       >
-        <div data-reveal>
+        <path d="M3 2 L27 17 L3 32" fill="none" stroke="#1b2c96" stroke-width="3" />
+      </svg>
+      <div
+        class="relative mx-auto grid max-w-site gap-6 px-5 py-14 md:grid-cols-[1.2fr_0.8fr] md:items-end md:gap-20 md:px-10 md:py-28"
+      >
+        <div data-reveal class="flex flex-col gap-6 md:gap-7">
           <h2
-            class="mb-6 max-w-[22ch] font-display text-[clamp(34px,3.8vw,54px)] font-normal leading-[1.06] tracking-[-0.02em]"
+            class="font-display text-[38px] font-extrabold leading-none md:text-[clamp(48px,5vw,72px)] md:leading-[0.98]"
+            style="letter-spacing: -0.04em"
           >
-            {{ c.home.ctaHeading }} <em class="italic text-accent">{{ c.home.ctaEmphasis }}</em>
+            {{ c.home.ctaHeading }} {{ c.home.ctaEmphasis }}
           </h2>
-          <p class="max-w-[50ch] text-[18px] leading-[1.6] text-muted">
+          <p class="max-w-[46ch] text-[17px] leading-[1.5] text-ultra-soft md:text-[20px]">
             {{ c.home.ctaBody }}
           </p>
         </div>
-        <div data-reveal class="grid gap-4">
-          <BookCallButton size="lg" class="justify-between" arrow />
+        <div data-reveal class="flex flex-col gap-3.5">
+          <div class="flex items-center gap-4 pb-2.5">
+            <img
+              src="/alberto.jpg"
+              :alt="c.about.founderAlt"
+              class="h-16 w-16 shrink-0 object-cover md:h-[84px] md:w-[84px]"
+              loading="lazy"
+            />
+            <p class="text-[15px] leading-[1.45] text-ultra-soft md:text-[17px]">
+              <strong class="text-white">{{ c.contact.speakingWith }} Alberto.</strong>
+              {{ c.contact.founderNote }}
+            </p>
+          </div>
+          <BookCallButton variant="onInk" size="lg" class="justify-between" arrow>
+            {{ c.common.bookScopingCall }}
+          </BookCallButton>
           <a
             :href="`mailto:${org.email}`"
-            class="flex h-[58px] items-center justify-between rounded-sm border border-line-2 px-6 text-[16px] transition-[border-color,background-color] duration-[250ms] hover:border-ink hover:bg-paper-2"
+            class="group flex h-16 items-center justify-between border-2 border-white px-7 text-[16px] font-semibold transition-colors duration-[250ms] hover:bg-white hover:text-ultra md:text-[18px]"
           >
             {{ org.email }}
-            <span aria-hidden="true">&rarr;</span>
+            <ChevronIcon :size="14" class="transition-transform duration-[250ms] group-hover:translate-x-1" />
           </a>
-          <div class="mt-1.5 font-mono text-[11px] uppercase tracking-[0.12em] text-muted">
-            {{ c.common.repliesWithin }}
+          <div class="pt-1 text-[14px] text-ultra-muted md:text-[15px]">
+            {{ c.common.repliesWithinTz }}
           </div>
         </div>
       </div>
@@ -312,6 +369,7 @@
 import { categoryExamples } from "~/data/categories";
 import { localisedCategories, localisedServices, localisedWork } from "~/data/i18n";
 import { org } from "~/data/org";
+import { featuredSlugs, type WorkItem } from "~/data/site";
 
 const locale = useLocale();
 const c = useCopy();
@@ -320,8 +378,58 @@ const lp = useLocalePath();
 const services = computed(() => localisedServices(locale.value));
 const categories = computed(() => localisedCategories(locale.value));
 const work = computed(() => localisedWork(locale.value));
-// The strip is labelled "Own products", so it may only contain them.
-const featured = computed(() => work.value.filter((w) => w.kind === "own").slice(0, 3));
+// Chosen by slug, not by kind: TourScanner is a "role", and the strip no
+// longer claims to show only our own products.
+const featured = computed(() =>
+  featuredSlugs
+    .map((slug) => work.value.find((w) => w.slug === slug))
+    .filter((w): w is WorkItem => Boolean(w)),
+);
+
+const sectors = computed(() => c.value.work.sectors.split("·").map((s) => s.trim()));
+
+// Blue, ink, ice: the three cards never share a colour, so a swipe on a
+// phone always shows a change.
+const cardTone = [
+  {
+    card: "bg-ultra text-white",
+    chip: "border-ultra-line",
+    number: "",
+    body: "text-ultra-soft",
+    rule: "border-ultra-line",
+    strong: "text-white",
+    note: "text-ultra-muted",
+    button: "bg-white text-ultra",
+  },
+  {
+    card: "bg-night-block text-white",
+    chip: "border-night-line",
+    number: "text-periwinkle",
+    body: "text-night-muted",
+    rule: "border-night-line",
+    strong: "text-white",
+    note: "text-night-muted",
+    button: "bg-ultra text-white",
+  },
+  {
+    card: "bg-accent-soft text-ink",
+    chip: "border-accent-soft-line",
+    number: "text-accent",
+    body: "text-muted",
+    rule: "border-accent-soft-line",
+    strong: "text-ink",
+    note: "text-muted",
+    button: "bg-ultra text-white",
+  },
+];
+
+/** "from ~ EUR 15k" style line: the service's last spec. */
+function priceLine(svc: { specs: { label: string; value: string }[] }) {
+  const last = svc.specs[svc.specs.length - 1];
+  if (!last) return "";
+  // "Quoted after the scoping call" reads on its own; "~ EUR 15k" needs "from".
+  return /\d/.test(last.value) ? `${last.label.toLowerCase()} ${last.value}` : last.value;
+}
 
 useHead({
   title: () => c.value.home.meta.title,

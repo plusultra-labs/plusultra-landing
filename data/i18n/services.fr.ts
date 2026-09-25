@@ -524,4 +524,179 @@ export const servicesFr: ServiceTexts = {
         "Des plateformes sur mesure de niveau production : portails, CRM, places de marché, outils internes. Livrées en quelques semaines sur un stack moderne par une équipe qui en exploite plus de dix.",
     },
   },
+
+  "fractional-ai-leadership": {
+    cardTitle: "Direction IA à temps partagé",
+    cardBody:
+      "Un responsable IA senior au sein de votre comité de direction, à temps partiel. Feuille de route, arbitrages entre acheter et construire, fournisseurs, maîtrise des coûts, et une équipe qui livre les premiers projets.",
+    title: "Un responsable IA senior dans votre direction, sans recrutement à temps plein",
+    lead: "La plupart des entreprises savent que l'IA compte, et presque aucune n'a quelqu'un de senior pour en répondre. Nous rejoignons votre comité de direction 2 à 4 jours par mois : nous fixons la feuille de route, tranchons entre acheter et construire, choisissons fournisseurs et modèles, tenons la facture IA sous contrôle, et notre équipe livre les premiers projets. Les conseils viennent de gens qui exploitent leurs propres produits IA.",
+    specs: [
+      { label: "Engagement habituel", value: "2–4 jours par mois" },
+      { label: "Format", value: "Temps partagé, au sein de votre direction" },
+      { label: "Prix", value: "Devis après le premier appel" },
+    ],
+    narrative: {
+      heading: "Pourquoi les plans IA calent entre le comité de direction et la première mise en ligne",
+      paragraphs: [
+        "Le scénario habituel est connu. La direction décide que l'IA est une priorité. On demande à quelqu'un de s'en occuper, en plus de son vrai travail. Les fournisseurs présentent, on achète quelques outils, une équipe lance un pilote, et un an plus tard personne ne sait dire ce que cela a coûté ni ce que cela a changé. Ce qui manque, c'est rarement le budget. C'est une personne senior qui porte les décisions et sait distinguer une bonne offre d'une mauvaise.",
+        "Recruter cette personne à temps plein est long et coûteux, et dans la plupart des entreprises le poste ne représente pas encore un temps plein. Un cabinet de stratégie vous écrit le plan, mais ne le construit pas. Nous occupons l'espace entre les deux : un responsable IA senior qui siège à vos réunions de direction quelques jours par mois, répond de la feuille de route, et s'appuie sur une équipe qui construit ce que la feuille de route prévoit.",
+        "Ce jugement vient de notre propre travail. Nous exploitons des produits IA en production, dont BuzzWatch, qui a des clients payants et un partenariat entreprise avec une agence internationale. Nous menons un programme d'innovation IA au sein d'une agence digitale internationale, par phases, et chaque phase doit s'autofinancer avant que la suivante ne démarre. Alberto travaille sur l'IA et le produit chez TourScanner, un métamoteur de voyage de plus de 1,5 million d'offres, où chaque appel à un modèle doit justifier son coût. Avant cela, il a fondé et dirigé Artupia pendant sept ans, jusqu'à 100 000 utilisateurs et une équipe de 20 personnes.",
+      ],
+      pullQuote:
+        "Chaque décision IA portée par quelqu'un de senior, avec une équipe derrière capable de la construire.",
+    },
+    points: [
+      {
+        title: "Une feuille de route liée au business",
+        body: "Nous partons de là où votre entreprise gagne et perd de l'argent, puis nous décidons où l'IA a sa place. La feuille de route nomme les processus, l'ordre, le retour attendu et ce qu'on abandonne. Chaque mois, elle est confrontée à ce qui s'est réellement passé.",
+      },
+      {
+        title: "Acheter ou construire, tranché sur des chiffres",
+        body: "Certaines choses s'achètent, d'autres se construisent, d'autres encore ne valent pas la peine. Nous tranchons au cas par cas, avec le coût de chaque option écrit noir sur blanc. Quand un outil existant fait le travail, nous le disons.",
+      },
+      {
+        title: "Fournisseurs et modèles choisis sur vos données",
+        body: "Nous lisons les contrats, testons les modèles sur vos propres données et comparons le coût réel par tâche. Vous obtenez une recommandation que vous pouvez défendre, et vos fournisseurs savent que quelqu'un de senior vérifie leur travail.",
+      },
+      {
+        title: "Des coûts IA visibles et maîtrisés",
+        body: "Dépense suivie par équipe, par outil et par processus, avec des plafonds fixés avant l'arrivée de la facture. C'est la même discipline que sur nos propres produits, où chaque appel à un modèle doit mériter sa place.",
+      },
+      {
+        title: "Des conseils de recrutement, y compris pour nous remplacer",
+        body: "Quand vient le moment de votre propre équipe IA, nous aidons à définir les postes, à évaluer les candidats sur du vrai travail et à décider quelles compétences doivent rester en interne. Le but est une entreprise qui n'a plus besoin de nous pour cela.",
+      },
+      {
+        title: "Les premiers projets, livrés par notre équipe",
+        body: "Une feuille de route que personne ne construit reste un document. Notre équipe livre les premiers projets avec le même stack et les mêmes standards que nos propres produits, sur vos comptes, pour que le plan devienne un logiciel que les gens utilisent.",
+      },
+    ],
+    pipeline: {
+      intro:
+        "Quatre phases. Le premier mois sert à comprendre ce que vous avez déjà. Ensuite, le travail prend un rythme mensuel, et chaque projet est cadré et validé séparément.",
+      stages: [
+        {
+          title: "Cadrage",
+          duration: "1 semaine",
+          basis: "Gratuit",
+          body: "Un appel, puis une réponse courte et écrite. Où en est l'IA dans votre entreprise aujourd'hui, ce que la direction en attend, et si un responsable à temps partagé est la bonne formule pour vous.",
+          outputs: [
+            "Usage actuel de l'IA, dépense et fournisseurs sur la table",
+            "Une réponse honnête : on y va ou pas",
+            "L'engagement adapté, avec un devis",
+          ],
+        },
+        {
+          title: "État des lieux",
+          duration: "Premier mois",
+          basis: "Mensuel",
+          body: "Nous rencontrons l'équipe, lisons les systèmes et regardons ce que l'IA vous coûte déjà. Puis nous mettons par écrit les décisions qui pèsent le plus.",
+          outputs: [
+            "Carte de là où l'IA sert aujourd'hui, et de là où elle devrait servir",
+            "Dépense IA actuelle par outil et par fournisseur",
+            "Les premiers arbitrages acheter ou construire, motivés",
+            "Une feuille de route pour le trimestre suivant",
+          ],
+        },
+        {
+          title: "Premiers projets",
+          duration: "Dès le deuxième mois",
+          basis: "Validé par projet",
+          body: "Notre équipe livre les premiers éléments de la feuille de route, pour que le plan se confronte tôt à du vrai travail et à de vraies données.",
+          outputs: [
+            "Les premiers projets en ligne, sur vos comptes",
+            "Le chiffre que chaque projet doit faire bouger, mesuré",
+            "Fournisseurs et modèles testés sur vos données",
+            "Ce qui n'a pas marché, abandonné",
+          ],
+        },
+        {
+          title: "Direction dans la durée",
+          duration: "En continu",
+          basis: "Mensuel",
+          body: "2 à 4 jours par mois au rythme de votre direction. La feuille de route reste à jour, la dépense reste visible et les décisions tombent à temps.",
+          outputs: [
+            "Revue mensuelle de la feuille de route et de la dépense",
+            "Choix de fournisseurs et de modèles au fil du marché",
+            "Appui au recrutement de votre propre équipe IA",
+            "Passation quand vous recrutez un responsable à temps plein",
+          ],
+        },
+      ],
+      footnote:
+        "Vous pouvez vous arrêter après n'importe quelle phase et garder tout ce qui a été produit jusque-là, sur vos propres comptes.",
+    },
+    deliverables: [
+      {
+        group: "Direction",
+        items: [
+          "Une feuille de route IA liée au chiffre d'affaires et aux coûts",
+          "Des arbitrages acheter ou construire, écrits et motivés",
+          "Une liste claire des usages où l'IA n'a pas sa place",
+          "Une revue mensuelle avec le comité de direction",
+          "Un point mensuel court pour le conseil ou les investisseurs",
+        ],
+      },
+      {
+        group: "Fournisseurs et coûts",
+        items: [
+          "Listes courtes de fournisseurs et de modèles, testées sur vos données",
+          "Revue des contrats et des prix avant signature",
+          "Dépense IA suivie par équipe, outil et processus",
+          "Plafonds de dépense et alertes fixés à l'avance",
+          "Un plan pour le jour où un fournisseur change de prix ou de qualité",
+        ],
+      },
+      {
+        group: "Équipe et projets",
+        items: [
+          "Définition des postes pour vos recrutements IA",
+          "Évaluation des candidats sur du vrai travail",
+          "Les premiers projets, livrés par notre équipe",
+          "Code, données et comptes à votre nom",
+          "Une documentation que votre future équipe peut reprendre",
+        ],
+      },
+    ],
+    notDoing: [
+      "Servir de caution. Un responsable IA sans équipe pour construire, c'est un titre, pas une fonction.",
+      "Des présentations stratégiques sans logiciel qui fonctionne derrière.",
+      "De la mise à disposition de personnel à l'heure. Nous répondons de décisions et de résultats, pas d'une feuille de temps.",
+      "Acheter des outils parce qu'un concurrent l'a fait. Chaque achat a une mission et un chiffre.",
+      "L'enfermement. Feuille de route, comptes et code sont à vous, avec une passation propre quand vous recrutez votre propre responsable.",
+    ],
+    faq: [
+      {
+        q: "Que veut dire temps partagé, concrètement ?",
+        a: "Un responsable IA senior qui fait partie de votre comité de direction 2 à 4 jours par mois. Nous sommes présents aux réunions où les décisions se prennent, nous répondons de la feuille de route IA et nous veillons à ce que les premiers projets soient vraiment livrés.",
+      },
+      {
+        q: "En quoi est-ce différent d'un consultant ?",
+        a: "Un consultant vous remet un plan. Nous prenons les décisions, et notre équipe construit les premiers éléments de la feuille de route. Vous nous jugez sur le logiciel en production et sur ce que l'IA vous coûte, pas sur la qualité des slides.",
+      },
+      {
+        q: "Pourquoi ne pas recruter un Head of AI à temps plein ?",
+        a: "Vous en aurez peut-être besoin plus tard, et nous vous aidons à le recruter. Tant que le poste ne représente pas un temps plein, un responsable à temps partagé coûte moins cher, démarre plus vite et arrive avec une équipe qui construit. Le jour où vous recrutez, nous lui transmettons la feuille de route, les décisions et le code.",
+      },
+      {
+        q: "Combien cela coûte-t-il ?",
+        a: "Cela dépend de l'engagement, entre 2 et 4 jours par mois, et des projets que vous décidez de lancer. Nous établissons le devis après le premier appel, une fois que nous savons ce dont vous avez besoin.",
+      },
+      {
+        q: "Qui siégerait dans notre comité de direction ?",
+        a: "Une personne senior de notre équipe, nommée avant toute signature, avec derrière elle les ingénieurs et les designers qui livrent les projets.",
+      },
+      {
+        q: "Allez-vous toujours recommander de construire avec vous ?",
+        a: "Non. Acheter ou construire, cela veut dire exactement ça. Quand un outil existant fait le travail, nous le disons et nous vous aidons à le choisir. Nous construisons là où rien sur le marché ne convient, ou là où le posséder vous donne un vrai avantage.",
+      },
+    ],
+    cta: "Besoin de quelqu'un de senior pour prendre l'IA en main dans votre entreprise ?",
+    meta: {
+      title: "Direction IA à temps partagé - Plusultra Labs",
+      description:
+        "Un responsable IA senior au sein de votre comité de direction, 2 à 4 jours par mois : feuille de route, arbitrages acheter ou construire, choix des fournisseurs et des modèles, maîtrise des coûts IA et premiers projets livrés par notre équipe.",
+    },
+  },
 };

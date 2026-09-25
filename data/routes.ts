@@ -33,6 +33,7 @@ export const SERVICE_SLUGS = [
   "ai-product-development",
   "ai-integration",
   "custom-platforms",
+  "fractional-ai-leadership",
 ] as const;
 export type ServiceSlug = (typeof SERVICE_SLUGS)[number];
 
@@ -65,6 +66,7 @@ const SEGMENTS: Record<Locale, Segments> = {
       "ai-product-development": "ai-product-development",
       "ai-integration": "ai-integration",
       "custom-platforms": "custom-platforms",
+      "fractional-ai-leadership": "fractional-ai-leadership",
     },
   },
   it: {
@@ -76,6 +78,7 @@ const SEGMENTS: Record<Locale, Segments> = {
       "ai-product-development": "sviluppo-prodotti-ai",
       "ai-integration": "integrazione-ai",
       "custom-platforms": "piattaforme-su-misura",
+      "fractional-ai-leadership": "direzione-ai-part-time",
     },
   },
   es: {
@@ -87,6 +90,7 @@ const SEGMENTS: Record<Locale, Segments> = {
       "ai-product-development": "desarrollo-de-producto-ia",
       "ai-integration": "integracion-de-ia",
       "custom-platforms": "plataformas-a-medida",
+      "fractional-ai-leadership": "direccion-ia-fraccional",
     },
   },
   fr: {
@@ -98,6 +102,7 @@ const SEGMENTS: Record<Locale, Segments> = {
       "ai-product-development": "developpement-produit-ia",
       "ai-integration": "integration-ia",
       "custom-platforms": "plateformes-sur-mesure",
+      "fractional-ai-leadership": "direction-ia-a-temps-partage",
     },
   },
 };

@@ -524,4 +524,179 @@ export const servicesEs: ServiceTexts = {
         "Plataformas a medida de nivel producción: portales, CRM, marketplaces, herramientas internas. Entregadas en semanas sobre un stack moderno por un equipo que opera más de diez propias.",
     },
   },
+
+  "fractional-ai-leadership": {
+    cardTitle: "Dirección de IA fraccional",
+    cardBody:
+      "Un responsable de IA senior dentro de tu equipo directivo, a tiempo parcial. Hoja de ruta, decisiones de comprar o construir, proveedores, control de costes y un equipo que lanza los primeros proyectos.",
+    title: "Un responsable de IA senior en tu dirección, sin contratarlo a tiempo completo",
+    lead: "Casi todas las empresas saben que la IA importa, y casi ninguna tiene a alguien senior que responda de ella. Entramos en tu equipo directivo 2-4 días al mes: marcamos la hoja de ruta, decidimos qué comprar y qué construir, elegimos proveedores y modelos, mantenemos a raya la factura de IA, y nuestro equipo lanza los primeros proyectos. El consejo viene de gente que opera productos de IA propios.",
+    specs: [
+      { label: "Dedicación habitual", value: "2–4 días al mes" },
+      { label: "Formato", value: "Tiempo parcial, dentro de tu dirección" },
+      { label: "Precio", value: "Presupuesto tras la primera llamada" },
+    ],
+    narrative: {
+      heading: "Por qué los planes de IA se quedan parados entre el comité de dirección y el primer lanzamiento",
+      paragraphs: [
+        "Lo normal es esto. La dirección acuerda que la IA es una prioridad. A alguien se le pide que lo mire, además de su trabajo de verdad. Los proveedores presentan, se compran un par de herramientas, un equipo hace un piloto, y un año después nadie sabe decir cuánto costó ni qué cambió. Casi nunca falta presupuesto. Falta una persona senior que tome las decisiones y sepa distinguir una buena propuesta de una mala.",
+        "Contratar a esa persona a tiempo completo es lento y caro, y en la mayoría de empresas el puesto todavía no da para una jornada completa. Una consultora de estrategia te escribe el plan, pero no lo construye. Nosotros cubrimos el hueco entre las dos cosas: un responsable de IA senior que se sienta en tus reuniones de dirección unos días al mes, responde de la hoja de ruta y tiene detrás un equipo que construye lo que la hoja de ruta dice.",
+        "El criterio sale de nuestro propio trabajo. Operamos productos de IA en producción, entre ellos BuzzWatch, que tiene clientes de pago y una alianza enterprise con una agencia internacional. Llevamos un programa de innovación en IA dentro de una agencia digital internacional, por fases, y cada fase tiene que pagarse sola antes de que empiece la siguiente. Alberto trabaja en IA y producto en TourScanner, un metabuscador de viajes con más de 1,5 millones de ofertas, donde cada llamada a un modelo tiene que justificar lo que cuesta. Antes fundó y dirigió Artupia durante siete años, hasta los 100.000 usuarios y un equipo de 20 personas.",
+      ],
+      pullQuote:
+        "Cada decisión de IA en manos de alguien senior, con un equipo detrás capaz de construirla.",
+    },
+    points: [
+      {
+        title: "Una hoja de ruta atada al negocio",
+        body: "Empezamos por dónde gana y pierde dinero tu empresa, y después decidimos dónde encaja la IA. La hoja de ruta dice qué procesos, en qué orden, con qué retorno esperado y qué se descarta. Cada mes la comparamos con lo que pasó de verdad.",
+      },
+      {
+        title: "Comprar o construir, decidido con números",
+        body: "Hay cosas que conviene comprar, otras que conviene construir y otras que mejor no hacer. Lo decidimos caso por caso, con el coste de cada opción por escrito. Cuando una herramienta que ya existe hace el trabajo, te lo decimos.",
+      },
+      {
+        title: "Proveedores y modelos elegidos con tus datos",
+        body: "Leemos los contratos, probamos los modelos con tus propios datos y comparamos el coste real por tarea. Recibes una recomendación que puedes defender, y tus proveedores saben que alguien senior revisa su trabajo.",
+      },
+      {
+        title: "Costes de IA a la vista y bajo control",
+        body: "Gasto seguido por equipo, por herramienta y por proceso, con límites fijados antes de que llegue la factura. Es la misma disciplina que aplicamos a nuestros productos, donde cada llamada a un modelo tiene que ganarse su sitio.",
+      },
+      {
+        title: "Ayuda para contratar, también a quien nos sustituya",
+        body: "Cuando llegue el momento de tener tu propio equipo de IA, te ayudamos a definir los puestos, a evaluar candidatos con trabajo real y a decidir qué capacidades tienen que estar en casa. El objetivo es una empresa que ya no nos necesite para esto.",
+      },
+      {
+        title: "Los primeros proyectos, lanzados por nuestro equipo",
+        body: "Una hoja de ruta que nadie construye es un documento. Nuestro equipo lanza los primeros proyectos con el mismo stack y los mismos estándares que usamos en nuestros productos, en tus cuentas, para que el plan se convierta en software que la gente usa.",
+      },
+    ],
+    pipeline: {
+      intro:
+        "Cuatro fases. El primer mes sirve para entender lo que ya tienes. A partir de ahí el trabajo coge un ritmo mensual, y cada proyecto se define y se acuerda por separado.",
+      stages: [
+        {
+          title: "Encuadre",
+          duration: "1 semana",
+          basis: "Gratis",
+          body: "Una llamada y después una respuesta breve por escrito. Dónde está hoy la IA en tu empresa, qué necesita de ella la dirección y si un responsable a tiempo parcial es la fórmula adecuada para ti.",
+          outputs: [
+            "Uso actual de la IA, gasto y proveedores sobre la mesa",
+            "Una respuesta honesta sobre si encajamos o no",
+            "La dedicación que te conviene, con un presupuesto",
+          ],
+        },
+        {
+          title: "Diagnóstico",
+          duration: "Primer mes",
+          basis: "Mensual",
+          body: "Conocemos al equipo, leemos los sistemas y miramos cuánto te cuesta ya la IA. Después dejamos por escrito las decisiones que más pesan.",
+          outputs: [
+            "Mapa de dónde se usa la IA hoy y dónde debería estar",
+            "Gasto actual en IA por herramienta y proveedor",
+            "Las primeras decisiones de comprar o construir, razonadas",
+            "Una hoja de ruta para el próximo trimestre",
+          ],
+        },
+        {
+          title: "Primeros proyectos",
+          duration: "Desde el segundo mes",
+          basis: "Acordado por proyecto",
+          body: "Nuestro equipo lanza los primeros puntos de la hoja de ruta, para que el plan se pruebe pronto con trabajo real y datos reales.",
+          outputs: [
+            "Los primeros proyectos en línea, en tus cuentas",
+            "El número que cada proyecto tiene que mover, medido",
+            "Proveedores y modelos probados con tus datos",
+            "Lo que no funcionó, descartado",
+          ],
+        },
+        {
+          title: "Dirección continuada",
+          duration: "En curso",
+          basis: "Mensual",
+          body: "2-4 días al mes dentro del ritmo de tu dirección. La hoja de ruta sigue al día, el gasto sigue a la vista y las decisiones llegan a tiempo.",
+          outputs: [
+            "Revisión mensual de hoja de ruta y gasto",
+            "Decisiones de proveedores y modelos según se mueve el mercado",
+            "Apoyo para contratar tu propio equipo de IA",
+            "Traspaso cuando contratas a un responsable a tiempo completo",
+          ],
+        },
+      ],
+      footnote:
+        "Puedes parar después de cualquier fase y quedarte con todo lo producido hasta ahí, en tus propias cuentas.",
+    },
+    deliverables: [
+      {
+        group: "Dirección",
+        items: [
+          "Una hoja de ruta de IA atada a ingresos y costes",
+          "Decisiones de comprar o construir, por escrito y razonadas",
+          "Una lista clara de dónde no hay que usar IA",
+          "Una revisión mensual con el equipo directivo",
+          "Un resumen mensual breve para el consejo o los inversores",
+        ],
+      },
+      {
+        group: "Proveedores y costes",
+        items: [
+          "Listas cortas de proveedores y modelos, probadas con tus datos",
+          "Revisión de contratos y precios antes de firmar",
+          "Gasto en IA seguido por equipo, herramienta y proceso",
+          "Límites de gasto y alertas fijados de antemano",
+          "Un plan para cuando un proveedor cambia de precio o de calidad",
+        ],
+      },
+      {
+        group: "Equipo y proyectos",
+        items: [
+          "Definición de puestos para tus contrataciones de IA",
+          "Evaluación de candidatos con trabajo real",
+          "Los primeros proyectos, lanzados por nuestro equipo",
+          "Código, datos y cuentas a tu nombre",
+          "Documentación que tu futuro equipo pueda retomar",
+        ],
+      },
+    ],
+    notDoing: [
+      "Hacer de figura decorativa. Un responsable de IA sin equipo que construya es un cargo, no una función.",
+      "Presentaciones de estrategia sin software funcionando detrás.",
+      "Cesión de personal por horas. Respondemos de decisiones y resultados, no de una hoja de horas.",
+      "Comprar herramientas porque las compró un competidor. Cada compra tiene una tarea y un número.",
+      "Dependencia. Hoja de ruta, cuentas y código son tuyos, con un traspaso limpio cuando contratas a tu propio responsable.",
+    ],
+    faq: [
+      {
+        q: "¿Qué significa fraccional en la práctica?",
+        a: "Un responsable de IA senior que forma parte de tu equipo directivo 2-4 días al mes. Estamos en las reuniones donde se decide, respondemos de la hoja de ruta de IA y nos aseguramos de que los primeros proyectos salgan de verdad.",
+      },
+      {
+        q: "¿En qué se diferencia de contratar a un consultor?",
+        a: "Un consultor te entrega un plan. Nosotros tomamos las decisiones, y nuestro equipo construye los primeros puntos de la hoja de ruta. Nos juzgas por el software en producción y por lo que te cuesta la IA, no por lo bonitas que son las diapositivas.",
+      },
+      {
+        q: "¿Por qué no contratar a un Head of AI a tiempo completo?",
+        a: "Puede que más adelante lo necesites, y te ayudamos a contratarlo. Mientras el puesto no dé para una jornada completa, un responsable a tiempo parcial cuesta menos, empieza antes y viene con un equipo que construye. Cuando contrates, le pasamos la hoja de ruta, las decisiones y el código.",
+      },
+      {
+        q: "¿Cuánto cuesta?",
+        a: "Depende de la dedicación, entre 2 y 4 días al mes, y de los proyectos que decidas hacer. Te pasamos presupuesto tras la primera llamada, cuando sabemos qué necesitas.",
+      },
+      {
+        q: "¿Quién se sentaría en nuestro equipo directivo?",
+        a: "Una persona senior de nuestro equipo, con nombre y apellido antes de firmar nada, y detrás los ingenieros y diseñadores que lanzan los proyectos.",
+      },
+      {
+        q: "¿Nos recomendaréis siempre construir con vosotros?",
+        a: "No. Comprar o construir significa exactamente eso. Cuando una herramienta que ya existe hace el trabajo, te lo decimos y te ayudamos a elegirla. Construimos donde no hay nada en el mercado que encaje, o donde tenerlo en propiedad te da una ventaja real.",
+      },
+    ],
+    cta: "¿Necesitas a alguien senior que se haga cargo de la IA en tu empresa?",
+    meta: {
+      title: "Dirección de IA fraccional - Plusultra Labs",
+      description:
+        "Un responsable de IA senior dentro de tu equipo directivo, 2-4 días al mes: hoja de ruta, decisiones de comprar o construir, proveedores y modelos, control del coste de IA y primeros proyectos lanzados por nuestro equipo.",
+    },
+  },
 };

@@ -5,11 +5,11 @@
       <div class="mx-auto max-w-site px-5 md:px-10">
         <div class="grid items-end gap-12 py-16 md:grid-cols-[1.25fr_0.75fr] md:gap-16 md:pb-[68px] md:pt-[88px]">
           <div>
-            <div class="pu-fade mb-[22px] font-mono text-[11px] uppercase tracking-[0.16em] text-muted">
+            <div class="pu-fade mb-[22px] text-[15px] font-bold text-accent">
               {{ c.servicePage.breadcrumb }} / {{ content.cardTitle }}
             </div>
             <h1
-              class="pu-rise mb-[26px] max-w-[22ch] font-display text-[clamp(40px,4.8vw,68px)] font-normal leading-[1.03] tracking-[-0.022em]"
+              class="pu-rise mb-[26px] max-w-[22ch] font-display text-[clamp(40px,4.8vw,68px)] font-extrabold leading-[1.03] tracking-[-0.022em]"
             >
               {{ content.title }}
             </h1>
@@ -25,7 +25,7 @@
           </div>
 
           <div class="pu-fade grid gap-4 border-line text-[15px] md:border-l md:pl-8" style="animation-delay: 0.3s">
-            <div class="font-mono text-[10.5px] uppercase tracking-[0.14em] text-muted">
+            <div class="text-[14px] font-bold text-muted">
               {{ c.servicePage.atAGlance }}
             </div>
             <div
@@ -46,7 +46,7 @@
       <div class="mx-auto max-w-site px-5 py-16 md:px-10 md:py-[92px]">
         <div data-reveal class="grid gap-10 md:grid-cols-[0.44fr_1fr] md:gap-16">
           <h2
-            class="max-w-[20ch] font-display text-[clamp(28px,3vw,40px)] font-normal leading-[1.1] tracking-[-0.018em]"
+            class="max-w-[20ch] font-display text-[clamp(28px,3vw,40px)] font-extrabold leading-[1.1] tracking-[-0.018em]"
           >
             {{ content.narrative.heading }}
           </h2>
@@ -71,12 +71,12 @@
     <!-- Capability points -->
     <section class="border-b border-line bg-paper-2">
       <div class="mx-auto max-w-site px-5 py-16 md:px-10 md:py-[92px]">
-        <div data-reveal class="mb-[18px] font-mono text-[11px] uppercase tracking-[0.16em] text-muted">
+        <div data-reveal class="mb-[18px] text-[15px] font-bold text-accent">
           {{ c.servicePage.pointsKicker }}
         </div>
         <h2
           data-reveal
-          class="mb-12 max-w-[24ch] font-display text-[clamp(28px,3vw,40px)] font-normal leading-[1.1] tracking-[-0.018em]"
+          class="mb-12 max-w-[24ch] font-display text-[clamp(28px,3vw,40px)] font-extrabold leading-[1.1] tracking-[-0.018em]"
         >
           {{ c.servicePage.pointsHeading }}
         </h2>
@@ -97,12 +97,12 @@
     <!-- How it works: pipeline -->
     <section class="border-b border-line">
       <div class="mx-auto max-w-site px-5 py-16 md:px-10 md:py-[92px]">
-        <div data-reveal class="mb-[18px] font-mono text-[11px] uppercase tracking-[0.16em] text-muted">
+        <div data-reveal class="mb-[18px] text-[15px] font-bold text-accent">
           {{ c.servicePage.pipelineKicker }}
         </div>
         <h2
           data-reveal
-          class="mb-5 max-w-[24ch] font-display text-[clamp(28px,3vw,40px)] font-normal leading-[1.1] tracking-[-0.018em]"
+          class="mb-5 max-w-[24ch] font-display text-[clamp(28px,3vw,40px)] font-extrabold leading-[1.1] tracking-[-0.018em]"
         >
           {{ c.servicePage.pipelineHeading }}
         </h2>
@@ -129,15 +129,15 @@
             </span>
 
             <div class="flex items-baseline justify-between gap-3">
-              <span class="font-mono text-[12px] tracking-[0.12em] text-accent">
+              <span class="text-[14px] font-bold text-accent">
                 {{ String(i + 1).padStart(2, "0") }}
               </span>
-              <span class="font-mono text-[10.5px] uppercase tracking-[0.14em] text-muted">
+              <span class="text-[14px] font-bold text-muted">
                 {{ stage.duration }}
               </span>
             </div>
 
-            <h3 class="mt-5 font-display text-[24px] font-normal leading-tight tracking-[-0.012em]">
+            <h3 class="mt-5 font-display text-[24px] font-extrabold leading-tight tracking-[-0.012em]">
               {{ stage.title }}
             </h3>
             <p class="mt-3 text-[14.5px] leading-[1.6] text-muted">{{ stage.body }}</p>
@@ -154,14 +154,14 @@
             </ul>
 
             <div class="mt-auto pt-6">
-              <span class="font-mono text-[10.5px] uppercase tracking-[0.14em]">
+              <span class="text-[14px] font-bold">
                 {{ stage.basis }}
               </span>
             </div>
           </div>
         </div>
 
-        <p class="mt-5 font-mono text-[11px] uppercase leading-relaxed tracking-[0.12em] text-muted">
+        <p class="mt-5 text-[14px] font-bold leading-relaxed text-muted">
           {{ content.pipeline.footnote }}
         </p>
       </div>
@@ -170,12 +170,12 @@
     <!-- Deliverables -->
     <section class="border-b border-line bg-paper-2">
       <div class="mx-auto max-w-site px-5 py-16 md:px-10 md:py-[92px]">
-        <div data-reveal class="mb-[18px] font-mono text-[11px] uppercase tracking-[0.16em] text-muted">
+        <div data-reveal class="mb-[18px] text-[15px] font-bold text-accent">
           {{ c.servicePage.deliverablesKicker }}
         </div>
         <h2
           data-reveal
-          class="mb-5 font-display text-[clamp(28px,3vw,40px)] font-normal leading-[1.1] tracking-[-0.018em]"
+          class="mb-5 font-display text-[clamp(28px,3vw,40px)] font-extrabold leading-[1.1] tracking-[-0.018em]"
         >
           {{ c.servicePage.deliverablesHeading }}
         </h2>
@@ -189,7 +189,7 @@
             data-reveal
             class="bg-paper-2 px-7 py-8"
           >
-            <h3 class="font-mono text-[10.5px] uppercase tracking-[0.14em] text-accent">
+            <h3 class="text-[14px] font-bold text-accent">
               {{ group.group }}
             </h3>
             <ul class="mt-5">
@@ -211,11 +211,11 @@
       <div class="mx-auto max-w-site px-5 py-16 md:px-10 md:py-[92px]">
         <div data-reveal class="grid items-start gap-10 md:grid-cols-[0.44fr_1fr] md:gap-16">
           <div>
-            <div class="mb-[18px] font-mono text-[11px] uppercase tracking-[0.16em] text-muted">
+            <div class="mb-[18px] text-[15px] font-bold text-accent">
               {{ c.servicePage.boundariesKicker }}
             </div>
             <h2
-              class="mb-5 font-display text-[clamp(28px,3vw,36px)] font-normal leading-[1.1] tracking-[-0.016em]"
+              class="mb-5 font-display text-[clamp(28px,3vw,36px)] font-extrabold leading-[1.1] tracking-[-0.016em]"
             >
               {{ c.servicePage.boundariesHeading }}
             </h2>
@@ -229,7 +229,7 @@
               :key="item"
               class="flex gap-5 border-b border-line py-5"
             >
-              <span class="font-mono text-[13px] text-muted" aria-hidden="true">&#10005;</span>
+              <span class="text-[14px] font-bold text-muted" aria-hidden="true">&#10005;</span>
               <span class="text-[16px] leading-[1.6] text-muted">{{ item }}</span>
             </div>
           </div>
@@ -242,17 +242,17 @@
       <div class="mx-auto max-w-site px-5 py-16 md:px-10 md:py-[92px]">
         <div class="mb-12 flex flex-wrap items-end justify-between gap-10">
           <div data-reveal>
-            <div class="mb-[18px] font-mono text-[11px] uppercase tracking-[0.16em] text-muted">
+            <div class="mb-[18px] text-[15px] font-bold text-accent">
               {{ c.servicePage.pricingKicker }}
             </div>
             <h2
-              class="max-w-[24ch] font-display text-[clamp(28px,3vw,40px)] font-normal leading-[1.1] tracking-[-0.018em]"
+              class="max-w-[24ch] font-display text-[clamp(28px,3vw,40px)] font-extrabold leading-[1.1] tracking-[-0.018em]"
             >
-              {{ c.servicePage.pricingHeading }}
+              {{ onRequest ? c.servicePage.pricingHeadingOnRequest : c.servicePage.pricingHeading }}
             </h2>
           </div>
           <p class="m-0 max-w-[38ch] text-[15px] leading-[1.6] text-muted">
-            {{ c.servicePage.pricingNote }}
+            {{ onRequest ? c.servicePage.pricingNoteOnRequest : c.servicePage.pricingNote }}
           </p>
         </div>
         <div class="grid gap-px border border-line bg-line md:grid-cols-3">
@@ -262,10 +262,10 @@
             data-reveal
             class="flex flex-col gap-4 bg-paper px-7 py-8"
           >
-            <div class="font-mono text-[10.5px] uppercase tracking-[0.14em] text-muted">
+            <div class="text-[14px] font-bold text-muted">
               {{ String(i + 1).padStart(2, "0") }} · {{ tier.title }}
             </div>
-            <div class="font-display text-[30px] leading-none">{{ tier.price }}</div>
+            <div class="font-display font-extrabold leading-[1.1]" :class="onRequest ? 'text-[20px]' : 'text-[30px]'">{{ tier.price }}</div>
             <p class="text-[15px] leading-[1.6] text-muted">{{ tier.body }}</p>
           </div>
         </div>
@@ -275,12 +275,12 @@
     <!-- FAQ -->
     <section class="border-b border-line">
       <div class="mx-auto max-w-site px-5 py-16 md:px-10 md:py-[92px]">
-        <div data-reveal class="mb-[18px] font-mono text-[11px] uppercase tracking-[0.16em] text-muted">
+        <div data-reveal class="mb-[18px] text-[15px] font-bold text-accent">
           {{ c.servicePage.faqKicker }}
         </div>
         <h2
           data-reveal
-          class="mb-12 font-display text-[clamp(28px,3vw,40px)] font-normal leading-[1.1] tracking-[-0.018em]"
+          class="mb-12 font-display text-[clamp(28px,3vw,40px)] font-extrabold leading-[1.1] tracking-[-0.018em]"
         >
           {{ c.servicePage.faqHeading }}
         </h2>
@@ -300,12 +300,12 @@
     <!-- Related work -->
     <section v-if="related.length" class="border-b border-line bg-paper-2">
       <div class="mx-auto max-w-site px-5 py-16 md:px-10 md:py-[92px]">
-        <div data-reveal class="mb-[18px] font-mono text-[11px] uppercase tracking-[0.16em] text-muted">
+        <div data-reveal class="mb-[18px] text-[15px] font-bold text-accent">
           {{ c.servicePage.relatedKicker }}
         </div>
         <h2
           data-reveal
-          class="font-display text-[clamp(28px,3vw,40px)] font-normal leading-[1.1] tracking-[-0.018em]"
+          class="font-display text-[clamp(28px,3vw,40px)] font-extrabold leading-[1.1] tracking-[-0.018em]"
         >
           {{ c.servicePage.relatedHeading }}
         </h2>
@@ -328,7 +328,7 @@
                 loading="lazy"
               />
             </div>
-            <h3 class="mt-4 font-display text-[24px] font-normal leading-tight">{{ item.name }}</h3>
+            <h3 class="mt-4 font-display text-[24px] font-extrabold leading-tight">{{ item.name }}</h3>
             <p class="mt-1.5 text-[15px] text-muted">{{ item.tagline }}</p>
           </NuxtLink>
         </div>
@@ -338,21 +338,21 @@
     <!-- Other services -->
     <section class="border-b border-line">
       <div class="mx-auto max-w-site px-5 py-14 md:px-10 md:py-16">
-        <div class="font-mono text-[11px] uppercase tracking-[0.16em] text-muted">
+        <div class="text-[15px] font-bold text-accent">
           {{ c.servicePage.otherServices }}
         </div>
-        <div class="mt-7 grid gap-px border border-line bg-line md:grid-cols-2">
+        <div class="mt-7 grid gap-px border border-line bg-line md:grid-cols-3">
           <NuxtLink
             v-for="other in otherServices"
             :key="other.to"
             :to="other.to"
             class="group bg-paper px-7 py-8 transition-colors duration-300 hover:bg-paper-2"
           >
-            <h3 class="mb-2.5 font-display text-[24px] font-normal leading-tight">
+            <h3 class="mb-2.5 font-display text-[24px] font-extrabold leading-tight">
               {{ other.cardTitle }}
             </h3>
             <p class="text-[15px] leading-[1.6] text-muted">{{ other.cardBody }}</p>
-            <div class="mt-6 font-mono text-[11.5px] uppercase tracking-[0.1em] text-accent">
+            <div class="mt-6 text-[14px] font-bold text-accent">
               {{ c.common.explore }} &rarr;
             </div>
           </NuxtLink>
@@ -366,7 +366,7 @@
         class="mx-auto flex max-w-site flex-wrap items-center justify-between gap-10 px-5 py-16 md:px-10 md:py-[88px]"
       >
         <h2
-          class="max-w-[24ch] font-display text-[clamp(30px,3.2vw,44px)] font-normal leading-[1.08] tracking-[-0.018em]"
+          class="max-w-[24ch] font-display text-[clamp(30px,3.2vw,44px)] font-extrabold leading-[1.08] tracking-[-0.018em]"
         >
           {{ content.cta }}
         </h2>
@@ -390,6 +390,8 @@ const lp = useLocalePath();
 
 const content = computed(() => localisedService(locale.value, props.slug));
 const tiers = computed(() => localisedPricing(locale.value, props.slug));
+// A service with no public price must not sit under "Prices published".
+const onRequest = computed(() => !tiers.value.some((t) => /\d/.test(t.price)));
 const related = computed(() =>
   localisedWork(locale.value)
     .filter((w) => w.service === props.slug)

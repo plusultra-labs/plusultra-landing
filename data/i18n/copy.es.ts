@@ -4,7 +4,7 @@ import type { SiteCopy } from "./types";
 // as the English original.
 export const copyEs: SiteCopy = {
   orgDescription:
-    "Plusultra Labs es un estudio de producto de IA. Construimos y operamos nuestros propios productos de IA, y llevamos el mismo equipo senior al trabajo con clientes: desarrollo de producto de IA, integración de IA y plataformas a medida.",
+    "Plusultra Labs es un estudio de producto de IA. Construimos y operamos nuestros propios productos de IA, y llevamos el mismo equipo senior al trabajo con clientes: desarrollo de producto de IA, integración de IA, plataformas a medida y dirección de IA fraccional.",
   orgShort:
     "Estudio de producto de IA. Lanzamos nuestros productos de IA y después el tuyo.",
 
@@ -67,7 +67,7 @@ export const copyEs: SiteCopy = {
   },
 
   home: {
-    kicker: "Estudio de producto de IA · Singapur",
+    kicker: "Estudio de producto de IA para empresas (B2B), en Singapur, con clientes en Europa y Asia",
     heroLines: ["Lanzamos nuestros", "productos de IA. Luego", "lanzamos el"],
     heroEmphasis: "tuyo.",
     lead: "Plusultra Labs es un estudio de producto de IA. Todo lo que recomendamos ya lo usamos nosotros a diario: nuestros productos, nuestras herramientas de IA, nuestros sistemas.",
@@ -76,55 +76,48 @@ export const copyEs: SiteCopy = {
       { label: "Primera versión usable", value: "3–6 semanas" },
       { label: "El equipo", value: "12 personas" },
     ],
-    proofs: [
-      {
-        value: "35",
-        label: "productos digitales diseñados, construidos y hoy en marcha, nuestros y de clientes",
-      },
-      {
-        value: "1,5M+",
-        label: "ofertas de viaje emparejadas y ordenadas en TourScanner, donde nuestro fundador trabaja en IA y producto",
-      },
-      {
-        value: "100%",
-        label: "del código y la infraestructura entregados en cuentas que son tuyas",
-      },
-      {
-        value: "24/7",
-        label: "nuestros asistentes de IA llevan las operaciones del estudio, así que sabemos que aguanta",
-      },
+    timeline: [
+      { year: "2014", label: "La primera empresa, Artupia" },
+      { year: "2021", label: "Productos para otros fundadores" },
+      { year: "2023", label: "Nuestros productos, en marcha y de pago" },
+      { year: "Luego", label: "El tuyo" },
     ],
-    servicesKicker: "01 — Qué hacemos",
-    servicesHeading: "Tres formas de trabajar juntos.",
+    sectorsLabel: "Trabajamos B2B, para",
+    sectorsNote: "Sectores que conocemos desde dentro",
+    seeNumbers: "Ver los números",
+    kindLabels: { own: "Producto propio", client: "Proyecto para cliente", role: "Rol de producto e IA" },
+    readCase: "Leer el caso",
+    servicesKicker: "Qué hacemos",
+    servicesHeading: "Cuatro formas de trabajar juntos.",
     servicesIntro:
       "Sin capa comercial de por medio y sin traspasos a júniors: las personas de la primera llamada son las que escriben el código. Alcance y precio quedan fijados por escrito antes de empezar.",
-    buildKicker: "02 — Qué construimos",
+    buildKicker: "Qué construimos",
     buildHeading: "Cuatro tipos de proyecto, no cuatro proyectos.",
     buildIntro:
       "Treinta y cinco productos lanzados y hoy en marcha. Lo que sigue está agrupado por tipo de proyecto y no por cliente, porque la pregunta útil es si ya hemos resuelto un problema con la forma del tuyo, no si tu sector aparece en la lista.",
     buildNote: "Solo ejemplos · parte del trabajo con clientes está bajo NDA",
     showcaseHeading: "Unos cuantos que sí podemos enseñar, con los números delante.",
-    showcaseLabel: "Productos propios",
-    processKicker: "03 — Cómo transcurre un proyecto",
+    showcaseLabel: "Productos propios, proyectos para clientes y una empresa en la que trabajamos desde dentro. Cada tarjeta empieza por el número que importa.",
+    processKicker: "Cómo transcurre un proyecto",
     processHeading: "Un proceso escrito, con fechas encima.",
     process: [
       {
-        when: "SEMANA 0",
+        when: "Semana 0",
         title: "Primera llamada",
         body: "Una llamada con los ingenieros que lo construirían. Sales con una respuesta escrita sobre encaje, rango de presupuesto y plazos, nos contrates o no.",
       },
       {
-        when: "SEMANA 1",
+        when: "Semana 1",
         title: "Propuesta cerrada",
         body: "Alcance, arquitectura, precio y fechas de entrega en un solo documento, acordados antes de escribir código. Sin sorpresas por horas.",
       },
       {
-        when: "SEMANA 2 — 12",
+        when: "Semanas 2 a 12",
         title: "Entregas cada semana",
         body: "Un entorno en línea desde la primera semana y algo que puedes clicar cada semana, con tus datos reales dentro desde el principio.",
       },
       {
-        when: "EN CURSO",
+        when: "En curso",
         title: "Lo operamos o te lo entregamos",
         body: "Lo mantenemos nosotros, o entregamos código e infraestructura documentados. En ambos casos las cuentas son tuyas desde el primer commit.",
       },
@@ -136,16 +129,16 @@ export const copyEs: SiteCopy = {
     meta: {
       title: "Plusultra Labs - Estudio de producto de IA",
       description:
-        "Plusultra Labs es un estudio de producto de IA. Lanzamos nuestros propios productos de IA y llevamos el mismo equipo de ingeniería al tuyo. Desarrollo de producto de IA, integración de IA, plataformas a medida.",
+        "Plusultra Labs es un estudio de producto de IA. Lanzamos nuestros propios productos de IA y llevamos el mismo equipo de ingeniería al tuyo. Desarrollo de producto de IA, integración de IA, plataformas a medida, dirección de IA fraccional.",
       ogTitle: "Plusultra Labs - Estudio de producto de IA",
       ogDescription:
-        "Lanzamos nuestros productos de IA. Luego lanzamos el tuyo. Desarrollo de producto de IA, integración de IA, plataformas a medida.",
+        "Lanzamos nuestros productos de IA. Luego lanzamos el tuyo. Desarrollo de producto de IA, integración de IA, plataformas a medida, dirección de IA fraccional.",
     },
   },
 
   services: {
     kicker: "Servicios",
-    heading: "Tres formas de trabajar juntos.",
+    heading: "Cuatro formas de trabajar juntos.",
     lead: "Sea cual sea la forma del encargo, el equipo es el mismo que construye y opera nuestros productos. Aquí abajo tienes qué entregamos, cuánto cuesta aproximadamente y cuánto tarda.",
     includedLabel: "Siempre incluido",
     included: [
@@ -191,28 +184,31 @@ export const copyEs: SiteCopy = {
   servicePage: {
     breadcrumb: "Servicios",
     atAGlance: "En resumen",
-    pointsKicker: "01 — Qué obtienes de nosotros",
+    pointsKicker: "Qué obtienes de nosotros",
     pointsHeading: "Las partes que marcan la diferencia.",
-    pipelineKicker: "02 — Cómo transcurre un proyecto",
+    pipelineKicker: "Cómo transcurre un proyecto",
     pipelineHeading: "Un proceso escrito, con fechas encima.",
-    deliverablesKicker: "03 — Entregables",
+    deliverablesKicker: "Entregables",
     deliverablesHeading: "Qué te queda en la mano.",
     deliverablesIntro:
       "No es una lista de categorías. Son las cosas concretas que existen al final, y que siguen siendo tuyas.",
     boundariesKicker: "Límites",
     boundariesHeading: "Lo que no hacemos.",
     boundariesBody: "Decirlo en voz alta nos ahorra una llamada a todos.",
-    pricingKicker: "04 — Modelos de colaboración",
+    pricingKicker: "Modelos de colaboración",
     pricingHeading: "Precios publicados, antes de que preguntes.",
     pricingNote:
       "Cada proyecto se cotiza sobre su alcance real; estos rangos te dan el orden de magnitud para que sepas dónde estás antes de la primera llamada.",
-    faqKicker: "05 — Preguntas",
+    pricingHeadingOnRequest: "Tres maneras de plantearlo.",
+    pricingNoteOnRequest:
+      "El precio depende de cuántos días al mes hacen falta y de lo que construimos a la vez. Recibes un presupuesto por escrito tras la primera llamada.",
+    faqKicker: "Preguntas",
     faqHeading: "Las preguntas que nos hacen.",
-    relatedKicker: "06 — Proyectos seleccionados",
+    relatedKicker: "Proyectos seleccionados",
     relatedHeading: "Una selección de proyectos de este servicio.",
     relatedNote:
       "Una selección, no la lista completa. Parte del trabajo con clientes está bajo NDA y no aparece aquí.",
-    otherServices: "Las otras dos formas de trabajar juntos",
+    otherServices: "Las otras tres formas de trabajar juntos",
     howToName: "Cómo transcurre un proyecto de {service}",
   },
 
@@ -241,7 +237,7 @@ export const copyEs: SiteCopy = {
     clientsValue: "Europa y Asia",
     teamLabel: "El equipo",
     peopleUnit: "personas",
-    storyKicker: "01 — Dónde empezó esto",
+    storyKicker: "Dónde empezó esto",
     storyHeading: "Empecé construyendo la cosa, no vendiendo el servicio.",
     story: [
       "Monté mi primer proyecto por mi cuenta a los quince; Artupia fue la primera empresa de verdad. La fundé en 2014, cuando todavía estaba en el instituto, y la dirigí como fundador y CEO durante siete años: un marketplace donde cualquiera podía encargar una obra a un artista real — describes lo que quieres, los artistas proponen, y sigues la pieza del boceto a la entrega. Superó los 100.000 usuarios y las 20 personas, y levantó hasta 3 millones de euros. En 2021 el Covid se llevó por delante el mercado del arte del que dependía. Construirla es también lo que me convirtió en desarrollador: full-stack de forma autodidacta, porque el producto lo pedía.",
@@ -253,7 +249,7 @@ export const copyEs: SiteCopy = {
     storyPullQuote: "Todo lo que vendemos, ya lo usamos nosotros.",
     founderRole: "Fundador · Producto",
     founderAlt: "Alberto, fundador de Plusultra Labs",
-    principlesKicker: "02 — Cómo trabajamos",
+    principlesKicker: "Cómo trabajamos",
     principlesHeading: "Tres cosas que deciden todo lo demás.",
     principles: [
       {
@@ -269,7 +265,7 @@ export const copyEs: SiteCopy = {
         body: "Algo que puedes clicar cada semana, en línea desde el primer día. El software es real cuando la gente lo usa, no cuando queda bien en una demo.",
       },
     ],
-    teamKicker: "03 — El equipo",
+    teamKicker: "El equipo",
     teamHeading: "Las personas que lo construirían.",
     teamIntro:
       "{n} personas entre producto, diseño, ingeniería y entrega, más una red de especialistas que traemos cuando un proyecto lo pide.",
@@ -443,6 +439,23 @@ export const copyEs: SiteCopy = {
         price: "35.000 €+",
         title: "Columna vertebral del negocio",
         body: "El sistema sobre el que funciona tu empresa: varias aplicaciones, automatizaciones, informes, operado y evolucionado por nosotros con el tiempo.",
+      },
+    ],
+    "fractional-ai-leadership": [
+      {
+        price: "Presupuesto tras la primera llamada",
+        title: "Asesorar",
+        body: "2 días al mes. La hoja de ruta de IA, las decisiones de comprar o construir, proveedores y modelos, y cada mes una revisión de lo que te cuesta la IA.",
+      },
+      {
+        price: "Presupuesto tras la primera llamada",
+        title: "Dirigir",
+        body: "3-4 días al mes. Un sitio en tus reuniones de dirección, la responsabilidad de la hoja de ruta, ayuda para contratar y los primeros proyectos lanzados por nuestro equipo.",
+      },
+      {
+        price: "Presupuesto tras la primera llamada",
+        title: "Traspasar",
+        body: "Para cuando estés listo para tener tu propio responsable de IA. Te ayudamos a contratarlo y después le pasamos la hoja de ruta, las decisiones y el código.",
       },
     ],
   },

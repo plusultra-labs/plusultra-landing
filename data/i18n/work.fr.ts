@@ -4,6 +4,7 @@ export const workFr: WorkTexts = {
   buzzwatch: {
     name: "BuzzWatch",
     tagline: "Voyez ce que l'IA dit de votre marque",
+    outcome: "De zéro à des clients payants et une agence partenaire",
     period: "2024 - aujourd'hui",
     tags: ["Produit maison", "IA", "Marketing tech"],
     paragraphs: [
@@ -15,17 +16,24 @@ export const workFr: WorkTexts = {
   tourscanner: {
     name: "TourScanner",
     tagline: "IA et produit à l'intérieur d'un métamoteur voyage",
+    outcome: "IA et produit depuis 2023, dans une entreprise fondée par d'autres en 2018",
+    metrics: [
+      { value: "1,5M+", label: "offres de voyage rattachées à la bonne attraction, classées et tenues à jour, avec le coût de chaque appel au modèle maîtrisé" },
+      { value: "30+", label: "sites de réservation comparés" },
+      { value: "5 000", label: "destinations" },
+    ],
     period: "2023 - aujourd'hui",
     tags: ["Rôle produit", "Voyage", "Grand public"],
     paragraphs: [
-      "TourScanner est un métamoteur voyage qui compare visites, activités et billets d'attractions sur plus de trente sites de réservation, comme les comparateurs le font pour les vols. Il a été fondé en 2018 par d'autres personnes, et nous ne l'avons pas construit.",
-      "Alberto l'a rejoint en 2023 et y travaille sur l'IA et le produit : plus d'un million et demi d'offres sur 5 000 destinations, rattachées à la bonne attraction, classées et tenues à jour à une échelle où chaque appel de modèle doit justifier son coût.",
+      "Chez TourScanner, Alberto travaille sur l'IA et le produit : plus d'un million et demi d'offres sur 5 000 destinations, rattachées à la bonne attraction, classées et tenues à jour à une échelle où chaque appel de modèle doit justifier son coût.",
+      "TourScanner est un métamoteur voyage qui compare visites, activités et billets d'attractions sur plus de trente sites de réservation, comme les comparateurs le font pour les vols. Il a été fondé en 2018 par d'autres personnes et nous ne l'avons pas construit ; Alberto l'a rejoint en 2023.",
       "C'est l'exemple le plus clair du travail que ce studio fait la plupart du temps. Quelqu'un d'autre a fondé l'entreprise ; notre rôle est d'améliorer le produit de l'intérieur.",
     ],
   },
   intelligoai: {
     name: "IntelligoAI",
     tagline: "Gestion à la consultation pour les cabinets médicaux",
+    outcome: "Les cabinets paient à la consultation, pas à l'année",
     period: "2025 - aujourd'hui",
     tags: ["Produit maison", "Santé"],
     paragraphs: [
@@ -37,6 +45,7 @@ export const workFr: WorkTexts = {
   itasign: {
     name: "ItaSign",
     tagline: "La signature électronique sans abonnement",
+    outcome: "Signatures électroniques valables, payées à l'unité, sans abonnement",
     period: "2025 - aujourd'hui",
     tags: ["Produit maison", "Legal tech"],
     paragraphs: [
@@ -47,6 +56,10 @@ export const workFr: WorkTexts = {
   "travel-platform-engine": {
     name: "Moteur de plateformes voyage",
     tagline: "Piloter un portefeuille de plateformes voyage à grande échelle",
+    outcome: "Un nouveau site multilingue en ligne en quelques heures",
+    metrics: [
+      { value: "<24h", label: "pour lancer une plateforme de voyage complète en plusieurs langues. Il fallait des semaines." },
+    ],
     period: "2025 - aujourd'hui",
     tags: ["Outil interne", "Voyage", "Multi-site"],
     paragraphs: [
@@ -58,6 +71,7 @@ export const workFr: WorkTexts = {
   insightflow: {
     name: "InsightFlow",
     tagline: "L'analyse par IA posée sur vos tableurs",
+    outcome: "Les rapports qu'une équipe d'agence livre chaque semaine",
     period: "2024 - aujourd'hui",
     tags: ["Plateforme client", "IA", "Analytique"],
     paragraphs: [
@@ -69,6 +83,7 @@ export const workFr: WorkTexts = {
   hotelflex: {
     name: "HotelFlex",
     tagline: "Réserver un hôtel avec ses crédits d'avantages salariés",
+    outcome: "Des hôtels réservables avec les crédits d'avantages salariés",
     period: "2023 - aujourd'hui",
     tags: ["Produit maison", "Voyage", "Fintech"],
     paragraphs: [
@@ -79,6 +94,7 @@ export const workFr: WorkTexts = {
   eventflex: {
     name: "EventFlex",
     tagline: "Concerts et événements avec ses crédits d'avantages salariés",
+    outcome: "Concerts et événements avec le même portefeuille",
     period: "2024 - aujourd'hui",
     tags: ["Produit maison", "Événementiel", "Fintech"],
     paragraphs: [
@@ -89,6 +105,7 @@ export const workFr: WorkTexts = {
   "fms-portal": {
     name: "Portail de commandes d'atelier",
     tagline: "Suivi des commandes en direct pour un atelier artisanal",
+    outcome: "Des centaines de commandes visibles, zéro formation",
     period: "2026",
     tags: ["Plateforme client", "Confidentiel"],
     paragraphs: [
@@ -100,6 +117,7 @@ export const workFr: WorkTexts = {
   "cuore-e-respiro": {
     name: "Cuore e Respiro",
     tagline: "Vos tendances de santé lues depuis votre montre connectée",
+    outcome: "Une app santé pour iPhone et Android",
     period: "2026 - en développement",
     tags: ["Application client", "Santé", "Mobile"],
     paragraphs: [
@@ -111,6 +129,7 @@ export const workFr: WorkTexts = {
   "colzani-partners": {
     name: "Colzani & Partners",
     tagline: "Immobilier de luxe, de Dubaï à Monaco",
+    outcome: "Annonces de luxe publiées en interne, sans agence",
     period: "2026 - en lancement",
     tags: ["Plateforme client", "Immobilier"],
     paragraphs: [
@@ -122,6 +141,7 @@ export const workFr: WorkTexts = {
   "agency-ai": {
     name: "Transformation IA d'une agence",
     tagline: "Un programme d'innovation IA à l'intérieur d'une vraie agence",
+    outcome: "Chaque phase se rembourse avant la suivante",
     period: "2026 - aujourd'hui",
     tags: ["Programme client", "IA", "Confidentiel"],
     paragraphs: [
@@ -133,6 +153,7 @@ export const workFr: WorkTexts = {
   artupia: {
     name: "Artupia",
     tagline: "De l'art sur commande, par de vrais artistes",
+    outcome: "Plus de 100 000 utilisateurs et jusqu'à 3 M€ levés",
     period: "2014 - 2021",
     tags: ["Fondée", "Place de marché"],
     paragraphs: [
@@ -144,6 +165,7 @@ export const workFr: WorkTexts = {
   "document-ai": {
     name: "Plateforme de lecture documentaire",
     tagline: "Des milliers de documents par jour, compris",
+    outcome: "Des milliers de documents par jour, lus et triés",
     period: "2023",
     tags: ["Plateforme client", "IA", "Confidentiel"],
     paragraphs: [
@@ -154,6 +176,10 @@ export const workFr: WorkTexts = {
   "beverage-mvp": {
     name: "MVP de livraison quick-commerce",
     tagline: "De l'idée au produit en ligne en quatre semaines",
+    outcome: "De l'idée à de vraies commandes en quatre semaines",
+    metrics: [
+      { value: "4 sem.", label: "de l'idée à une app de livraison en ligne, avec de vraies commandes" },
+    ],
     period: "2022",
     tags: ["Application client", "Confidentiel"],
     paragraphs: [

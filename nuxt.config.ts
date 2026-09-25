@@ -52,13 +52,13 @@ export default defineNuxtConfig({
         {
           name: "theme-color",
           media: "(prefers-color-scheme: light)",
-          content: "#faf9f7",
+          content: "#ffffff",
           "data-scheme": "light",
         },
         {
           name: "theme-color",
           media: "(prefers-color-scheme: dark)",
-          content: "#232830",
+          content: "#0b0d12",
           "data-scheme": "dark",
         },
       ],
@@ -75,7 +75,7 @@ export default defineNuxtConfig({
         },
         {
           rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap",
+          href: "https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=IBM+Plex+Sans:wght@500&family=IBM+Plex+Mono:wght@400&display=swap",
         },
       ],
 
