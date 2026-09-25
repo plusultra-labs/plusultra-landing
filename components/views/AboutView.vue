@@ -1,80 +1,70 @@
 <template>
   <div>
-    <!-- Hero -->
-    <section class="border-b border-line">
-      <div class="mx-auto max-w-site px-5 md:px-10">
-        <div class="grid items-end gap-12 py-16 md:grid-cols-[1.25fr_0.75fr] md:gap-16 md:pb-16 md:pt-[88px]">
-          <div>
-            <div class="pu-fade mb-[22px] text-[15px] font-bold text-accent">
-              {{ c.about.kicker }}
-            </div>
-            <h1
-              class="pu-rise mb-[26px] max-w-[20ch] font-display text-[clamp(40px,4.8vw,68px)] font-extrabold leading-[1.03] tracking-[-0.022em]"
-            >
-              {{ c.about.heading }}
-            </h1>
-            <p
-              class="pu-rise max-w-[56ch] text-[19px] leading-[1.55] text-muted"
-              style="animation-delay: 0.1s"
-            >
-              {{ c.about.lead }}
-            </p>
-          </div>
-          <div class="pu-fade grid gap-5 border-line md:border-l md:pl-8" style="animation-delay: 0.3s">
-            <div>
-              <div class="mb-2 text-[14px] font-bold text-muted">
-                {{ c.common.basedIn }}
-              </div>
-              <div class="text-[15.5px] leading-[1.5]">{{ c.common.location }}</div>
-            </div>
-            <div class="h-px bg-line" />
-            <div>
-              <div class="mb-2 text-[14px] font-bold text-muted">
-                {{ c.about.clientsLabel }}
-              </div>
-              <div class="text-[15.5px] leading-[1.5]">{{ c.about.clientsValue }}</div>
-            </div>
-            <div class="h-px bg-line" />
-            <div>
-              <div class="mb-2 text-[14px] font-bold text-muted">
-                {{ c.about.teamLabel }}
-              </div>
-              <div class="font-display text-[32px] leading-none">
-                {{ team.length }} {{ c.about.peopleUnit }}
-              </div>
-            </div>
-          </div>
+    <!-- Hero: the blue field, the studio in one line, the facts beside it. -->
+    <section class="bg-ultra text-white">
+      <div
+        class="mx-auto grid max-w-site gap-10 px-5 pb-12 pt-10 md:grid-cols-[1.3fr_0.7fr] md:items-end md:gap-20 md:px-10 md:pb-24 md:pt-[88px]"
+      >
+        <div>
+          <p class="pu-fade mb-5 text-[15px] font-semibold text-ultra-muted md:mb-8 md:text-[18px]">
+            {{ c.about.kicker }}
+          </p>
+          <h1
+            class="pu-rise mb-6 max-w-[16ch] font-display text-[clamp(40px,6.4vw,92px)] font-extrabold leading-[0.95] md:mb-8"
+            style="letter-spacing: -0.04em"
+          >
+            {{ c.about.heading }}
+          </h1>
+          <p
+            class="pu-rise max-w-[56ch] text-[17px] leading-[1.5] text-ultra-soft md:text-[20px]"
+            style="animation-delay: 0.1s"
+          >
+            {{ c.about.lead }}
+          </p>
         </div>
+        <dl class="pu-fade grid grid-cols-2 gap-x-4 gap-y-6 md:grid-cols-1 md:gap-6" style="animation-delay: 0.3s">
+          <div class="border-t-[3px] border-white pt-3">
+            <dt class="text-[14px] font-bold text-ultra-muted">{{ c.common.basedIn }}</dt>
+            <dd class="mt-1.5 text-[17px] font-bold leading-[1.35] md:text-[19px]">{{ c.common.location }}</dd>
+          </div>
+          <div class="border-t-[3px] border-white pt-3">
+            <dt class="text-[14px] font-bold text-ultra-muted">{{ c.about.clientsLabel }}</dt>
+            <dd class="mt-1.5 text-[17px] font-bold leading-[1.35] md:text-[19px]">{{ c.about.clientsValue }}</dd>
+          </div>
+          <div class="col-span-2 border-t-[3px] border-white pt-3 md:col-span-1">
+            <dt class="text-[14px] font-bold text-ultra-muted">{{ c.about.teamLabel }}</dt>
+            <dd class="mt-1.5 font-display text-[36px] font-extrabold leading-none md:text-[44px]">
+              {{ team.length }} {{ c.about.peopleUnit }}
+            </dd>
+          </div>
+        </dl>
       </div>
     </section>
 
-    <!-- Founder story -->
-    <section id="alberto" class="scroll-mt-28 border-b border-line">
-      <div class="mx-auto max-w-site px-5 py-16 md:px-10 md:py-[92px]">
-        <div data-reveal class="mb-[18px] text-[15px] font-bold text-accent">
-          {{ c.about.storyKicker }}
-        </div>
-        <div class="grid gap-12 md:grid-cols-[0.42fr_1fr] md:gap-16">
+    <!-- Step 1 · Founder story -->
+    <section id="alberto" class="scroll-mt-24 py-14 md:py-28">
+      <div class="mx-auto max-w-site px-5 md:px-10">
+        <SectionKicker data-reveal :step="1" :text="c.about.storyKicker" class="mb-8 md:mb-12" />
+        <div class="grid gap-10 md:grid-cols-[0.42fr_1fr] md:gap-20">
           <div data-reveal>
-            <div class="border border-line bg-paper-2 p-3">
+            <div class="bg-paper-2 md:sticky md:top-28">
               <img
                 src="/alberto.jpg"
                 :alt="c.about.founderAlt"
                 width="480"
                 height="640"
-                class="aspect-[3/4] w-full border border-line object-cover"
+                class="aspect-square w-full object-cover md:aspect-[3/4]"
                 loading="lazy"
               />
-              <div class="pt-4">
-                <div class="font-display text-[24px] leading-tight">Alberto</div>
-                <div class="mt-1 text-[14px] font-bold text-muted">
-                  {{ c.about.founderRole }}
-                </div>
+              <div class="flex flex-col gap-1 p-5 md:p-6">
+                <div class="font-display text-[26px] font-extrabold leading-tight">Alberto</div>
+                <div class="text-[15px] font-bold text-accent">{{ c.about.founderRole }}</div>
                 <a
                   :href="`mailto:${org.email}`"
-                  class="mt-3 inline-block text-[14.5px] text-muted transition-colors duration-[250ms] hover:text-ink"
+                  class="group mt-3 flex min-h-[44px] items-center justify-between gap-3 border-t-[1.5px] border-line pt-3 text-[15px] font-semibold transition-colors duration-[250ms] hover:text-accent"
                 >
                   {{ org.email }}
+                  <ChevronIcon :size="12" class="text-accent transition-transform duration-[250ms] group-hover:translate-x-1" />
                 </a>
               </div>
             </div>
@@ -82,7 +72,7 @@
 
           <div data-reveal>
             <h2
-              class="mb-7 max-w-[22ch] font-display text-[clamp(28px,3vw,40px)] font-extrabold leading-[1.1] tracking-[-0.018em]"
+              class="mb-7 max-w-[20ch] font-display text-[32px] font-extrabold leading-[1.02] md:mb-9 md:text-[52px] md:leading-none"
             >
               {{ c.about.storyHeading }}
             </h2>
@@ -90,88 +80,101 @@
               <p
                 v-for="p in c.about.story"
                 :key="p"
-                class="mb-5 text-[17.5px] leading-[1.62] text-muted last:mb-0"
+                class="mb-5 text-[17px] leading-[1.62] text-muted last:mb-0 md:text-[18px]"
               >
                 {{ p }}
               </p>
-              <p class="mt-9 border-l-2 border-accent pl-6 font-display text-[22px] leading-[1.4]">
-                {{ c.about.storyPullQuote }}
-              </p>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Principles -->
-    <section class="border-b border-line bg-paper-2">
-      <div class="mx-auto max-w-site px-5 py-16 md:px-10 md:py-[92px]">
-        <div data-reveal class="mb-[18px] text-[15px] font-bold text-accent">
-          {{ c.about.principlesKicker }}
-        </div>
-        <h2
-          data-reveal
-          class="mb-12 max-w-[24ch] font-display text-[clamp(28px,3vw,40px)] font-extrabold leading-[1.1] tracking-[-0.018em]"
-        >
-          {{ c.about.principlesHeading }}
-        </h2>
-        <div class="grid gap-px border border-line bg-line md:grid-cols-3">
-          <div
-            v-for="item in c.about.principles"
-            :key="item.title"
-            data-reveal
-            class="bg-paper-2 px-7 py-8"
-          >
-            <h3 class="mb-2.5 text-[17px] font-semibold">{{ item.title }}</h3>
-            <p class="text-[15px] leading-[1.6] text-muted">{{ item.body }}</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Team -->
-    <section class="border-b border-line">
-      <div class="mx-auto max-w-site px-5 py-16 md:px-10 md:py-[92px]">
-        <div data-reveal class="mb-[18px] text-[15px] font-bold text-accent">
-          {{ c.about.teamKicker }}
-        </div>
-        <h2
-          data-reveal
-          class="mb-5 font-display text-[clamp(28px,3vw,40px)] font-extrabold leading-[1.1] tracking-[-0.018em]"
-        >
-          {{ c.about.teamHeading }}
-        </h2>
-        <p data-reveal class="mb-14 max-w-[58ch] text-[16.5px] leading-[1.62] text-muted">
-          {{ fill(c.about.teamIntro, { n: team.length }) }}
-        </p>
-        <div class="grid grid-cols-2 gap-x-6 gap-y-12 sm:grid-cols-3 lg:grid-cols-4">
-          <div
-            v-for="member in team"
-            :key="member.name"
-            data-reveal
-            class="flex flex-col items-center text-center"
-          >
-            <TeamAvatar :person="member.avatar" :size="128" />
-            <b class="mt-4 block text-[16px] font-medium">{{ member.name }}</b>
-            <p class="mt-0.5 text-[14px] font-bold text-muted">
-              {{ c.team[member.avatar] }}
+            <p
+              class="mt-10 max-w-[24ch] border-t-[3px] border-accent pt-5 font-display text-[28px] font-extrabold leading-[1.1] md:mt-14 md:text-[40px]"
+            >
+              {{ c.about.storyPullQuote }}
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="border-b border-line">
+    <!-- Step 2 · Principles -->
+    <section class="bg-paper-2 py-14 md:py-28">
+      <div class="mx-auto max-w-site px-5 md:px-10">
+        <div data-reveal class="mb-8 flex flex-col gap-5 md:mb-14 md:gap-6">
+          <SectionKicker :step="2" :text="c.about.principlesKicker" />
+          <h2 class="max-w-[22ch] font-display text-[32px] font-extrabold leading-[1.02] md:text-[56px] md:leading-none">
+            {{ c.about.principlesHeading }}
+          </h2>
+        </div>
+        <ol class="grid gap-3 md:grid-cols-3 md:gap-6">
+          <li
+            v-for="(item, i) in c.about.principles"
+            :key="item.title"
+            data-reveal
+            class="flex flex-col gap-3 bg-paper p-6 md:gap-4 md:p-9"
+          >
+            <RouteMark :step="i + 1" :width="70" class="text-accent" />
+            <h3 class="pt-2 font-display text-[22px] font-extrabold leading-[1.1] md:text-[26px]">{{ item.title }}</h3>
+            <p class="text-[16px] leading-[1.6] text-muted">{{ item.body }}</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Step 3 · Team -->
+    <section class="py-14 md:py-28">
+      <div class="mx-auto max-w-site px-5 md:px-10">
+        <div data-reveal class="mb-8 grid gap-5 md:mb-14 md:grid-cols-[1.3fr_1fr] md:items-end md:gap-20">
+          <div class="flex flex-col gap-5 md:gap-6">
+            <SectionKicker :step="3" :text="c.about.teamKicker" />
+            <h2 class="font-display text-[32px] font-extrabold leading-[1.02] md:text-[56px] md:leading-none">
+              {{ c.about.teamHeading }}
+            </h2>
+          </div>
+          <p class="text-[16px] leading-[1.55] text-muted md:text-[18px]">
+            {{ fill(c.about.teamIntro, { n: team.length }) }}
+          </p>
+        </div>
+        <ul class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:gap-6 lg:grid-cols-4">
+          <li
+            v-for="member in team"
+            :key="member.name"
+            data-reveal
+            class="flex flex-col items-start gap-4 bg-paper-2 p-5 md:p-6"
+          >
+            <TeamAvatar :person="member.avatar" :size="88" />
+            <div>
+              <div class="text-[17px] font-bold leading-tight">{{ member.name }}</div>
+              <p class="mt-1 text-[14px] leading-[1.35] text-muted">{{ c.team[member.avatar] }}</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- The arrowhead: the call. -->
+    <section class="relative overflow-hidden bg-ultra text-white">
+      <svg
+        class="pointer-events-none absolute -right-[120px] top-6 h-[340px] w-[300px] md:-right-[60px] md:top-10 md:h-[520px] md:w-[450px]"
+        viewBox="0 0 30 34"
+        aria-hidden="true"
+      >
+        <path d="M3 2 L27 17 L3 32" fill="none" stroke="#1b2c96" stroke-width="3" />
+      </svg>
       <div
-        class="mx-auto flex max-w-site flex-wrap items-center justify-between gap-10 px-5 py-16 md:px-10 md:py-[88px]"
+        class="relative mx-auto flex max-w-site flex-col gap-8 px-5 py-14 md:flex-row md:items-end md:justify-between md:gap-16 md:px-10 md:py-28"
       >
         <h2
-          class="max-w-[24ch] font-display text-[clamp(30px,3.2vw,44px)] font-extrabold leading-[1.08] tracking-[-0.018em]"
+          data-reveal
+          class="max-w-[18ch] font-display text-[38px] font-extrabold leading-none md:text-[clamp(44px,4.6vw,68px)] md:leading-[0.98]"
+          style="letter-spacing: -0.04em"
         >
           {{ c.about.ctaHeading }}
         </h2>
-        <BookCallButton size="lg" arrow />
+        <div data-reveal class="flex w-full flex-col gap-3 md:w-auto md:min-w-[340px]">
+          <BookCallButton variant="onInk" size="lg" class="justify-between" arrow>
+            {{ c.common.bookScopingCall }}
+          </BookCallButton>
+          <div class="text-[14px] text-ultra-muted md:text-[15px]">{{ c.common.repliesWithinTz }}</div>
+        </div>
       </div>
     </section>
   </div>

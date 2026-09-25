@@ -1,71 +1,85 @@
 <template>
   <div>
-    <section class="border-b border-line">
+    <!-- Hero: the blue field, with the index facts as stat blocks. -->
+    <section class="bg-ultra text-white">
       <div class="mx-auto max-w-site px-5 md:px-10">
-        <div class="grid items-end gap-12 py-16 md:grid-cols-[1.25fr_0.75fr] md:gap-16 md:pb-16 md:pt-[88px]">
+        <div class="grid gap-10 py-12 md:grid-cols-[1.25fr_0.75fr] md:items-end md:gap-20 md:pb-20 md:pt-[88px]">
           <div>
-            <div class="pu-fade mb-[22px] text-[15px] font-bold text-accent">
+            <p class="pu-fade mb-5 text-[15px] font-bold text-ultra-muted md:mb-8 md:text-[18px]">
               {{ c.work.kicker }}
-            </div>
+            </p>
             <h1
-              class="pu-rise mb-[26px] max-w-[20ch] font-display text-[clamp(40px,4.8vw,68px)] font-extrabold leading-[1.03] tracking-[-0.022em]"
+              class="pu-rise mb-6 max-w-[20ch] font-display text-[clamp(38px,5.4vw,80px)] font-extrabold leading-[0.96] md:mb-8"
+              style="letter-spacing: -0.04em"
             >
               {{ c.work.heading }}
             </h1>
             <p
-              class="pu-rise max-w-[56ch] text-[19px] leading-[1.55] text-muted"
+              class="pu-rise max-w-[56ch] text-[17px] leading-[1.5] text-ultra-soft md:text-[20px]"
               style="animation-delay: 0.1s"
             >
               {{ c.work.lead }}
             </p>
           </div>
-          <div class="pu-fade grid gap-5 border-line md:border-l md:pl-8" style="animation-delay: 0.3s">
-            <div>
-              <div class="mb-2 text-[14px] font-bold text-muted">
-                {{ c.work.kindsLabel }}
-              </div>
-              <div class="text-[15.5px] leading-[1.5]">
+          <dl class="pu-fade grid gap-6" style="animation-delay: 0.3s">
+            <div class="border-t-[3px] border-white pt-3 md:pt-4">
+              <dt class="text-[14px] font-bold text-ultra-muted md:text-[15px]">{{ c.work.countLabel }}</dt>
+              <dd class="mt-1.5 font-display text-[40px] font-extrabold leading-none md:text-[52px]">
+                {{ work.length }} / 35
+              </dd>
+            </div>
+            <div class="border-t-[3px] border-white pt-3 md:pt-4">
+              <dt class="text-[14px] font-bold text-ultra-muted md:text-[15px]">{{ c.work.kindsLabel }}</dt>
+              <dd class="mt-1.5 text-[16px] font-semibold leading-[1.45]">
                 {{ categories.map((cat) => cat.title).join(" · ") }}
-              </div>
+              </dd>
             </div>
-            <div class="h-px bg-line" />
-            <div>
-              <div class="mb-2 text-[14px] font-bold text-muted">
-                {{ c.work.sectorsLabel }}
-              </div>
-              <div class="text-[15.5px] leading-[1.5]">{{ c.work.sectors }}</div>
+            <div class="border-t-[3px] border-white pt-3 md:pt-4">
+              <dt class="text-[14px] font-bold text-ultra-muted md:text-[15px]">{{ c.work.sectorsLabel }}</dt>
+              <dd class="mt-1.5 text-[16px] font-semibold leading-[1.45]">{{ c.work.sectors }}</dd>
             </div>
-            <div class="h-px bg-line" />
-            <div>
-              <div class="mb-2 text-[14px] font-bold text-muted">
-                {{ c.work.countLabel }}
-              </div>
-              <div class="font-display text-[32px] leading-none">{{ work.length }} / 35</div>
-            </div>
-          </div>
+          </dl>
         </div>
       </div>
     </section>
 
-    <!-- The hero above closes on a hairline; without top padding the first
-         case study and the sticky nav both start flush against it. -->
+    <!-- Phones: the index as a row of chips that scrolls sideways. -->
+    <nav class="border-b border-line bg-paper-2 md:hidden" :aria-label="c.nav.work">
+      <ol class="flex gap-2 overflow-x-auto px-5 py-3.5 [scrollbar-width:none]">
+        <li v-for="item in flatIndex" :key="item.slug" class="shrink-0">
+          <a
+            :href="`#${item.slug}`"
+            class="flex h-11 items-center whitespace-nowrap px-3.5 text-[15px] font-semibold transition-colors"
+            :class="active === item.slug ? 'bg-ultra text-white' : 'bg-paper text-ink'"
+          >
+            {{ item.name }}
+          </a>
+        </li>
+      </ol>
+    </nav>
+
     <div
-      class="mx-auto grid max-w-site gap-10 px-5 pb-20 pt-14 md:grid-cols-[240px_1fr] md:px-10 md:pb-28 md:pt-[88px]"
+      class="mx-auto grid max-w-site gap-10 px-5 pb-16 pt-10 md:grid-cols-[250px_1fr] md:gap-14 md:px-10 md:pb-28 md:pt-20"
     >
-      <!-- Sticky project nav -->
-      <nav class="hidden md:block">
-        <div class="sticky top-28 flex flex-col gap-6 border-l border-line pl-5 text-[14px]">
+      <!-- Desktop: sticky index, the current case lit in blue. -->
+      <nav class="hidden md:block" :aria-label="c.nav.work">
+        <div class="sticky top-28 flex flex-col gap-7">
+          <RouteMark :step="1" :width="84" class="text-accent" />
           <div v-for="group in grouped" :key="group.title">
-            <div class="mb-2.5 text-[14px] font-bold text-muted">
-              {{ group.title }}
-            </div>
-            <ol class="flex flex-col gap-2">
+            <div class="mb-2.5 text-[15px] font-extrabold">{{ group.title }}</div>
+            <ol class="flex flex-col">
               <li v-for="item in group.items" :key="item.slug">
                 <a
                   :href="`#${item.slug}`"
-                  class="block transition-colors"
-                  :class="active === item.slug ? 'font-medium text-accent' : 'text-muted hover:text-ink'"
+                  class="group flex min-h-[34px] items-center gap-2 text-[15px] transition-colors"
+                  :class="active === item.slug ? 'font-bold text-accent' : 'text-muted hover:text-ink'"
                 >
+                  <ChevronIcon
+                    :size="9"
+                    :weight="6"
+                    class="transition-opacity"
+                    :class="active === item.slug ? 'opacity-100' : 'opacity-0 group-hover:opacity-60'"
+                  />
                   {{ item.name }}
                 </a>
               </li>
@@ -75,45 +89,88 @@
       </nav>
 
       <!-- Case studies -->
-      <div>
+      <div class="flex flex-col gap-4 md:gap-6">
         <article
-          v-for="(item, i) in work"
+          v-for="item in work"
           :id="item.slug"
           :key="item.slug"
           :ref="setSection"
           data-reveal
-          class="scroll-mt-28 border-line py-12 first:pt-0 md:py-16"
-          :class="{ 'border-t': i > 0 }"
+          class="scroll-mt-24 bg-paper-2 p-5 md:scroll-mt-28 md:p-10"
         >
-          <div class="mb-5 flex flex-wrap items-baseline gap-x-5 gap-y-1 text-[14px] font-bold text-muted">
-            <span>{{ item.period }}</span>
-            <span v-for="tag in item.tags" :key="tag">{{ tag }}</span>
+          <div class="mb-4 flex flex-wrap items-center gap-2 md:mb-5">
+            <span class="bg-ultra px-2.5 py-1.5 text-[14px] font-bold text-white">
+              {{ c.home.kindLabels[item.kind] }}
+            </span>
+            <span class="px-1 text-[14px] font-bold text-muted">{{ item.period }}</span>
+            <span
+              v-for="tag in item.tags.slice(1)"
+              :key="tag"
+              class="border-[1.5px] border-line-2 px-2.5 py-1 text-[14px] font-semibold text-muted"
+            >
+              {{ tag }}
+            </span>
           </div>
-          <h2 class="font-display text-[clamp(28px,3vw,42px)] font-extrabold leading-[1.06] tracking-[-0.02em]">
-            {{ item.name }}
+
+          <div class="flex flex-wrap items-start justify-between gap-x-6 gap-y-3">
+            <div class="min-w-0">
+              <h2 class="font-display text-[30px] font-extrabold leading-[1.04] md:text-[44px]" style="letter-spacing: -0.035em">
+                {{ item.name }}
+              </h2>
+              <p class="mt-2 text-[16px] text-muted md:text-[18px]">{{ item.tagline }}</p>
+              <p v-if="item.outcome" class="mt-2.5 text-[16px] font-bold leading-[1.4] text-accent md:text-[17px]">
+                {{ item.outcome }}
+              </p>
+            </div>
             <a
               v-if="item.url"
               :href="item.url"
               target="_blank"
-              class="ml-2 align-middle text-[14px] font-bold text-accent"
-            >{{ c.common.visit }} ↗</a>
-          </h2>
-          <p class="mt-2 text-[17px] text-muted">{{ item.tagline }}</p>
+              rel="noopener"
+              class="group flex h-12 shrink-0 items-center gap-3 bg-ultra px-5 text-[15px] font-bold capitalize text-white transition-colors duration-[250ms] hover:bg-ultra-deep"
+            >
+              {{ c.common.visit }}
+              <ChevronIcon :size="12" class="transition-transform duration-[250ms] group-hover:translate-x-0.5" />
+            </a>
+          </div>
 
-          <div class="mt-7 overflow-hidden border border-line bg-paper-2">
+          <div
+            v-if="item.metrics?.length"
+            class="mt-6 grid gap-5 bg-paper p-5 md:mt-8 md:grid-cols-[1.3fr_1fr] md:items-end md:gap-10 md:p-7"
+          >
+            <div>
+              <div
+                class="font-display text-[56px] font-extrabold leading-[0.9] text-accent md:text-[80px]"
+                style="letter-spacing: -0.045em"
+              >
+                {{ item.metrics[0].value }}
+              </div>
+              <p class="mt-3 max-w-[44ch] text-[16px] leading-[1.45] text-muted md:text-[17px]">
+                {{ item.metrics[0].label }}
+              </p>
+            </div>
+            <dl v-if="item.metrics.length > 1" class="grid grid-cols-2 gap-4">
+              <div v-for="m in item.metrics.slice(1)" :key="m.value" class="border-t-[3px] border-accent pt-3">
+                <dt class="font-display text-[26px] font-extrabold leading-none md:text-[30px]">{{ m.value }}</dt>
+                <dd class="mt-1.5 text-[14px] leading-[1.4] text-muted md:text-[15px]">{{ m.label }}</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="mt-6 overflow-hidden bg-paper p-2 md:mt-8 md:p-3">
             <img
               :src="item.image"
               :alt="item.name"
-              class="aspect-[16/9] w-full object-cover object-top"
+              class="block aspect-[16/9] w-full object-cover object-top"
               loading="lazy"
             />
           </div>
 
-          <div class="mt-7 max-w-[68ch] space-y-4">
+          <div class="mt-6 max-w-[68ch] space-y-4 md:mt-8">
             <p
               v-for="(p, pi) in item.paragraphs"
               :key="pi"
-              class="text-[16px] leading-[1.62] text-muted"
+              class="text-[16px] leading-[1.62] text-muted md:text-[17px]"
             >
               {{ p }}
             </p>
@@ -122,16 +179,27 @@
       </div>
     </div>
 
-    <section class="border-t border-line">
+    <!-- The arrowhead: the call. -->
+    <section class="relative overflow-hidden bg-ultra text-white">
+      <svg
+        class="pointer-events-none absolute -right-[120px] top-6 h-[340px] w-[300px] md:-right-[60px] md:top-6 md:h-[480px] md:w-[420px]"
+        viewBox="0 0 30 34"
+        aria-hidden="true"
+      >
+        <path d="M3 2 L27 17 L3 32" fill="none" stroke="#1b2c96" stroke-width="3" />
+      </svg>
       <div
-        class="mx-auto flex max-w-site flex-wrap items-center justify-between gap-10 px-5 py-16 md:px-10 md:py-[88px]"
+        class="relative mx-auto flex max-w-site flex-col gap-8 px-5 py-14 md:flex-row md:items-end md:justify-between md:gap-16 md:px-10 md:py-28"
       >
         <h2
-          class="max-w-[24ch] font-display text-[clamp(30px,3.2vw,44px)] font-extrabold leading-[1.08] tracking-[-0.018em]"
+          class="max-w-[20ch] font-display text-[36px] font-extrabold leading-none md:text-[clamp(44px,4.6vw,64px)] md:leading-[0.98]"
+          style="letter-spacing: -0.04em"
         >
           {{ c.work.ctaHeading }}
         </h2>
-        <BookCallButton size="lg" arrow />
+        <BookCallButton variant="onInk" size="lg" class="justify-between md:min-w-[300px]" arrow>
+          {{ c.common.bookScopingCall }}
+        </BookCallButton>
       </div>
     </section>
   </div>
@@ -162,6 +230,8 @@ const grouped = computed(() => {
   if (rest.length) groups.push({ title: c.value.work.moreWork, items: rest });
   return groups.filter((g) => g.items.length);
 });
+
+const flatIndex = computed(() => grouped.value.flatMap((g) => g.items));
 
 const active = ref(work.value[0].slug);
 const sections: HTMLElement[] = [];

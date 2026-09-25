@@ -1,65 +1,62 @@
 <template>
   <div>
-    <!-- Hero -->
-    <section class="border-b border-line">
-      <div class="mx-auto max-w-site px-5 md:px-10">
-        <div class="grid items-end gap-12 py-16 md:grid-cols-[1.25fr_0.75fr] md:gap-16 md:pb-[68px] md:pt-[88px]">
-          <div>
-            <div class="pu-fade mb-[22px] text-[15px] font-bold text-accent">
-              {{ c.servicePage.breadcrumb }} / {{ content.cardTitle }}
-            </div>
-            <h1
-              class="pu-rise mb-[26px] max-w-[22ch] font-display text-[clamp(40px,4.8vw,68px)] font-extrabold leading-[1.03] tracking-[-0.022em]"
-            >
-              {{ content.title }}
-            </h1>
-            <p
-              class="pu-rise mb-9 max-w-[58ch] text-[19px] leading-[1.55] text-muted"
-              style="animation-delay: 0.1s"
-            >
+    <!-- Hero: the blue field, like the homepage. -->
+    <section class="bg-ultra text-white">
+      <div class="mx-auto max-w-site px-5 pb-12 pt-8 md:px-10 md:pb-20 md:pt-[72px]">
+        <nav class="pu-fade mb-5 text-[15px] font-semibold text-ultra-muted md:mb-10" :aria-label="c.servicePage.breadcrumb">
+          <NuxtLink :to="lp('services')" class="underline-offset-4 hover:text-white hover:underline">
+            {{ c.servicePage.breadcrumb }}
+          </NuxtLink>
+          <span aria-hidden="true"> / </span>
+          <span class="text-white">{{ content.cardTitle }}</span>
+        </nav>
+        <h1
+          class="pu-rise max-w-[20ch] font-display text-[clamp(38px,6vw,84px)] font-extrabold leading-[0.98] md:leading-[0.95]"
+          style="letter-spacing: -0.04em"
+        >
+          {{ content.title }}
+        </h1>
+
+        <div class="mt-6 grid gap-8 md:mt-12 md:grid-cols-[1.1fr_1fr] md:items-end md:gap-20">
+          <div class="pu-rise flex flex-col gap-8" style="animation-delay: 0.1s">
+            <p class="max-w-[56ch] text-[17px] leading-[1.5] text-ultra-soft md:text-[20px]">
               {{ content.lead }}
             </p>
-            <div class="pu-rise" style="animation-delay: 0.2s">
-              <BookCallButton arrow>{{ c.common.bookScopingCall }}</BookCallButton>
+            <div>
+              <BookCallButton variant="onInk" size="lg" arrow>{{ c.common.bookScopingCall }}</BookCallButton>
             </div>
           </div>
 
-          <div class="pu-fade grid gap-4 border-line text-[15px] md:border-l md:pl-8" style="animation-delay: 0.3s">
-            <div class="text-[14px] font-bold text-muted">
-              {{ c.servicePage.atAGlance }}
-            </div>
-            <div
-              v-for="spec in content.specs"
-              :key="spec.label"
-              class="flex justify-between gap-4 border-b border-line pb-3 last:border-b-0 last:pb-0"
-            >
-              <span class="text-muted">{{ spec.label }}</span>
-              <span>{{ spec.value }}</span>
-            </div>
+          <div class="pu-fade" style="animation-delay: 0.25s">
+            <p class="mb-4 text-[15px] font-bold text-ultra-muted">{{ c.servicePage.atAGlance }}</p>
+            <dl class="grid gap-5 sm:grid-cols-3 sm:gap-6">
+              <div v-for="spec in content.specs" :key="spec.label" class="border-t-[3px] border-white pt-3 md:pt-4">
+                <dd class="font-display text-[22px] font-extrabold leading-[1.1] md:text-[24px]">{{ spec.value }}</dd>
+                <dt class="mt-2 text-[14px] leading-[1.3] text-ultra-soft md:text-[15px]">{{ spec.label }}</dt>
+              </div>
+            </dl>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Narrative -->
-    <section class="border-b border-line">
-      <div class="mx-auto max-w-site px-5 py-16 md:px-10 md:py-[92px]">
-        <div data-reveal class="grid gap-10 md:grid-cols-[0.44fr_1fr] md:gap-16">
-          <h2
-            class="max-w-[20ch] font-display text-[clamp(28px,3vw,40px)] font-extrabold leading-[1.1] tracking-[-0.018em]"
-          >
+    <section class="py-14 md:py-28">
+      <div class="mx-auto max-w-site px-5 md:px-10">
+        <div data-reveal class="grid gap-8 md:grid-cols-[0.8fr_1fr] md:gap-20">
+          <h2 class="font-display text-[30px] font-extrabold leading-[1.04] md:text-[48px] md:leading-[1.02]">
             {{ content.narrative.heading }}
           </h2>
           <div>
             <p
               v-for="p in content.narrative.paragraphs"
               :key="p"
-              class="mb-5 text-[17.5px] leading-[1.62] text-muted last:mb-0"
+              class="mb-5 text-[16px] leading-[1.6] text-muted last:mb-0 md:text-[18px]"
             >
               {{ p }}
             </p>
             <p
-              class="mt-9 border-l-2 border-accent pl-6 font-display text-[22px] leading-[1.4]"
+              class="mt-8 border-t-[3px] border-accent pt-5 font-display text-[22px] font-extrabold leading-[1.25] text-accent md:mt-10 md:text-[28px]"
             >
               {{ content.narrative.pullQuote }}
             </p>
@@ -68,135 +65,112 @@
       </div>
     </section>
 
-    <!-- Capability points -->
-    <section class="border-b border-line bg-paper-2">
-      <div class="mx-auto max-w-site px-5 py-16 md:px-10 md:py-[92px]">
-        <div data-reveal class="mb-[18px] text-[15px] font-bold text-accent">
-          {{ c.servicePage.pointsKicker }}
+    <!-- Step 1 · Capability points -->
+    <section class="bg-paper-2 py-14 md:py-28">
+      <div class="mx-auto max-w-site px-5 md:px-10">
+        <div data-reveal class="mb-8 flex flex-col gap-5 md:mb-14 md:gap-6">
+          <SectionKicker :step="1" :text="c.servicePage.pointsKicker" />
+          <h2 class="max-w-[22ch] font-display text-[32px] font-extrabold leading-[1.02] md:text-[56px] md:leading-none">
+            {{ c.servicePage.pointsHeading }}
+          </h2>
         </div>
-        <h2
-          data-reveal
-          class="mb-12 max-w-[24ch] font-display text-[clamp(28px,3vw,40px)] font-extrabold leading-[1.1] tracking-[-0.018em]"
-        >
-          {{ c.servicePage.pointsHeading }}
-        </h2>
-        <div class="grid gap-px border border-line bg-line md:grid-cols-3">
+        <div class="grid gap-3 md:grid-cols-3 md:gap-6">
           <div
             v-for="item in content.points"
             :key="item.title"
             data-reveal
-            class="bg-paper-2 px-7 py-8"
+            class="flex flex-col gap-3 bg-paper p-6 md:p-8"
           >
-            <h3 class="mb-2.5 text-[17px] font-semibold">{{ item.title }}</h3>
-            <p class="text-[15px] leading-[1.6] text-muted">{{ item.body }}</p>
+            <h3 class="font-display text-[20px] font-extrabold leading-[1.15] md:text-[22px]">{{ item.title }}</h3>
+            <p class="text-[15px] leading-[1.6] text-muted md:text-[16px]">{{ item.body }}</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- How it works: pipeline -->
-    <section class="border-b border-line">
-      <div class="mx-auto max-w-site px-5 py-16 md:px-10 md:py-[92px]">
-        <div data-reveal class="mb-[18px] text-[15px] font-bold text-accent">
-          {{ c.servicePage.pipelineKicker }}
+    <!-- Step 2 · Pipeline: the dashes grow, the last stage is the arrow. -->
+    <section class="bg-night-block py-14 text-white md:py-28">
+      <div class="mx-auto max-w-site px-5 md:px-10">
+        <div data-reveal class="mb-8 flex flex-col gap-5 md:mb-16 md:gap-6">
+          <SectionKicker
+            :step="2"
+            :text="c.servicePage.pipelineKicker"
+            mark-class="text-periwinkle"
+            unlit="var(--night-line)"
+          />
+          <h2 class="max-w-[20ch] font-display text-[32px] font-extrabold leading-[1.02] md:text-[56px] md:leading-none">
+            {{ c.servicePage.pipelineHeading }}
+          </h2>
+          <p class="max-w-[62ch] text-[16px] leading-[1.6] text-night-muted md:text-[18px]">
+            {{ content.pipeline.intro }}
+          </p>
         </div>
-        <h2
-          data-reveal
-          class="mb-5 max-w-[24ch] font-display text-[clamp(28px,3vw,40px)] font-extrabold leading-[1.1] tracking-[-0.018em]"
-        >
-          {{ c.servicePage.pipelineHeading }}
-        </h2>
-        <p data-reveal class="mb-12 max-w-[62ch] text-[16.5px] leading-[1.62] text-muted">
-          {{ content.pipeline.intro }}
-        </p>
 
-        <div class="grid gap-px border border-line bg-line md:grid-cols-4">
-          <div
+        <ol class="grid gap-8 md:grid-cols-4 md:gap-8">
+          <li
             v-for="(stage, i) in content.pipeline.stages"
             :key="stage.title"
             data-reveal
-            class="relative flex flex-col bg-paper px-6 py-7 md:px-7"
+            class="grid grid-cols-[36px_1fr] gap-x-4 md:flex md:flex-col md:gap-4"
           >
-            <!-- connector, sits on the hairline between stages -->
-            <span
-              v-if="i > 0"
-              class="absolute -left-2 top-[30px] hidden h-4 w-4 items-center justify-center bg-paper md:flex"
-              aria-hidden="true"
-            >
-              <svg viewBox="0 0 16 16" class="h-3 w-3 text-accent" fill="none" stroke="currentColor" stroke-width="1.6">
-                <path d="M5 2.5 L10.5 8 L5 13.5" stroke-linecap="square" />
-              </svg>
+            <span class="flex justify-center pt-1 md:h-9 md:items-center md:justify-start md:pt-0">
+              <span
+                v-if="i < content.pipeline.stages.length - 1"
+                class="block w-1.5 bg-periwinkle md:!h-2 md:w-[var(--w)]"
+                :style="{ height: `${stageBar(i).h}px`, '--w': `${stageBar(i).w}%` }"
+              />
+              <ChevronIcon v-else :size="26" :weight="5" class="rotate-90 text-periwinkle md:rotate-0" />
             </span>
-
-            <div class="flex items-baseline justify-between gap-3">
-              <span class="text-[14px] font-bold text-accent">
-                {{ String(i + 1).padStart(2, "0") }}
-              </span>
-              <span class="text-[14px] font-bold text-muted">
-                {{ stage.duration }}
-              </span>
+            <div class="flex flex-col gap-2 md:gap-3">
+              <div class="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+                <span class="text-[14px] font-extrabold text-periwinkle md:text-[15px]">{{ stage.duration }}</span>
+                <span class="text-[14px] font-bold text-night-muted">{{ stage.basis }}</span>
+              </div>
+              <h3 class="font-display text-[22px] font-extrabold leading-[1.1] md:text-[24px]">{{ stage.title }}</h3>
+              <p class="text-[15px] leading-[1.6] text-night-muted md:text-[16px]">{{ stage.body }}</p>
+              <ul class="mt-2 space-y-2.5 border-t border-night-line pt-4">
+                <li v-for="out in stage.outputs" :key="out" class="flex gap-3 text-[14px] leading-[1.55] text-night-muted">
+                  <ChevronIcon :size="8" :weight="6" class="mt-[6px] text-periwinkle" />
+                  <span>{{ out }}</span>
+                </li>
+              </ul>
             </div>
+          </li>
+        </ol>
 
-            <h3 class="mt-5 font-display text-[24px] font-extrabold leading-tight tracking-[-0.012em]">
-              {{ stage.title }}
-            </h3>
-            <p class="mt-3 text-[14.5px] leading-[1.6] text-muted">{{ stage.body }}</p>
-
-            <ul class="mt-6 space-y-2.5 border-t border-line pt-5">
-              <li
-                v-for="out in stage.outputs"
-                :key="out"
-                class="flex gap-3 text-[13.5px] leading-[1.55] text-muted"
-              >
-                <span class="text-accent" aria-hidden="true">·</span>
-                <span>{{ out }}</span>
-              </li>
-            </ul>
-
-            <div class="mt-auto pt-6">
-              <span class="text-[14px] font-bold">
-                {{ stage.basis }}
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <p class="mt-5 text-[14px] font-bold leading-relaxed text-muted">
+        <p class="mt-10 max-w-[70ch] text-[15px] font-semibold leading-[1.55] text-night-muted md:mt-14">
           {{ content.pipeline.footnote }}
         </p>
       </div>
     </section>
 
-    <!-- Deliverables -->
-    <section class="border-b border-line bg-paper-2">
-      <div class="mx-auto max-w-site px-5 py-16 md:px-10 md:py-[92px]">
-        <div data-reveal class="mb-[18px] text-[15px] font-bold text-accent">
-          {{ c.servicePage.deliverablesKicker }}
+    <!-- Step 3 · Deliverables -->
+    <section class="py-14 md:py-28">
+      <div class="mx-auto max-w-site px-5 md:px-10">
+        <div class="mb-8 grid gap-5 md:mb-14 md:grid-cols-[1.3fr_1fr] md:items-end md:gap-20">
+          <div data-reveal class="flex flex-col gap-5 md:gap-6">
+            <SectionKicker :step="3" :text="c.servicePage.deliverablesKicker" />
+            <h2 class="font-display text-[32px] font-extrabold leading-[1.02] md:text-[56px] md:leading-none">
+              {{ c.servicePage.deliverablesHeading }}
+            </h2>
+          </div>
+          <p data-reveal class="text-[16px] leading-[1.55] text-muted md:text-[18px]">
+            {{ c.servicePage.deliverablesIntro }}
+          </p>
         </div>
-        <h2
-          data-reveal
-          class="mb-5 font-display text-[clamp(28px,3vw,40px)] font-extrabold leading-[1.1] tracking-[-0.018em]"
-        >
-          {{ c.servicePage.deliverablesHeading }}
-        </h2>
-        <p data-reveal class="mb-12 max-w-[58ch] text-[16.5px] leading-[1.62] text-muted">
-          {{ c.servicePage.deliverablesIntro }}
-        </p>
-        <div class="grid gap-px border border-line bg-line md:grid-cols-3">
+        <div class="grid gap-3 md:grid-cols-3 md:gap-6">
           <div
             v-for="group in content.deliverables"
             :key="group.group"
             data-reveal
-            class="bg-paper-2 px-7 py-8"
+            class="bg-paper-2 px-6 pb-3 pt-6 md:px-8 md:pt-8"
           >
-            <h3 class="text-[14px] font-bold text-accent">
-              {{ group.group }}
-            </h3>
-            <ul class="mt-5">
+            <h3 class="font-display text-[20px] font-extrabold text-accent md:text-[22px]">{{ group.group }}</h3>
+            <ul class="mt-4">
               <li
                 v-for="item in group.items"
                 :key="item"
-                class="border-b border-line py-3 text-[14.5px] leading-[1.6] text-muted first:pt-0 last:border-b-0 last:pb-0"
+                class="border-t-[1.5px] border-line py-3.5 text-[15px] leading-[1.55] md:text-[16px]"
               >
                 {{ item }}
               </li>
@@ -207,170 +181,179 @@
     </section>
 
     <!-- What we decline -->
-    <section class="border-b border-line">
-      <div class="mx-auto max-w-site px-5 py-16 md:px-10 md:py-[92px]">
-        <div data-reveal class="grid items-start gap-10 md:grid-cols-[0.44fr_1fr] md:gap-16">
-          <div>
-            <div class="mb-[18px] text-[15px] font-bold text-accent">
-              {{ c.servicePage.boundariesKicker }}
-            </div>
-            <h2
-              class="mb-5 font-display text-[clamp(28px,3vw,36px)] font-extrabold leading-[1.1] tracking-[-0.016em]"
-            >
+    <section class="bg-paper-2 py-14 md:py-28">
+      <div class="mx-auto max-w-site px-5 md:px-10">
+        <div data-reveal class="grid items-start gap-8 md:grid-cols-[0.8fr_1fr] md:gap-20">
+          <div class="flex flex-col gap-5 md:gap-6">
+            <SectionKicker :step="3" :text="c.servicePage.boundariesKicker" />
+            <h2 class="font-display text-[32px] font-extrabold leading-[1.02] md:text-[48px]">
               {{ c.servicePage.boundariesHeading }}
             </h2>
-            <p class="text-[16.5px] leading-[1.62] text-muted">
+            <p class="text-[16px] leading-[1.6] text-muted md:text-[18px]">
               {{ c.servicePage.boundariesBody }}
             </p>
           </div>
-          <div class="border-t border-line-2">
-            <div
+          <ul class="flex flex-col gap-2.5">
+            <li
               v-for="item in content.notDoing"
               :key="item"
-              class="flex gap-5 border-b border-line py-5"
+              class="flex items-start gap-4 bg-paper px-5 py-4 md:px-6 md:py-5"
             >
-              <span class="text-[14px] font-bold text-muted" aria-hidden="true">&#10005;</span>
-              <span class="text-[16px] leading-[1.6] text-muted">{{ item }}</span>
-            </div>
-          </div>
+              <svg width="14" height="14" viewBox="0 0 14 14" class="mt-[5px] shrink-0 text-accent" aria-hidden="true">
+                <path d="M2 2 L12 12 M12 2 L2 12" stroke="currentColor" stroke-width="2.5" />
+              </svg>
+              <span class="text-[16px] leading-[1.55] md:text-[17px]">{{ item }}</span>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- Pricing -->
-    <section class="border-b border-line bg-paper-2">
-      <div class="mx-auto max-w-site px-5 py-16 md:px-10 md:py-[92px]">
-        <div class="mb-12 flex flex-wrap items-end justify-between gap-10">
-          <div data-reveal>
-            <div class="mb-[18px] text-[15px] font-bold text-accent">
-              {{ c.servicePage.pricingKicker }}
-            </div>
-            <h2
-              class="max-w-[24ch] font-display text-[clamp(28px,3vw,40px)] font-extrabold leading-[1.1] tracking-[-0.018em]"
-            >
+    <!-- Step 4 · Pricing -->
+    <section class="py-14 md:py-28">
+      <div class="mx-auto max-w-site px-5 md:px-10">
+        <div class="mb-8 grid gap-5 md:mb-14 md:grid-cols-[1.3fr_1fr] md:items-end md:gap-20">
+          <div data-reveal class="flex flex-col gap-5 md:gap-6">
+            <SectionKicker :step="4" :text="c.servicePage.pricingKicker" />
+            <h2 class="font-display text-[32px] font-extrabold leading-[1.02] md:text-[56px] md:leading-none">
               {{ onRequest ? c.servicePage.pricingHeadingOnRequest : c.servicePage.pricingHeading }}
             </h2>
           </div>
-          <p class="m-0 max-w-[38ch] text-[15px] leading-[1.6] text-muted">
+          <p data-reveal class="text-[16px] leading-[1.55] text-muted md:text-[18px]">
             {{ onRequest ? c.servicePage.pricingNoteOnRequest : c.servicePage.pricingNote }}
           </p>
         </div>
-        <div class="grid gap-px border border-line bg-line md:grid-cols-3">
+        <div class="grid gap-3 md:grid-cols-3 md:gap-6">
           <div
             v-for="(tier, i) in tiers"
             :key="tier.title"
             data-reveal
-            class="flex flex-col gap-4 bg-paper px-7 py-8"
+            class="flex flex-col gap-4 p-6 md:min-h-[300px] md:p-8"
+            :class="tierTone[i % 3].card"
           >
-            <div class="text-[14px] font-bold text-muted">
-              {{ String(i + 1).padStart(2, "0") }} · {{ tier.title }}
+            <span class="text-[15px] font-bold" :class="tierTone[i % 3].label">{{ tier.title }}</span>
+            <div
+              class="font-display font-extrabold leading-[1.05]"
+              :class="[onRequest ? 'text-[24px] md:text-[26px]' : 'text-[34px] md:text-[44px]', tierTone[i % 3].price]"
+              style="letter-spacing: -0.03em"
+            >
+              {{ tier.price }}
             </div>
-            <div class="font-display font-extrabold leading-[1.1]" :class="onRequest ? 'text-[20px]' : 'text-[30px]'">{{ tier.price }}</div>
-            <p class="text-[15px] leading-[1.6] text-muted">{{ tier.body }}</p>
+            <p class="text-[15px] leading-[1.6] md:text-[16px]" :class="tierTone[i % 3].body">{{ tier.body }}</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- FAQ -->
-    <section class="border-b border-line">
-      <div class="mx-auto max-w-site px-5 py-16 md:px-10 md:py-[92px]">
-        <div data-reveal class="mb-[18px] text-[15px] font-bold text-accent">
-          {{ c.servicePage.faqKicker }}
+    <section class="bg-paper-2 py-14 md:py-28">
+      <div class="mx-auto max-w-site px-5 md:px-10">
+        <div data-reveal class="mb-8 flex flex-col gap-5 md:mb-12 md:gap-6">
+          <SectionKicker :step="4" :text="c.servicePage.faqKicker" />
+          <h2 class="font-display text-[32px] font-extrabold leading-[1.02] md:text-[56px] md:leading-none">
+            {{ c.servicePage.faqHeading }}
+          </h2>
         </div>
-        <h2
-          data-reveal
-          class="mb-12 font-display text-[clamp(28px,3vw,40px)] font-extrabold leading-[1.1] tracking-[-0.018em]"
-        >
-          {{ c.servicePage.faqHeading }}
-        </h2>
-        <div class="grid md:grid-cols-2 md:gap-x-16">
-          <div
-            v-for="item in content.faq"
-            :key="item.q"
-            class="border-b border-line py-6 first:pt-0 md:[&:nth-child(2)]:pt-0"
-          >
-            <h3 class="text-[16.5px] font-semibold leading-snug">{{ item.q }}</h3>
-            <p class="mt-3 text-[15.5px] leading-[1.6] text-muted">{{ item.a }}</p>
-          </div>
+        <div class="grid gap-2.5 md:grid-cols-2 md:gap-3">
+          <details v-for="item in content.faq" :key="item.q" class="group self-start bg-paper">
+            <summary
+              class="flex min-h-[64px] cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 md:px-6 [&::-webkit-details-marker]:hidden"
+            >
+              <h3 class="text-[16px] font-bold leading-[1.35] md:text-[17px]">{{ item.q }}</h3>
+              <ChevronIcon
+                :size="12"
+                :weight="5"
+                class="text-accent transition-transform duration-[250ms] group-open:rotate-90"
+              />
+            </summary>
+            <p class="px-5 pb-5 text-[15px] leading-[1.6] text-muted md:px-6 md:text-[16px]">{{ item.a }}</p>
+          </details>
         </div>
       </div>
     </section>
 
     <!-- Related work -->
-    <section v-if="related.length" class="border-b border-line bg-paper-2">
-      <div class="mx-auto max-w-site px-5 py-16 md:px-10 md:py-[92px]">
-        <div data-reveal class="mb-[18px] text-[15px] font-bold text-accent">
-          {{ c.servicePage.relatedKicker }}
+    <section v-if="related.length" class="py-14 md:py-28">
+      <div class="mx-auto max-w-site px-5 md:px-10">
+        <div class="mb-8 grid gap-5 md:mb-12 md:grid-cols-[1.3fr_1fr] md:items-end md:gap-20">
+          <div data-reveal class="flex flex-col gap-5 md:gap-6">
+            <SectionKicker :step="4" :text="c.servicePage.relatedKicker" />
+            <h2 class="font-display text-[32px] font-extrabold leading-[1.02] md:text-[48px]">
+              {{ c.servicePage.relatedHeading }}
+            </h2>
+          </div>
+          <p data-reveal class="text-[16px] leading-[1.55] text-muted md:text-[18px]">
+            {{ c.servicePage.relatedNote }}
+          </p>
         </div>
-        <h2
-          data-reveal
-          class="font-display text-[clamp(28px,3vw,40px)] font-extrabold leading-[1.1] tracking-[-0.018em]"
-        >
-          {{ c.servicePage.relatedHeading }}
-        </h2>
-        <p data-reveal class="mb-12 mt-4 max-w-[58ch] text-[16px] leading-[1.62] text-muted">
-          {{ c.servicePage.relatedNote }}
-        </p>
-        <div class="grid gap-x-7 gap-y-10 md:grid-cols-3">
-          <NuxtLink
-            v-for="item in related"
-            :key="item.slug"
-            :to="lp('work', `#${item.slug}`)"
-            data-reveal
-            class="group block"
-          >
-            <div class="overflow-hidden border border-line bg-paper">
-              <img
-                :src="item.image"
-                :alt="item.name"
-                class="aspect-[16/9] w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
-                loading="lazy"
-              />
-            </div>
-            <h3 class="mt-4 font-display text-[24px] font-extrabold leading-tight">{{ item.name }}</h3>
-            <p class="mt-1.5 text-[15px] text-muted">{{ item.tagline }}</p>
-          </NuxtLink>
-        </div>
+        <ul class="grid gap-x-6 md:grid-cols-2">
+          <li v-for="item in related" :key="item.slug">
+            <NuxtLink
+              :to="lp('work', `#${item.slug}`)"
+              class="group -mx-3 flex min-h-[72px] items-center justify-between gap-4 border-t-[1.5px] border-line px-3 transition-colors duration-[250ms] hover:border-accent hover:bg-paper-2 md:-mx-4 md:px-4"
+            >
+              <span class="flex flex-col gap-0.5 py-3">
+                <span class="text-[17px] font-bold transition-colors duration-[250ms] group-hover:text-accent md:text-[18px]">
+                  {{ item.name }}
+                </span>
+                <span class="text-[15px] text-muted">{{ item.outcome || item.tagline }}</span>
+              </span>
+              <ChevronIcon :size="13" :weight="5" class="text-accent transition-transform duration-[250ms] group-hover:translate-x-1" />
+            </NuxtLink>
+          </li>
+        </ul>
       </div>
     </section>
 
     <!-- Other services -->
-    <section class="border-b border-line">
-      <div class="mx-auto max-w-site px-5 py-14 md:px-10 md:py-16">
-        <div class="text-[15px] font-bold text-accent">
+    <section class="bg-paper-2 py-14 md:py-20">
+      <div class="mx-auto max-w-site px-5 md:px-10">
+        <h2 class="mb-6 font-display text-[24px] font-extrabold md:mb-8 md:text-[32px]">
           {{ c.servicePage.otherServices }}
-        </div>
-        <div class="mt-7 grid gap-px border border-line bg-line md:grid-cols-3">
+        </h2>
+        <div class="grid gap-2.5 md:grid-cols-3 md:gap-6">
           <NuxtLink
             v-for="other in otherServices"
             :key="other.to"
             :to="other.to"
-            class="group bg-paper px-7 py-8 transition-colors duration-300 hover:bg-paper-2"
+            class="group flex flex-col gap-3 bg-paper p-5 transition-colors duration-[250ms] hover:bg-accent-soft md:p-8"
           >
-            <h3 class="mb-2.5 font-display text-[24px] font-extrabold leading-tight">
-              {{ other.cardTitle }}
-            </h3>
-            <p class="text-[15px] leading-[1.6] text-muted">{{ other.cardBody }}</p>
-            <div class="mt-6 text-[14px] font-bold text-accent">
-              {{ c.common.explore }} &rarr;
+            <div class="flex items-start justify-between gap-3">
+              <h3 class="font-display text-[22px] font-extrabold leading-[1.1] md:text-[24px]">{{ other.cardTitle }}</h3>
+              <span
+                class="flex h-11 w-11 shrink-0 items-center justify-center bg-ultra text-white transition-transform duration-[250ms] group-hover:translate-x-1"
+              >
+                <ChevronIcon :size="13" />
+              </span>
             </div>
+            <p class="text-[15px] leading-[1.6] text-muted md:text-[16px]">{{ other.cardBody }}</p>
+            <span class="sr-only">{{ c.common.explore }}</span>
           </NuxtLink>
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="border-b border-line">
+    <!-- CTA: the arrowhead. -->
+    <section class="relative overflow-hidden bg-ultra text-white">
+      <svg
+        class="pointer-events-none absolute -right-[120px] top-6 h-[340px] w-[300px] md:-right-[60px] md:top-6 md:h-[480px] md:w-[420px]"
+        viewBox="0 0 30 34"
+        aria-hidden="true"
+      >
+        <path d="M3 2 L27 17 L3 32" fill="none" stroke="#1b2c96" stroke-width="3" />
+      </svg>
       <div
-        class="mx-auto flex max-w-site flex-wrap items-center justify-between gap-10 px-5 py-16 md:px-10 md:py-[88px]"
+        class="relative mx-auto flex max-w-site flex-col gap-8 px-5 py-14 md:flex-row md:items-end md:justify-between md:gap-20 md:px-10 md:py-24"
       >
         <h2
-          class="max-w-[24ch] font-display text-[clamp(30px,3.2vw,44px)] font-extrabold leading-[1.08] tracking-[-0.018em]"
+          class="max-w-[22ch] font-display text-[34px] font-extrabold leading-none md:text-[clamp(44px,4.6vw,64px)] md:leading-[0.98]"
+          style="letter-spacing: -0.04em"
         >
           {{ content.cta }}
         </h2>
-        <BookCallButton size="lg" arrow />
+        <BookCallButton variant="onInk" size="lg" class="shrink-0 justify-between" arrow>
+          {{ c.common.bookScopingCall }}
+        </BookCallButton>
       </div>
     </section>
   </div>
@@ -397,6 +380,18 @@ const related = computed(() =>
     .filter((w) => w.service === props.slug)
     .slice(0, 6),
 );
+// Pipeline bars grow stage by stage: taller on phones, wider on desktop.
+function stageBar(i: number) {
+  return { h: [24, 44, 72, 96][i] ?? 96, w: [22, 45, 80, 100][i] ?? 100 };
+}
+
+// Ice, blue, ink: the tiers never share a colour.
+const tierTone = [
+  { card: "bg-paper-2", label: "text-accent", price: "", body: "text-muted" },
+  { card: "bg-ultra text-white", label: "text-ultra-muted", price: "", body: "text-ultra-soft" },
+  { card: "bg-night-block text-white", label: "text-periwinkle", price: "", body: "text-night-muted" },
+];
+
 const otherServices = computed(() =>
   localisedServices(locale.value).filter((s) => s.slug !== props.slug),
 );

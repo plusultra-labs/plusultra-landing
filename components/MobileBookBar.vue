@@ -2,7 +2,7 @@
   <!-- Phones only: the one next step stays under the thumb on every screen.
        Hidden while the booking dialog is open so it never sits on top of it. -->
   <div
-    v-show="!bookingOpen"
+    v-show="!bookingOpen && !onContact"
     class="fixed inset-x-0 bottom-0 z-30 flex gap-2.5 border-t border-line bg-paper px-4 pt-3 md:hidden"
     style="padding-bottom: max(12px, env(safe-area-inset-bottom))"
   >
@@ -22,7 +22,12 @@
 
 <script setup lang="ts">
 import { org } from "~/data/org";
+import { matchPath } from "~/data/routes";
 
 const c = useCopy();
 const { isOpen: bookingOpen } = useBookCall();
+
+// The contact page opens with the same two actions as its hero.
+const route = useRoute();
+const onContact = computed(() => matchPath(route.path.replace(/\/$/, "") || "/")?.key === "contact");
 </script>

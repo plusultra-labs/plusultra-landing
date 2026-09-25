@@ -1,84 +1,91 @@
 <template>
   <div>
-    <section class="border-b border-line">
-      <div class="mx-auto max-w-site px-5 md:px-10">
-        <div class="grid items-end gap-12 py-16 md:grid-cols-[1.25fr_0.75fr] md:gap-16 md:pb-16 md:pt-[88px]">
-          <div>
-            <div class="pu-fade mb-[22px] text-[15px] font-bold text-accent">
-              {{ c.contact.kicker }}
-            </div>
-            <h1
-              class="pu-rise mb-[26px] max-w-[20ch] font-display text-[clamp(40px,4.8vw,68px)] font-extrabold leading-[1.03] tracking-[-0.022em]"
-            >
-              {{ c.contact.heading }} <span class="text-accent">{{ c.contact.headingEmphasis }}</span>
-            </h1>
-            <p
-              class="pu-rise max-w-[56ch] text-[19px] leading-[1.55] text-muted"
-              style="animation-delay: 0.1s"
-            >
-              {{ c.contact.lead }}
-            </p>
-          </div>
+    <!-- Hero: the blue field, and the booking card as the thing to do here. -->
+    <section class="relative overflow-hidden bg-ultra text-white">
+      <svg
+        class="pointer-events-none absolute -right-[140px] top-10 hidden h-[600px] w-[520px] md:block"
+        viewBox="0 0 30 34"
+        aria-hidden="true"
+      >
+        <path d="M3 2 L27 17 L3 32" fill="none" stroke="#1b2c96" stroke-width="3" />
+      </svg>
+      <div
+        class="relative mx-auto grid max-w-site gap-10 px-5 pb-12 pt-10 md:grid-cols-[1.15fr_0.85fr] md:items-end md:gap-20 md:px-10 md:pb-24 md:pt-[88px]"
+      >
+        <div>
+          <p class="pu-fade mb-5 text-[15px] font-semibold text-ultra-muted md:mb-8 md:text-[18px]">
+            {{ c.contact.kicker }}
+          </p>
+          <h1
+            class="pu-rise mb-6 max-w-[14ch] font-display text-[clamp(40px,6.4vw,92px)] font-extrabold leading-[0.95] md:mb-8"
+            style="letter-spacing: -0.04em"
+          >
+            {{ c.contact.heading }} <span class="text-periwinkle">{{ c.contact.headingEmphasis }}</span>
+          </h1>
+          <p
+            class="pu-rise max-w-[52ch] text-[17px] leading-[1.5] text-ultra-soft md:text-[20px]"
+            style="animation-delay: 0.1s"
+          >
+            {{ c.contact.lead }}
+          </p>
+        </div>
 
-          <div class="pu-fade grid gap-4" style="animation-delay: 0.3s">
-            <div class="mb-2 flex items-center gap-5 border border-line bg-paper-2 p-5">
-              <img
-                src="/alberto.jpg"
-                :alt="c.about.founderAlt"
-                width="88"
-                height="88"
-                class="h-[88px] w-[88px] shrink-0 border border-line object-cover"
-              />
-              <div>
-                <div class="text-[14px] font-bold text-muted">
-                  {{ c.contact.speakingWith }}
-                </div>
-                <div class="mt-1.5 font-display text-[24px] leading-tight">Alberto</div>
-                <div class="mt-1 text-[14.5px] leading-[1.5] text-muted">
-                  {{ c.contact.founderNote }}
-                </div>
-              </div>
-            </div>
-            <BookCallButton size="lg" class="justify-between" arrow />
-            <a
-              :href="`mailto:${org.email}`"
-              class="flex h-[58px] items-center justify-between rounded-sm border border-line-2 px-6 text-[16px] transition-[border-color,background-color] duration-[250ms] hover:border-ink hover:bg-paper-2"
-            >
-              {{ org.email }}
-              <span aria-hidden="true">&rarr;</span>
-            </a>
-            <div class="mt-1.5 text-[14px] font-bold text-muted">
-              {{ c.common.repliesWithinTz }}
+        <div class="pu-fade flex flex-col gap-3" style="animation-delay: 0.3s">
+          <div class="mb-2 flex items-center gap-4 md:gap-5">
+            <img
+              src="/alberto.jpg"
+              :alt="c.about.founderAlt"
+              width="96"
+              height="96"
+              class="h-20 w-20 shrink-0 object-cover md:h-24 md:w-24"
+            />
+            <div>
+              <div class="text-[14px] font-bold text-ultra-muted">{{ c.contact.speakingWith }}</div>
+              <div class="mt-1 font-display text-[26px] font-extrabold leading-tight">Alberto</div>
+              <div class="mt-1 text-[15px] leading-[1.45] text-ultra-soft">{{ c.contact.founderNote }}</div>
             </div>
           </div>
+          <BookCallButton variant="onInk" size="lg" class="justify-between" arrow>
+            {{ c.common.bookScopingCall }}
+          </BookCallButton>
+          <a
+            :href="`mailto:${org.email}`"
+            class="group flex h-16 items-center justify-between gap-3 border-2 border-white px-7 text-[16px] font-semibold transition-colors duration-[250ms] hover:bg-white hover:text-ultra md:text-[17px]"
+          >
+            <span class="truncate">{{ org.email }}</span>
+            <ChevronIcon :size="14" class="transition-transform duration-[250ms] group-hover:translate-x-1" />
+          </a>
+          <div class="pt-1 text-[14px] text-ultra-muted md:text-[15px]">{{ c.common.repliesWithinTz }}</div>
         </div>
       </div>
     </section>
 
-    <section class="border-b border-line bg-paper-2">
-      <div class="mx-auto max-w-site px-5 py-16 md:px-10 md:py-[92px]">
-        <div data-reveal class="grid items-start gap-10 md:grid-cols-[0.44fr_1fr] md:gap-16">
-          <div>
-            <div class="mb-[18px] text-[15px] font-bold text-accent">
-              {{ c.contact.prepKicker }}
-            </div>
-            <h2
-              class="font-display text-[clamp(28px,3vw,36px)] font-extrabold leading-[1.1] tracking-[-0.016em]"
-            >
-              {{ c.contact.prepHeading }}
-            </h2>
-          </div>
-          <div class="border-t border-line-2">
-            <div
-              v-for="item in c.contact.prep"
-              :key="item.title"
-              class="grid gap-4 border-b border-line py-5 md:grid-cols-[1fr_1.4fr] md:gap-8"
-            >
-              <span class="text-[16px] font-medium">{{ item.title }}</span>
-              <span class="text-[15.5px] leading-[1.6] text-muted">{{ item.body }}</span>
-            </div>
-          </div>
+    <!-- Step 1 · What makes the first call useful -->
+    <section class="bg-paper-2 py-14 md:py-28">
+      <div class="mx-auto max-w-site px-5 md:px-10">
+        <div data-reveal class="mb-8 flex flex-col gap-5 md:mb-14 md:gap-6">
+          <SectionKicker :step="1" :text="c.contact.prepKicker" />
+          <h2 class="max-w-[20ch] font-display text-[32px] font-extrabold leading-[1.02] md:text-[56px] md:leading-none">
+            {{ c.contact.prepHeading }}
+          </h2>
         </div>
+        <ol class="grid gap-3 md:grid-cols-2 md:gap-6">
+          <li
+            v-for="(item, i) in c.contact.prep"
+            :key="item.title"
+            data-reveal
+            class="flex gap-5 bg-paper p-6 md:gap-7 md:p-9"
+          >
+            <span
+              class="font-display text-[40px] font-extrabold leading-none text-accent md:text-[52px]"
+              aria-hidden="true"
+            >{{ i + 1 }}</span>
+            <div class="flex flex-col gap-2 pt-1">
+              <h3 class="font-display text-[20px] font-extrabold leading-[1.15] md:text-[24px]">{{ item.title }}</h3>
+              <p class="text-[16px] leading-[1.6] text-muted">{{ item.body }}</p>
+            </div>
+          </li>
+        </ol>
       </div>
     </section>
   </div>
