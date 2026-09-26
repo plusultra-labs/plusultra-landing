@@ -6,7 +6,7 @@ export const servicesFr: ServiceTexts = {
     cardBody:
       "De l'idée au produit fini. Nous concevons, construisons et exploitons des produits numériques exactement comme les nôtres : première version en ligne en quelques semaines, faite pour durer.",
     title: "Développement de produit IA, par des gens qui livrent les leurs",
-    lead: "La plupart des agences construisent leur premier produit IA avec le budget du client. Le nôtre est déjà construit : BuzzWatch, InsightFlow, ItaSign et IntelligoAI sont des SaaS vivants que nous avons conçus, livrés et que nous exploitons. Votre produit hérite des schémas qui ont survécu à la production.",
+    lead: "La plupart des agences construisent leur premier produit IA avec le budget du client. Le nôtre est déjà construit : BuzzWatch, InsightFlow, IntelligoAI et une plateforme de signature électronique sont des SaaS vivants que nous avons conçus, livrés et que nous exploitons. Votre produit hérite des schémas qui ont survécu à la production.",
     specs: [
       { label: "Durée habituelle", value: "6–12 semaines" },
       { label: "Première version utilisable", value: "3–6 semaines" },
@@ -16,7 +16,7 @@ export const servicesFr: ServiceTexts = {
       heading: "Ce que vous achetez vraiment quand vous confiez la construction d'un produit",
       paragraphs: [
         "La version standard se déroule ainsi. Une agence vous chiffre une phase de cadrage, produit un cahier des charges et sous-traite la construction. Six mois plus tard, vous possédez un code que personne du premier appel n'a lu, sur une infrastructure que personne ne veut maintenir, avec une fonction IA qui coûte plus par utilisateur que ce que l'utilisateur paie.",
-        "Nous avons pris l'autre chemin. Avant de vendre du développement de produit IA, nous avons construit les nôtres. BuzzWatch suit ce que les assistants IA disent d'une marque, a des clients payants et un partenariat entreprise avec une agence internationale. ItaSign, IntelligoAI et InsightFlow sont en ligne, payés et exploités par nous.",
+        "Nous avons pris l'autre chemin. Avant de vendre du développement de produit IA, nous avons construit les nôtres. BuzzWatch suit ce que les assistants IA disent d'une marque, a des clients payants et un partenariat entreprise avec une agence internationale. IntelligoAI, InsightFlow et une plateforme de signature électronique sont en ligne, payés et exploités par nous.",
         "Cela change ce que vous recevez. L'architecture que nous proposons est celle que nous exploitons. Les coûts d'API que nous chiffrons sont ceux que nous payons chaque mois. Les modes de panne que nous anticipons sont ceux qui nous ont déjà réveillés la nuit. Vous achetez les schémas qui ont survécu au contact d'utilisateurs réels, pas ceux qui rendaient bien dans une proposition.",
       ],
       pullQuote: "Tout ce que nous recommandons, nous le faisons déjà tourner en production.",

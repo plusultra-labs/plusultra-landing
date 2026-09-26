@@ -28,7 +28,7 @@ CTA secondary: **See our work** → /work
 
 ## We use everything we sell (products strip)
 
-Short strip with logos/cards: BuzzWatch · InsightFlow · ItaSign · IntelligoAI · Patrimo — one line each, link to /products.
+Short strip with logos/cards: BuzzWatch · InsightFlow · IntelligoAI · Patrimo — one line each, link to /products.
 Framing line: *"Our own products are our R&D lab. Client work gets what already survived production."*
 
 ## Featured work (3 case-study cards)

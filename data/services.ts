@@ -39,7 +39,7 @@ export const services: ServiceContent[] = [
     cardBody:
       "From idea to finished product. We design, build, and run digital products the same way we build our own: first version live in weeks, built to last.",
     title: "AI product development, by people who ship their own",
-    lead: "Most agencies build their first AI product on your budget. We already built ours: BuzzWatch, InsightFlow, ItaSign, and IntelligoAI are live SaaS products we designed, shipped, and operate. Your product gets the patterns that survived production.",
+    lead: "Most agencies build their first AI product on your budget. We already built ours: BuzzWatch, InsightFlow, IntelligoAI, and a digital signature platform are live SaaS products we designed, shipped, and operate. Your product gets the patterns that survived production.",
     specs: [
       { label: "Typical duration", value: "6–12 weeks" },
       { label: "First usable release", value: "3–6 weeks" },
@@ -49,7 +49,7 @@ export const services: ServiceContent[] = [
       heading: "What you are really buying when you hire someone to build a product",
       paragraphs: [
         "The standard version goes like this. An agency quotes a discovery phase, produces a specification, and subcontracts the build. Six months later you own a codebase nobody on the original call has read, running on infrastructure nobody wants to maintain, with an AI feature that costs more per user than the user pays.",
-        "We took the other route. Before selling AI product development we built our own. BuzzWatch tracks what AI assistants say about a brand and has paying customers and an enterprise agency partnership. ItaSign, IntelligoAI, and InsightFlow are live, paid for, and operated by us.",
+        "We took the other route. Before selling AI product development we built our own. BuzzWatch tracks what AI assistants say about a brand and has paying customers and an enterprise agency partnership. IntelligoAI, InsightFlow, and a digital signature platform are live, paid for, and operated by us.",
         "That changes what you get. The architecture we propose is architecture we run. The API costs we quote are costs we pay every month. The failure modes we design around are the ones that already woke us up at night. You are buying the patterns that survived contact with real users, not the ones that looked good in a proposal.",
       ],
       pullQuote:

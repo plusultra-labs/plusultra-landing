@@ -38,7 +38,6 @@ export const org = {
   // TourScanner belongs to someone else.
   sameAs: [
     "https://buzzwatch.ai",
-    "https://itasign.com",
     "https://intelligo-ai.com",
   ],
 } as const;

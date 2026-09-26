@@ -6,7 +6,7 @@ export const servicesEs: ServiceTexts = {
     cardBody:
       "De la idea al producto terminado. Diseñamos, construimos y operamos productos digitales igual que los nuestros: primera versión en línea en semanas, hecha para durar.",
     title: "Desarrollo de producto de IA, por gente que ya lanzó el suyo",
-    lead: "Muchas agencias construyen su primer producto de IA con el presupuesto del cliente. Nosotros el nuestro ya lo construimos: BuzzWatch, InsightFlow, ItaSign e IntelligoAI son SaaS vivos que diseñamos, lanzamos y operamos. Tu producto hereda los patrones que sobrevivieron a producción.",
+    lead: "Muchas agencias construyen su primer producto de IA con el presupuesto del cliente. Nosotros el nuestro ya lo construimos: BuzzWatch, InsightFlow, IntelligoAI y una plataforma de firma digital son SaaS vivos que diseñamos, lanzamos y operamos. Tu producto hereda los patrones que sobrevivieron a producción.",
     specs: [
       { label: "Duración habitual", value: "6–12 semanas" },
       { label: "Primera versión usable", value: "3–6 semanas" },
@@ -16,7 +16,7 @@ export const servicesEs: ServiceTexts = {
       heading: "Qué estás comprando de verdad cuando encargas un producto",
       paragraphs: [
         "La versión estándar va así. Una agencia te cotiza una fase de discovery, produce un pliego y subcontrata la construcción. Seis meses después tienes un código que nadie de la primera llamada ha leído, sobre una infraestructura que nadie quiere mantener, con una función de IA que cuesta por usuario más de lo que el usuario paga.",
-        "Nosotros tomamos el otro camino. Antes de vender desarrollo de producto de IA construimos el nuestro. BuzzWatch vigila qué dicen los asistentes de IA sobre una marca, tiene clientes que pagan y un acuerdo enterprise con una agencia internacional. ItaSign, IntelligoAI e InsightFlow están vivos, se pagan solos y los operamos nosotros.",
+        "Nosotros tomamos el otro camino. Antes de vender desarrollo de producto de IA construimos el nuestro. BuzzWatch vigila qué dicen los asistentes de IA sobre una marca, tiene clientes que pagan y un acuerdo enterprise con una agencia internacional. IntelligoAI, InsightFlow y una plataforma de firma digital están vivos, se pagan solos y los operamos nosotros.",
         "Eso cambia lo que recibes. La arquitectura que proponemos es la arquitectura que operamos. Los costes de API que te cotizamos son costes que pagamos cada mes. Las formas de romperse que anticipamos son las que ya nos despertaron de noche. Estás comprando los patrones que sobrevivieron al contacto con usuarios reales, no los que quedaban bien en una propuesta.",
       ],
       pullQuote: "Todo lo que recomendamos ya lo tenemos en producción nosotros.",

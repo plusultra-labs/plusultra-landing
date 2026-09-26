@@ -12,7 +12,7 @@
 ## The class of work (real examples, anonymize until permissions land)
 
 - Practice-management platform for medical clinics (IntelligoAI)
-- eIDAS-compliant e-signature platform (ItaSign)
+- eIDAS-compliant digital signature platform
 - Luxury real-estate listing platform with custom CMS (Dubai / Milan / Monaco)
 - Order/production portal for a manufacturing workshop, integrated with Google Sheets
 - Financial-advisor CRM (Patrimo)

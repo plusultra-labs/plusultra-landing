@@ -42,14 +42,14 @@ export const workEs: WorkTexts = {
       "El modelo de precio que al mercado le faltaba es exactamente el tipo de razonamiento de producto que llevamos a cada proyecto.",
     ],
   },
-  itasign: {
-    name: "ItaSign",
+  "e-signature": {
+    name: "Plataforma de firma digital",
     tagline: "Firma digital sin suscripciones",
     outcome: "Firmas electrónicas válidas, pago por firma, sin suscripción",
     period: "2025 - hoy",
     tags: ["Producto propio", "Legal tech"],
     paragraphs: [
-      "Firmar un documento con validez legal en Europa suele significar una suscripción enterprise. ItaSign permite a las empresas italianas enviar documentos a firma electrónica con plena validez legal y pagar por firma.",
+      "Firmar un documento con validez legal en Europa suele significar una suscripción enterprise. La plataforma permite a las empresas italianas enviar documentos a firma electrónica con plena validez legal y pagar por firma.",
       "Por dentro: firmas simples y avanzadas conformes al reglamento eIDAS, flujos de firma en secuencia y soporte multiorganización, dentro de una interfaz que una pequeña empresa entiende de verdad.",
     ],
   },

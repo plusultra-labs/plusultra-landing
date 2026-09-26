@@ -42,14 +42,14 @@ export const workIt: WorkTexts = {
       "Il modello di prezzo che al mercato mancava è esattamente il tipo di ragionamento sul prodotto che portiamo in ogni progetto.",
     ],
   },
-  itasign: {
-    name: "ItaSign",
+  "e-signature": {
+    name: "Piattaforma di firma digitale",
     tagline: "Firma digitale senza abbonamenti",
     outcome: "Firme elettroniche valide, a consumo, senza abbonamento",
     period: "2025 - oggi",
     tags: ["Prodotto nostro", "Legal tech"],
     paragraphs: [
-      "Firmare un documento con valore legale in Europa di solito significa un abbonamento enterprise. ItaSign permette alle imprese italiane di mandare documenti in firma elettronica con pieno valore legale pagando invece a firma.",
+      "Firmare un documento con valore legale in Europa di solito significa un abbonamento enterprise. La piattaforma permette alle imprese italiane di mandare documenti in firma elettronica con pieno valore legale pagando invece a firma.",
       "Sotto il cofano: firme semplici e avanzate conformi al regolamento eIDAS, flussi di firma in sequenza e gestione di più organizzazioni, dentro un'interfaccia che una piccola impresa capisce davvero.",
     ],
   },

@@ -15,7 +15,7 @@ export interface WorkCategory {
 }
 
 export const workCategories: WorkCategory[] = [
-  { slug: "saas", examples: ["buzzwatch", "itasign", "intelligoai"] },
+  { slug: "saas", examples: ["buzzwatch", "e-signature", "intelligoai"] },
   {
     slug: "internal-tools",
     examples: ["travel-platform-engine", "fms-portal", "colzani-partners"],

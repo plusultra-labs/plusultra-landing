@@ -42,14 +42,14 @@ export const workFr: WorkTexts = {
       "Le modèle tarifaire qui manquait au marché est exactement le type de réflexion produit que nous apportons à chaque projet.",
     ],
   },
-  itasign: {
-    name: "ItaSign",
+  "e-signature": {
+    name: "Plateforme de signature électronique",
     tagline: "La signature électronique sans abonnement",
     outcome: "Signatures électroniques valables, payées à l'unité, sans abonnement",
     period: "2025 - aujourd'hui",
     tags: ["Produit maison", "Legal tech"],
     paragraphs: [
-      "Signer un document avec valeur légale en Europe suppose en général un abonnement entreprise. ItaSign permet aux entreprises italiennes d'envoyer des documents en signature électronique juridiquement valable et de payer à la signature.",
+      "Signer un document avec valeur légale en Europe suppose en général un abonnement entreprise. La plateforme permet aux entreprises italiennes d'envoyer des documents en signature électronique juridiquement valable et de payer à la signature.",
       "Sous le capot : signatures simples et avancées conformes au règlement eIDAS, parcours de signature séquentiels et gestion multi-organisation, le tout dans une interface qu'une petite entreprise comprend vraiment.",
     ],
   },

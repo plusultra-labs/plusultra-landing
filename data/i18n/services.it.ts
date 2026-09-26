@@ -6,7 +6,7 @@ export const servicesIt: ServiceTexts = {
     cardBody:
       "Dall'idea al prodotto finito. Progettiamo, costruiamo e mandiamo avanti prodotti digitali come facciamo con i nostri: prima versione online in poche settimane, costruita per durare.",
     title: "Sviluppo di prodotti AI, fatto da chi i suoi li ha già costruiti",
-    lead: "Molte agenzie costruiscono il loro primo prodotto AI con il budget del cliente. Noi il nostro l'abbiamo già costruito: BuzzWatch, InsightFlow, ItaSign e IntelligoAI sono SaaS vivi, che abbiamo progettato, rilasciato e mandiamo avanti. Il tuo prodotto eredita gli schemi che sono sopravvissuti alla produzione.",
+    lead: "Molte agenzie costruiscono il loro primo prodotto AI con il budget del cliente. Noi il nostro l'abbiamo già costruito: BuzzWatch, InsightFlow, IntelligoAI e una piattaforma di firma digitale sono SaaS vivi, che abbiamo progettato, rilasciato e mandiamo avanti. Il tuo prodotto eredita gli schemi che sono sopravvissuti alla produzione.",
     specs: [
       { label: "Durata tipica", value: "6–12 settimane" },
       { label: "Prima versione usabile", value: "3–6 settimane" },
@@ -16,7 +16,7 @@ export const servicesIt: ServiceTexts = {
       heading: "Cosa stai comprando davvero quando affidi a qualcuno la costruzione di un prodotto",
       paragraphs: [
         "La versione standard va così. Un'agenzia ti quota una fase di discovery, produce un capitolato e dà la costruzione in subappalto. Sei mesi dopo ti ritrovi un codice che nessuno di quelli della prima call ha mai letto, su un'infrastruttura che nessuno vuole mantenere, con una funzione AI che costa per utente più di quanto l'utente paghi.",
-        "Noi abbiamo preso l'altra strada. Prima di vendere sviluppo di prodotti AI abbiamo costruito i nostri. BuzzWatch controlla cosa dicono gli assistenti AI di un marchio, ha clienti paganti e una partnership enterprise con un'agenzia internazionale. ItaSign, IntelligoAI e InsightFlow sono vivi, pagati e gestiti da noi.",
+        "Noi abbiamo preso l'altra strada. Prima di vendere sviluppo di prodotti AI abbiamo costruito i nostri. BuzzWatch controlla cosa dicono gli assistenti AI di un marchio, ha clienti paganti e una partnership enterprise con un'agenzia internazionale. IntelligoAI, InsightFlow e una piattaforma di firma digitale sono vivi, pagati e gestiti da noi.",
         "Questo cambia quello che ricevi. L'architettura che proponiamo è l'architettura che mandiamo avanti. I costi delle API che ti quotiamo sono costi che paghiamo ogni mese. I modi in cui una cosa si rompe li conosciamo perché ci hanno già svegliato di notte. Stai comprando gli schemi che sono sopravvissuti al contatto con utenti veri, non quelli che facevano bella figura in una proposta.",
       ],
       pullQuote: "Tutto quello che consigliamo, lo teniamo già in produzione noi.",

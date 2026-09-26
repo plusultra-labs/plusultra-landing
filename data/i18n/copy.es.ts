@@ -177,7 +177,7 @@ export const copyEs: SiteCopy = {
     meta: {
       title: "Servicios - Plusultra Labs",
       description:
-        "Desarrollo de producto de IA, integración de IA en sistemas existentes y plataformas a medida, del equipo que construyó BuzzWatch, ItaSign, IntelligoAI y más de diez SaaS en producción.",
+        "Desarrollo de producto de IA, integración de IA en sistemas existentes y plataformas a medida, del equipo que construyó BuzzWatch, IntelligoAI, una plataforma de firma digital y más de diez SaaS en producción.",
     },
   },
 
@@ -225,7 +225,7 @@ export const copyEs: SiteCopy = {
     meta: {
       title: "Proyectos - Plusultra Labs",
       description:
-        "Proyectos de Plusultra Labs: BuzzWatch, IntelligoAI, ItaSign, Artupia y plataformas para clientes en salud, viajes, inmobiliario y finanzas.",
+        "Proyectos de Plusultra Labs: BuzzWatch, IntelligoAI, Artupia, una plataforma de firma digital y plataformas para clientes en salud, viajes, inmobiliario y finanzas.",
     },
   },
 
@@ -242,7 +242,7 @@ export const copyEs: SiteCopy = {
     story: [
       "Monté mi primer proyecto por mi cuenta a los quince; Artupia fue la primera empresa de verdad. La fundé en 2014, cuando todavía estaba en el instituto, y la dirigí como fundador y CEO durante siete años: un marketplace donde cualquiera podía encargar una obra a un artista real — describes lo que quieres, los artistas proponen, y sigues la pieza del boceto a la entrega. Superó los 100.000 usuarios y las 20 personas, y levantó hasta 3 millones de euros. En 2021 el Covid se llevó por delante el mercado del arte del que dependía. Construirla es también lo que me convirtió en desarrollador: full-stack de forma autodidacta, porque el producto lo pedía.",
       "Cuando el Covid cerró Artupia podría haber montado otra empresa mía. Hice lo contrario a propósito: me metí dentro de los productos de otros. Una app de quick-commerce, una startup de asistentes de IA y, desde 2023, TourScanner — un metabuscador de viajes que fundaron otros en 2018, que yo no construí y no es mío. Allí trabajo en IA y producto, sobre millón y medio de ofertas y 5.000 destinos. Ahí lo vi claro: la parte que de verdad me gusta es construir el producto, no poseerlo.",
-      "A partir de ahí llegó el resto de la cartera, cada producto nacido porque al mercado le faltaba algo evidente. ItaSign, porque firmar un documento con validez legal en Europa no debería exigir una suscripción enterprise. IntelligoAI, porque las consultas médicas italianas tenían que elegir entre la agenda de papel y un contrato anual. BuzzWatch, porque los clientes empezaron a preguntarle a los asistentes qué comprar y nadie podía ver qué respondían. InsightFlow, porque las agencias viven dentro de hojas de cálculo.",
+      "A partir de ahí llegó el resto de la cartera, cada producto nacido porque al mercado le faltaba algo evidente. Una plataforma de firma digital, porque firmar un documento con validez legal en Europa no debería exigir una suscripción enterprise. IntelligoAI, porque las consultas médicas italianas tenían que elegir entre la agenda de papel y un contrato anual. BuzzWatch, porque los clientes empezaron a preguntarle a los asistentes qué comprar y nadie podía ver qué respondían. InsightFlow, porque las agencias viven dentro de hojas de cálculo.",
       "El trabajo con clientes vino después, y solo porque la gente seguía preguntando quién había construido esto. Así que el estudio funciona como funcionan los productos: un equipo pequeño y senior, un entorno en línea desde la primera semana y algo que puedes clicar cada viernes. Nuestras propias operaciones van sobre asistentes de IA que construimos nosotros, que es también como sé qué prometer y qué no.",
       "Ese es todo el discurso. No soy el dueño de una agencia que aprendió IA para cerrar contratos. Empecé como fundador, seguí construyendo cuando mi empresa se acabó, y casi todo lo que construyo hoy es de otro. Me va bien así: me gusta más la parte del producto que la de la propiedad, y el estudio existe para que ahora haya un equipo entero haciéndolo con el tuyo.",
     ],
@@ -271,7 +271,7 @@ export const copyEs: SiteCopy = {
       "{n} personas entre producto, diseño, ingeniería y entrega, más una red de especialistas que traemos cuando un proyecto lo pide.",
     ctaHeading: "¿Quieres ver cómo abordaríamos tu problema?",
     personDescription:
-      "Fundador de Plusultra Labs. Fundó Artupia en 2014 y la dirigió como CEO durante siete años, hasta superar los 100.000 usuarios y las 20 personas con hasta 3 millones de euros levantados. Hoy construye productos para otras empresas y opera una cartera que incluye BuzzWatch, ItaSign, IntelligoAI e InsightFlow, y trabaja en IA y producto en TourScanner.",
+      "Fundador de Plusultra Labs. Fundó Artupia en 2014 y la dirigió como CEO durante siete años, hasta superar los 100.000 usuarios y las 20 personas con hasta 3 millones de euros levantados. Hoy construye productos para otras empresas y opera una cartera que incluye BuzzWatch, IntelligoAI, InsightFlow y una plataforma de firma digital, y trabaja en IA y producto en TourScanner.",
     meta: {
       title: "El estudio - Plusultra Labs",
       description:

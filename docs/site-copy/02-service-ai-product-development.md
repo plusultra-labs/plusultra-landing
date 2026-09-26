@@ -7,7 +7,7 @@
 **H1:** AI product development, by people who ship their own
 
 **Lead:**
-> Most agencies build their first AI product on your budget. We've already built ours — BuzzWatch, InsightFlow, ItaSign, IntelligoAI are live SaaS products we designed, shipped, and operate. Your product gets the patterns that survived production, not experiments.
+> Most agencies build their first AI product on your budget. We've already built ours — BuzzWatch, InsightFlow, IntelligoAI and a digital signature platform are live SaaS products we designed, shipped, and operate. Your product gets the patterns that survived production, not experiments.
 
 ## What you get
 

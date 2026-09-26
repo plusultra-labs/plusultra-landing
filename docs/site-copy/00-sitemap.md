@@ -12,7 +12,7 @@ Positioning: **AI product studio + agency.** We build our own AI products and pu
   /services/custom-platforms          Custom platforms & SaaS
 /work/                           Case study index
   /work/<slug>                   One page per case study
-/products/                       Our own products (BuzzWatch, InsightFlow, ItaSign, IntelligoAI, Patrimo)
+/products/                       Our own products (BuzzWatch, InsightFlow, IntelligoAI, Patrimo, a digital signature platform)
 /about/                          Company story + how we work (AI-native process, Vera)
 /blog/                           Articles (Nuxt Content), EN + IT
 /contact/                        Fillout embed + email
@@ -21,7 +21,7 @@ Positioning: **AI product studio + agency.** We build our own AI products and pu
 
 ## Case studies
 
-Name now (ours/public): BuzzWatch, TourScanner, InsightFlow, ItaSign, IntelligoAI, TS-Sites, Vera ("running a company on AI agents" — doubles as flagship blog content).
+Name now (ours/public): BuzzWatch, TourScanner, InsightFlow, IntelligoAI, TS-Sites, Vera ("running a company on AI agents" — doubles as flagship blog content).
 
 Ask permission first: GA Agency, Alma Medical, Ferrari Marmi, Colzani & Partners, Lookalike, Collezione Casa. Anonymized fallback if declined.
 
@@ -32,7 +32,7 @@ Skeleton per case study: context → problem → what we built (stack, timeline)
 1. **AI agents in production** (EN) — first-hand Vera/orchestration write-ups. Flagship, citation magnet.
 2. **AI integration engineering, Italian mid-market** (IT) — LLM selection, GDPR/EU architecture, costs, build vs buy. Lead generator.
 3. **Shipping SaaS: costs, timelines, stack** (EN+IT) — real numbers from our own products. BOFU layer.
-4. Vertical pillars (one each, later): medical clinic software (IntelligoAI), eIDAS e-signature (ItaSign), health-data apps, travel tech.
+4. Vertical pillars (one each, later): medical clinic software (IntelligoAI), eIDAS digital signature platform, health-data apps, travel tech.
 
 ## Technical
 
